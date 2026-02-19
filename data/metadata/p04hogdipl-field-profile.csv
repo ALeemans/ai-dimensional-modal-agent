@@ -1,0 +1,16 @@
+Bron;Veld;Type;Beschrijving;Null mogelijk;Voorbeeldwaarden;Kardinaliteit;Null %;Verwachte rol
+alle;DIPLOMAJAAR;numeriek;Jaar van diplomaverstrekking;Nee;2019, 2020, 2021, 2022, 2023;5;0%;Tijddimensiesleutel
+alle;PROVINCIENAAM;tekst;Provinciename;Nee;Drenthe, Gelderland, Noord-Holland;12;0%;Geografiedimensie
+alle;GEMEENTENUMMER;tekst;Gemeentecode (CBS);Nee;0106, 0114, 0228;52;0%;Geografiedimensiesleutel
+alle;GEMEENTENAAM;tekst;Gemeentenaam;Nee;Assen, Emmen, Ede;52;0%;Geografiedimensie
+alle;SOORT_INSTELLING;tekst;Instellingstype;Nee;reguliere inst.;1;0%;Instellingsdimensie
+alle;INSTELLINGSCODE_ACTUEEL;tekst;Actuele instellingscode (BRIN);Nee;25BE, 31FR;36;0%;Instellingsdimensiesleutel
+alle;INSTELLINGSNAAM_ACTUEEL;tekst;Actuele instellingsnaam;Nee;Hanzehogeschool Groningen, NHL Stenden Hogeschool;36;0%;Instellingsdimensie
+alle;ONDERDEEL;tekst;ISCED-sector / domein;Nee;TECHNIEK, ONDERWIJS, ECONOMIE;8;0%;Opleidingsdimensie
+alle;SUBONDERDEEL;tekst;Subdomein;Nee;n.v.t. (techniek), leraar basisonderwijs;16;0%;Opleidingsdimensie
+alle;SOORT_DIPLOMA;tekst;Soort verstrekt diploma;Nee;hbo bachelor, hbo associate degree;3;0%;Opleidingsdimensie
+alle;AANTAL_GEDIPLOMEERDEN;numeriek;Aantal gediplomeerden (ook -1 voor onderdrukte waarden);Nee;9, 23, 42, -1;Continu;0%;Meetwaarde
+4a (geslacht);GESLACHT;tekst;Geslacht;Nee;MAN, VROUW;2;0%;Demografiedimensie
+4b (niveau);OPLEIDINGSCODE_ACTUEEL;numeriek;CROHO-opleidingscode;Nee;34267, 34808, 35520;~200;0%;Opleidingsdimensiesleutel
+4b (niveau);OPLEIDINGSNAAM_ACTUEEL;tekst;Opleidingsnaam;Nee;B Elektrotechniek, B International Business, B Opleiding tot leraar Basisonderwijs;~200;0%;Opleidingsdimensie
+4c (oplvorm);OPLEIDINGSVORM;tekst;Opleidingsvorm;Nee;VT (voltijd), DT (deeltijd), DU (duaal);3;0%;Opleidingsdimensie

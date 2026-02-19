@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:onderwijsdata.duo.nl)"
+      "WebFetch(domain:onderwijsdata.duo.nl)",
+      "WebFetch(domain:duo.nl)"
     ]
   }
 }

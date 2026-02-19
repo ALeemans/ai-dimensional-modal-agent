@@ -1,0 +1,31 @@
+Bron;Veld;Type;Beschrijving;Null mogelijk;Voorbeeldwaarden;Kardinaliteit;Null %;Verwachte rol
+alle;SOORT HO;tekst;Type HO (kleine letters: hbo/wo);Nee;hbo, wo;2;0%;Scopefilter
+alle;PROVINCIE;tekst;Provincie;Nee;Friesland, Gelderland, Noord-Holland;12;0%;Geografiedimensie
+alle;BEVOEGD GEZAG NUMMER;tekst;Bevoegd-gezagnummer;Nee;30156, 40235, 40687;~50;0%;Instellingsdimensiesleutel
+alle;INSTELLINGSCODE;tekst;Instellingscode (BRIN);Nee;31FR, 25BA, 30TX;~50;0%;Instellingsdimensiesleutel (BRIN)
+alle;INSTELLINGSNAAM;tekst;Instellingsnaam;Nee;NHL Stenden Hogeschool, Christelijke Hogeschool Ede;~50;0%;Instellingsdimensie
+alle;STRAATNAAM;tekst;Straatnaam (bezoekadres);Nee;Rengerslaan, Oude Kerkweg, Bovenbuurtweg;~50;0%;Adresattribuut
+alle;HUISNUMMER-TOEVOEGING;tekst;Huisnummer en toevoeging;Nee;10, 100, 27;~50;0%;Adresattribuut
+alle;POSTCODE;tekst;Postcode (bezoekadres);Nee;8917 DD, 6717 JS, 6717 XA;~50;0%;Adresattribuut
+alle;PLAATSNAAM;tekst;Plaatsnaam (bezoekadres, hoofdletters);Nee;LEEUWARDEN, EDE;~50;0%;Geografiedimensie
+alle;GEMEENTENUMMER;tekst;Gemeentecode (CBS, met voorloopnullen);Nee;0080, 0228;~50;0%;Geografiedimensiesleutel
+alle;GEMEENTENAAM;tekst;Gemeentenaam (hoofdletters);Nee;LEEUWARDEN, EDE;~50;0%;Geografiedimensie
+alle;DENOMINATIE;tekst;Denominatie;Nee;Overige, Protestants-Christelijk, Rooms-Katholiek;~5;0%;Instellingsattribuut
+alle;TELEFOONNUMMER;tekst;Telefoonnummer;Ja;0582512345, 0318696300;~50;Onbekend;Contactinformatie
+alle;INTERNETADRES;tekst;Website;Ja;www.nhl.nl, www.che.nl;~50;Onbekend;Contactinformatie
+alle;STRAATNAAM CORRESPONDENTIEADRES;tekst;Straatnaam (correspondentieadres);Ja;Postbus;~50;Onbekend;Adresattribuut
+alle;HUISNUMMER-TOEVOEGING CORRESPONDENTIEADRES;tekst;Huisnummer (correspondentieadres);Ja;1080, 80;~50;Onbekend;Adresattribuut
+alle;POSTCODE CORRESPONDENTIEADRES;tekst;Postcode (correspondentieadres);Ja;8900 CB, 6710 BB;~50;Onbekend;Adresattribuut
+alle;PLAATSNAAM CORRESPONDENTIEADRES;tekst;Plaatsnaam (correspondentieadres);Ja;LEEUWARDEN, EDE;~50;Onbekend;Adresattribuut
+alle;NODAAL GEBIED CODE;tekst;Code nodaal gebied;Nee;10, 29;~40;0%;Geografiedimensie
+alle;NODAAL GEBIED NAAM;tekst;Naam nodaal gebied;Nee;Leeuwarden, Ede;~40;0%;Geografiedimensie
+alle;RPA-GEBIED CODE;tekst;Code RPA-gebied;Nee;04, 10;~30;0%;Geografiedimensie
+alle;RPA-GEBIED NAAM;tekst;Naam RPA-gebied;Nee;Fryslân, De Vallei;~30;0%;Geografiedimensie
+alle;WGR-GEBIED CODE;tekst;Code WGR-gebied;Nee;04, 16;~30;0%;Geografiedimensie
+alle;WGR-GEBIED NAAM;tekst;Naam WGR-gebied;Nee;Friesland-Noord, Eem en Vallei;~30;0%;Geografiedimensie
+alle;COROPGEBIED CODE;tekst;Code COROP-gebied;Nee;04, 13;~40;0%;Geografiedimensie
+alle;COROPGEBIED NAAM;tekst;Naam COROP-gebied;Nee;Noord-Friesland, Veluwe;~40;0%;Geografiedimensie
+alle;ONDERWIJSGEBIED CODE;tekst;Code onderwijsgebied;Nee;03, 09;~12;0%;Geografiedimensie
+alle;ONDERWIJSGEBIED NAAM;tekst;Naam onderwijsgebied;Nee;Friesland, Arnhem en omstreken;~12;0%;Geografiedimensie
+alle;RMC-REGIO CODE;tekst;Code RMC-regio;Nee;04, 16;~39;0%;Geografiedimensie
+alle;RMC-REGIO NAAM;tekst;Naam RMC-regio;Nee;Friesland Noord, Eem en Vallei;~39;0%;Geografiedimensie

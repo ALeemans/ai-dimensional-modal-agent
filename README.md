@@ -1,47 +1,47 @@
-# AI Dimensional Modeling Agent
+# AI Dimensioneel Modelleeringsagent
 
-**Author:** Anne Leemans, in collaboration with Claude Sonnet 4.6
+**Auteur:** Anne Leemans, in samenwerking met Claude Sonnet 4.6
 
-An AI-driven agent that automatically creates dimensional models (star schemas) from source data.
+Een AI-gestuurde agent die automatisch dimensionele modellen (sterrenmodellen) opbouwt vanuit brongegevens.
 
-**Pilot dataset:** DUO Open Onderwijsdata — Hoger Beroeps Onderwijs (HBO)
+**Pilotdataset:** DUO Open Onderwijsdata — Hoger Beroeps Onderwijs (HBO)
 
-## Project Goal
+## Projectdoel
 
-Build a reusable AI agent that can generate dimensional models from any data source by:
+Een herbruikbare AI-agent bouwen die dimensionele modellen kan genereren vanuit elke gegevensbron door:
 
-1. Collecting and analyzing source metadata
-2. Identifying fact and dimension candidates
-3. Generating star schema designs
-4. Producing validated, deployable dimensional models
+1. Bronmetagegevens te verzamelen en te analyseren
+2. Kandidaten voor feitentabellen en dimensietabellen te identificeren
+3. Sterrenmodelontwerpen te genereren
+4. Gevalideerde, inzetbare dimensionele modellen op te leveren
 
-The DUO HBO data serves as the first subject — the real deliverable is the **agent and its instructions**, which can be applied to any future data source.
+De DUO HBO-data dient als eerste pilotonderdeel — het echte eindproduct is de **agent en zijn instructies**, die op elke toekomstige gegevensbron kunnen worden toegepast.
 
-## Folder Structure
+## Mappenstructuur
 
 ```
 ai-dimensional-modeling/
-├── docs/                    # Project documentation and plans
+├── docs/                    # Projectdocumentatie en plannen
 ├── agent/
-│   ├── instructions/        # Agent instruction documents (the core deliverable)
-│   ├── templates/           # Reusable templates for dimensional modeling
-│   └── prompts/             # AI prompts for each phase
+│   ├── instructions/        # Agentinstructiedocumenten (het kernproduct)
+│   ├── templates/           # Herbruikbare sjablonen voor dimensioneel modelleren
+│   └── prompts/             # AI-prompts per fase
 ├── data/
-│   ├── raw/                 # Raw API responses and downloads
-│   ├── processed/           # Cleaned and structured data
-│   └── metadata/            # Collected metadata about sources
+│   ├── raw/                 # Ruwe API-responsen en downloads
+│   ├── processed/           # Opgeschoonde en gestructureerde gegevens
+│   └── metadata/            # Verzamelde metagegevens over bronnen
 ├── src/
-│   ├── exploration/         # Scripts for API exploration and metadata collection
-│   ├── modeling/            # Dimensional model generation logic
-│   └── validation/          # Model validation and testing
-├── examples/                # Example outputs and reference models
-└── tests/                   # Test cases
+│   ├── exploration/         # Scripts voor API-verkenning en metagegevensverzameling
+│   ├── modeling/            # Logica voor het genereren van dimensionele modellen
+│   └── validation/          # Modelvalidatie en -testing
+├── examples/                # Voorbeeldoutputs en referentiemodellen
+└── tests/                   # Testcases
 ```
 
 ## Links
 
-- [Project Plan](docs/PLAN.md)
-- [Agent Instructions](agent/instructions/)
-- DUO API info: https://duo.nl/open_onderwijsdata/api.jsp
+- [Projectplan](docs/PLAN.md)
+- [Agentinstructies](agent/instructions/)
+- DUO API-info: https://duo.nl/open_onderwijsdata/api.jsp
 - DUO Datasets: https://onderwijsdata.duo.nl/datasets/
-- HBO data overview: https://duo.nl/open_onderwijsdata/hoger-onderwijs/
+- HBO data-overzicht: https://duo.nl/open_onderwijsdata/hoger-onderwijs/

@@ -1,0 +1,45 @@
+Bron;Veld;Type;Beschrijving;Null mogelijk;Voorbeeldwaarden;Kardinaliteit;Null %;Verwachte rol
+alle;ONDERWIJSBESTUURID;tekst;Onderwijsbestuur-ID (RIO);Nee;100B349;~90;0%;Instellingsdimensiesleutel (RIO)
+alle;ONDERWIJSBESTUUR_NAAM;tekst;Naam onderwijsbestuur;Nee;Stichting HZ University of Appl. Scienc.;~90;0%;Instellingsdimensie
+alle;ONDERWIJSAANBIEDERID;tekst;Aanbieder-ID (kan afwijken van bestuur);Ja;—;~90;Onbekend;Instellingsdimensiesleutel
+alle;ONDERWIJSAANBIEDER_NAAM;tekst;Naam aanbieder;Ja;—;~90;Onbekend;Instellingsdimensie
+alle;ONDERWIJSLOCATIECODE;tekst;Onderwijslocatiecode;Ja;—;~300;Onbekend;Locatiedimensiesleutel
+alle;ONDERWIJSLOCATIESTRAAT;tekst;Straatnaam onderwijslocatie;Ja;—;~300;Onbekend;Locatiedimensie
+alle;ONDERWIJSLOCATIEPLAATS;tekst;Plaatsnaam onderwijslocatie;Ja;—;~100;Onbekend;Locatiedimensie
+alle;SOORT;tekst;Altijd OPLEIDING;Nee;OPLEIDING;1;0%;Redundant
+alle;OPLEIDINGSEENHEIDCODE;tekst;Opleidingseenheidcode (RIO);Nee;1001O2869, 1001O3168, 1001O8858;~700;0%;Opleidingsdimensiesleutel (RIO)
+alle;ERKENDEOPLEIDINGSCODE;numeriek;CROHO-opleidingscode;Nee;34074, 34279, 49506;~700;0%;Opleidingsdimensiesleutel (CROHO)
+alle;AANGEBODEN_OPLEIDINGCODE;tekst;Aangeboden opleidingscode;Ja;—;~700;Onbekend;Opleidingsdimensiesleutel
+alle;EIGEN_AANGEBODEN_OPLEIDINGSLEUTEL;tekst;Eigen opleidingssleutel van de instelling;Ja;—;~700;Onbekend;Instellingsintern
+alle;NAAM_LANG;tekst;Volledige opleidingsnaam (Nederlands);Nee;Watermanagement, Civiele Techniek, HBO-ICT;~700;0%;Opleidingsdimensie
+alle;INTERNATIONALE_NAAM;tekst;Internationale opleidingsnaam;Ja;Water Management, Civil Engineering;~700;Onbekend;Opleidingsdimensie
+alle;EIGENNAAM;tekst;Eigennaam van de instelling;Ja;—;~700;Hoog;Opleidingsdimensie
+alle;EIGENNAAM_DUITS;tekst;Duitse eigennaam;Ja;—;~700;Zeer hoog;Zelden gebruikt
+alle;EIGENNAAM_ENGELS;tekst;Engelse eigennaam;Ja;—;~700;Hoog;Opleidingsdimensie
+alle;VARIANT_VAN;tekst;Verwijzing naar variant-van opleidingscode;Ja;—;~700;Onbekend;Relatieveld
+alle;ERKENNER;tekst;Accreditatieorgaan;Nee;NVAO;1–2;0%;Dimensie
+alle;NIVEAU;tekst;Opleidingsniveau (scopefilter voor HBO);Nee;HBO-BA, HBO-MA, HBO-AD, WO-BA, WO-MA;5;0%;Opleidingsdimensie
+alle;GRAAD;tekst;Graadtype;Nee;BACHELOR, MASTER, ASSOCIATE_DEGREE;3;0%;Opleidingsdimensie
+alle;STUDIELAST;numeriek;ECTS-studiepunten;Nee;60, 120, 180, 240;~10;0%;Opleidingsattribuut
+alle;EQF;numeriek;Niveau Europees Kwalificatiekader (EQF);Nee;5, 6, 7;3;0%;Opleidingsdimensie
+alle;ISCED;numeriek;ISCED-studiegebiedcode;Nee;—;~50;0%;Opleidingsdimensie
+alle;NLQF;numeriek;Niveau Nederlands Kwalificatiekader (NLQF);Nee;5, 6, 7;3;0%;Opleidingsdimensie
+alle;WAARDEDOCUMENTSOORT;tekst;Soort waardedocument;Nee;GETUIGSCHRIFT;1–2;0%;Dimensie
+alle;VORM;tekst;Opleidingsvorm;Ja;VOLTIJD, DEELTIJD;2–3;Onbekend;Opleidingsdimensie
+alle;VOERTAAL;tekst;Voertaal;Ja;NLD, ENG;2–3;Onbekend;Opleidingsdimensie
+alle;BEGINDATUM;tijdstempel;Begindatum accreditatie opleiding;Nee;2002-09-01, 2015-09-01, 2023-09-01;—;0%;Langzaam veranderende dimensie
+alle;EINDDATUM;tijdstempel;Einddatum accreditatie opleiding (null = actief);Ja;—;—;Hoog;Langzaam veranderende dimensie
+alle;AANGEBODEN_OPLEIDING_BEGINDATUM;tijdstempel;Begindatum aangeboden opleiding;Ja;—;—;Onbekend;Aanbiedingstijdlijn
+alle;AANGEBODEN_OPLEIDING_EINDDATUM;tijdstempel;Einddatum aangeboden opleiding;Ja;—;—;Onbekend;Aanbiedingstijdlijn
+alle;EERSTE_INSTROOMDATUM;tijdstempel;Eerste instroomdatum;Ja;—;—;Onbekend;Aanbiedingstijdlijn
+alle;LAATSTE_INSTROOMDATUM;tijdstempel;Laatste instroomdatum;Ja;—;—;Onbekend;Aanbiedingstijdlijn
+alle;DEFICIENTIE;tekst;Deficiëntie-/toelatingseisen;Ja;—;—;Hoog;Opleidingsvereiste
+alle;EISEN_WERKZAAMHEDEN;tekst;Eisen aan werkzaamheden;Ja;—;—;Hoog;Opleidingsvereiste
+alle;PROPEDEUTISCHE_FASE;tekst;Propedeutische fase;Ja;—;Laag;Onbekend;Opleidingsattribuut
+alle;STUDIEKEUZECHECK;tekst;Studiekeuzecheck;Ja;—;Laag;Onbekend;Opleidingsattribuut
+alle;VERSNELD_TRAJECT;tekst;Versneld traject;Ja;—;Laag;Onbekend;Opleidingsattribuut
+alle;PENVOERDER;tekst;Penvoerende instelling bij samenwerkingsopleidingen;Ja;Stichting HZ University of Applied Sciences;~90;Hoog;Relatieveld
+alle;SAMENWERKEND_MET;tekst;Samenwerkende instellingen;Ja;—;—;Zeer hoog;Relatieveld
+alle;BUITENLANDSEPARTNER;tekst;Buitenlandse partners;Ja;—;—;Zeer hoog;Zelden ingevuld
+alle;WEBSITE;tekst;Website opleiding;Ja;—;~700;Onbekend;Informatief
+alle;OMSCHRIJVING;tekst;Omschrijving opleiding (vrije tekst);Ja;—;—;Onbekend;Informatief

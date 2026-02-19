@@ -1,171 +1,171 @@
-# Project Plan: AI Dimensional Modeling Agent
+# Projectplan: AI Dimensioneel Modelleeringsagent
 
-**Author:** Anne Leemans, in collaboration with Claude Opus 4.6
+**Auteur:** Anne Leemans, in samenwerking met Claude Opus 4.6
 
-## Goal
+## Doel
 
-Create an AI agent that can build a complete dimensional model (star schema) from scratch, given only access to a data source (API, database, flat files). The agent should work on **any** data source that meets basic prerequisites — not just DUO data.
+Een AI-agent ontwikkelen die vanuit elke gegevensbron (API, database, platte bestanden) een volledig dimensioneel model (sterrenmodel) kan opbouwen. De agent moet werken met **elke** gegevensbron die aan de basisvereisten voldoet — niet alleen DUO-data.
 
-### Three deliverables
+### Drie eindproducten
 
-1. **A dimensional model** of DUO HBO data (proof of concept)
-2. **An AI-powered workflow** that generates dimensional models from source data
-3. **Agent instruction documents** that allow the agent to be reused on any future data source
-
----
-
-## Step-by-Step Plan
-
-### Phase 1: Metadata Collection & Source Profiling
-
-> _"You can't model what you don't understand."_
-
-**Objective:** Collect as much accurate metadata as possible from the DUO HBO data sources.
-
-**Steps:**
-
-1.1. **Inventory all HBO datasets** from DUO Open Onderwijsdata
-   - Studenten HBO (students)
-   - Inschrijvingen HBO (enrollments)
-   - Studenten eerstejaars HBO (first-year students)
-   - Inschrijvingen eerstejaars HBO (first-year enrollments)
-   - Afgestudeerden HBO (graduates)
-   - Adressen hogescholen en universiteiten (institution addresses)
-   - Adressen besturen (governing board addresses)
-
-1.2. **Explore each API endpoint** and document:
-   - Available fields (column names, data types)
-   - Sample data (first rows)
-   - Cardinality of each field
-   - Null/empty rates
-   - Value distributions for categorical fields
-   - Relationships between datasets (shared keys)
-   - Update frequency and historical depth
-
-1.3. **Create a metadata catalog** with structured output per dataset
-
-1.4. **Write Agent Instruction:** `01-metadata-collection.md` — How to profile any data source
+1. **Een dimensioneel model** van DUO HBO-data (proof of concept)
+2. **Een AI-gestuurde workflow** die dimensionele modellen genereert vanuit brongegevens
+3. **Agentinstructiedocumenten** waarmee de agent herbruikbaar is voor elke toekomstige gegevensbron
 
 ---
 
-### Phase 2: Source Analysis & Business Understanding
+## Stapsgewijs Plan
 
-**Objective:** Understand what the data represents in business terms.
+### Fase 1: Metagegevensverzameling & Bronprofilering
 
-**Steps:**
+> _"Je kunt niet modelleren wat je niet begrijpt."_
 
-2.1. **Identify business entities** (student, institution, program, enrollment, graduation)
+**Doel:** Zo veel mogelijk nauwkeurige metagegevens verzamelen uit de DUO HBO-gegevensbronnen.
 
-2.2. **Map grain** for each dataset — what does one row represent?
+**Stappen:**
 
-2.3. **Identify business processes** (enrollment, graduation, etc.)
+1.1. **Alle HBO-datasets inventariseren** uit DUO Open Onderwijsdata
+   - Studenten HBO (ingeschrevenen)
+   - Inschrijvingen HBO
+   - Studenten eerstejaars HBO (eerstejaars ingeschrevenen)
+   - Inschrijvingen eerstejaars HBO
+   - Afgestudeerden HBO (gediplomeerden)
+   - Adressen hogescholen en universiteiten
+   - Adressen besturen
 
-2.4. **Document relationships** between entities
+1.2. **Elk API-eindpunt verkennen** en documenteren:
+   - Beschikbare velden (kolomnamen, gegevenstypes)
+   - Voorbeelddata (eerste rijen)
+   - Kardinaliteit van elk veld
+   - Null/lege waarden percentage
+   - Waardeverdeling voor categorische velden
+   - Relaties tussen datasets (gedeelde sleutels)
+   - Updatefrequentie en historische diepte
 
-2.5. **Write Agent Instruction:** `02-source-analysis.md` — How to derive business meaning from metadata
+1.3. **Een metagegevenscatalogus aanmaken** met gestructureerde output per dataset
 
----
-
-### Phase 3: Dimensional Model Design
-
-**Objective:** Design the star schema — identify facts and dimensions.
-
-**Steps:**
-
-3.1. **Identify fact candidates** — What are the measurable events/transactions?
-   - Enrollments (inschrijvingen)
-   - Graduations (afgestudeerden)
-   - Student counts (aggregated facts)
-
-3.2. **Identify dimension candidates** — What are the descriptive attributes?
-   - Student demographics (gender, nationality, age)
-   - Institution (name, address, type, board)
-   - Program/Study (CROHO code, field of study, level)
-   - Time (academic year, reference date)
-   - Geography (province, municipality)
-
-3.3. **Define grain** for each fact table
-
-3.4. **Map measures** (counts, sums, derived metrics)
-
-3.5. **Define dimension hierarchies** and slowly changing dimension strategies
-
-3.6. **Draw the star schema**
-
-3.7. **Write Agent Instruction:** `03-dimensional-design.md` — How to design facts and dimensions from analyzed sources
+1.4. **Agentinstructie schrijven:** `01-metagegevensverzameling.md` — Hoe een gegevensbron te profileren
 
 ---
 
-### Phase 4: Model Validation
+### Fase 2: Bronanalyse & Businessbegrip
 
-**Objective:** Validate the generated model against best practices and data reality.
+**Doel:** Begrijpen wat de data vertegenwoordigt in bedrijfskundige termen.
 
-**Steps:**
+**Stappen:**
 
-4.1. **Check conformance** to Kimball methodology
+2.1. **Businessentiteiten identificeren** (student, instelling, opleiding, inschrijving, diploma)
 
-4.2. **Validate referential integrity** — Do all FK relationships hold?
+2.2. **Granulariteit bepalen** per dataset — wat stelt één rij voor?
 
-4.3. **Test with sample queries** — Can the model answer typical business questions?
+2.3. **Bedrijfsprocessen identificeren** (inschrijving, afstudering, enz.)
 
-4.4. **Compare against manual design** — Would a human DWH architect make the same choices?
+2.4. **Relaties tussen entiteiten documenteren**
 
-4.5. **Write Agent Instruction:** `04-model-validation.md` — How to validate a generated dimensional model
-
----
-
-### Phase 5: Agent Assembly
-
-**Objective:** Package all instructions into a coherent, reusable agent.
-
-**Steps:**
-
-5.1. **Compile all instruction documents** into a complete agent workflow
-
-5.2. **Define prerequisites** — What does a data source need to be suitable?
-
-5.3. **Create templates** for metadata catalogs, model definitions, validation checklists
-
-5.4. **Test the agent** on a second data source (if time permits)
-
-5.5. **Write Agent Instruction:** `05-agent-workflow.md` — The master orchestration document
+2.5. **Agentinstructie schrijven:** `02-bronanalyse.md` — Hoe bedrijfskundige betekenis af te leiden uit metagegevens
 
 ---
 
-## DUO HBO Data Sources
+### Fase 3: Ontwerp van het Dimensionele Model
 
-| Dataset | Description | Updated | Scope |
-|---------|-------------|---------|-------|
-| Studenten HBO | Student counts per reference date Oct 1 | Mar 2025 | Last 5 years |
-| Inschrijvingen HBO | Enrollment records | Mar 2025 | Last 5 years |
-| Studenten eerstejaars HBO | First-year student counts | Mar 2025 | Last 5 years |
-| Inschrijvingen eerstejaars HBO | First-year enrollment records | Mar 2025 | Last 5 years |
-| Afgestudeerden HBO | Graduate records | Mar 2025 | Last 5 years |
-| Adressen hogescholen/universiteiten | Institution addresses | Feb 2026 | Current |
-| Adressen besturen | Governing board addresses | Feb 2026 | Current |
+**Doel:** Het sterrenmodel ontwerpen — feitentabellen en dimensietabellen identificeren.
 
-**API Portal:** https://onderwijsdata.duo.nl/datasets/
+**Stappen:**
 
-**Key dataset IDs:**
+3.1. **Kandidaten voor feitentabellen identificeren** — Wat zijn de meetbare gebeurtenissen/transacties?
+   - Inschrijvingen
+   - Diploma's (gediplomeerden)
+   - Studentenaantallen (geaggregeerde feiten)
+
+3.2. **Kandidaten voor dimensietabellen identificeren** — Wat zijn de beschrijvende attributen?
+   - Studentdemografie (geslacht, nationaliteit, leeftijd)
+   - Instelling (naam, adres, type, bestuur)
+   - Opleiding (CROHO-code, studiegebied, niveau)
+   - Tijd (studiejaar, peildatum)
+   - Geografie (provincie, gemeente)
+
+3.3. **Granulariteit definiëren** per feitentabel
+
+3.4. **Meetwaarden in kaart brengen** (aantallen, sommen, afgeleide metrieken)
+
+3.5. **Dimensiehiërarchieën definiëren** en strategieën voor langzaam veranderende dimensies
+
+3.6. **Het sterrenmodel tekenen**
+
+3.7. **Agentinstructie schrijven:** `03-dimensioneel-ontwerp.md` — Hoe feiten en dimensies te ontwerpen vanuit geanalyseerde bronnen
+
+---
+
+### Fase 4: Modelvalidatie
+
+**Doel:** Het gegenereerde model valideren aan de hand van best practices en de werkelijke data.
+
+**Stappen:**
+
+4.1. **Conformiteit controleren** met de Kimball-methodologie
+
+4.2. **Referentiële integriteit valideren** — Houden alle FK-relaties stand?
+
+4.3. **Testen met voorbeeldqueries** — Kan het model typische bedrijfsvragen beantwoorden?
+
+4.4. **Vergelijken met handmatig ontwerp** — Zou een menselijke DWH-architect dezelfde keuzes maken?
+
+4.5. **Agentinstructie schrijven:** `04-modelvalidatie.md` — Hoe een gegenereerd dimensioneel model te valideren
+
+---
+
+### Fase 5: Agentassemblage
+
+**Doel:** Alle instructies samenvoegen tot een coherente, herbruikbare agent.
+
+**Stappen:**
+
+5.1. **Alle instructiedocumenten compileren** tot een complete agentworkflow
+
+5.2. **Vereisten definiëren** — Aan welke eisen moet een gegevensbron voldoen?
+
+5.3. **Sjablonen aanmaken** voor metagegevenscatalogi, modeldefinities, validatiechecklists
+
+5.4. **De agent testen** op een tweede gegevensbron (indien tijd beschikbaar)
+
+5.5. **Agentinstructie schrijven:** `05-agentworkflow.md` — Het hoofdorchestratiedocument
+
+---
+
+## DUO HBO-gegevensbronnen
+
+| Dataset | Beschrijving | Bijgewerkt | Bereik |
+|---------|-------------|------------|--------|
+| Studenten HBO | Studentenaantallen per peildatum 1 oktober | Mrt 2025 | Laatste 5 jaar |
+| Inschrijvingen HBO | Inschrijvingsrecords | Mrt 2025 | Laatste 5 jaar |
+| Studenten eerstejaars HBO | Eerstejaars studentenaantallen | Mrt 2025 | Laatste 5 jaar |
+| Inschrijvingen eerstejaars HBO | Eerstejaars inschrijvingsrecords | Mrt 2025 | Laatste 5 jaar |
+| Afgestudeerden HBO | Diplomarecords | Mrt 2025 | Laatste 5 jaar |
+| Adressen hogescholen/universiteiten | Instellingsadressen | Feb 2026 | Huidig |
+| Adressen besturen | Bestuursadressen | Feb 2026 | Huidig |
+
+**API-portaal:** https://onderwijsdata.duo.nl/datasets/
+
+**Belangrijke dataset-ID's:**
 - `p01hoinges` — Ingeschrevenen hoger onderwijs
 - `p03hoinschr` — Inschrijvingen hoger onderwijs
 
 ---
 
-## Prerequisites for Future Data Sources
+## Vereisten voor Toekomstige Gegevensbronnen
 
-For the agent to work on a new data source, it should have:
+Voor de agent om op een nieuwe gegevensbron te werken, moet deze beschikken over:
 
-- [ ] Accessible data (API, database, or structured files)
-- [ ] Machine-readable metadata (field names, types) or documentation
-- [ ] Sufficient data volume to distinguish facts from dimensions
-- [ ] Identifiable business process(es) the data describes
-- [ ] At least one measurable event or transaction
+- [ ] Toegankelijke data (API, database of gestructureerde bestanden)
+- [ ] Machineleesbare metagegevens (veldnamen, types) of documentatie
+- [ ] Voldoende datavolume om feiten van dimensies te onderscheiden
+- [ ] Identificeerbaar(e) bedrijfsproces(sen) die de data beschrijft
+- [ ] Minimaal één meetbare gebeurtenis of transactie
 
 ---
 
-## Success Criteria
+## Succescriteria
 
-- The generated DUO HBO dimensional model is valid and usable
-- The agent instructions are clear enough to produce a model on a new data source without project-specific knowledge
-- The workflow is repeatable and produces consistent results
+- Het gegenereerde DUO HBO-dimensionele model is valide en bruikbaar
+- De agentinstructies zijn helder genoeg om een model op een nieuwe gegevensbron te produceren zonder projectspecifieke kennis
+- De workflow is herhaalbaar en levert consistente resultaten

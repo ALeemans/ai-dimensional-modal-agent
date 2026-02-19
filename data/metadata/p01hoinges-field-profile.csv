@@ -1,16 +1,16 @@
-﻿Resource;Field;Type;Description;Nullable;Sample Values;Cardinality;Null %;Role Guess
-all;STUDIEJAAR;numeric;Academic year (reference date Oct 1);No;2020, 2021, 2022, 2023, 2024;5;0%;Date/time dimension key
-all;PROVINCIENAAM;text;Province name;No;Drenthe, Noord-Holland, Zuid-Holland, Utrecht;12;0%;Geography dimension
-all;GEMEENTENUMMER;text;Municipality code (CBS);No;0106, 0114, 0363, 0599;52;0%;Geography dimension key
-all;GEMEENTENAAM;text;Municipality name;No;Assen, Amsterdam, Rotterdam, Utrecht;52;0%;Geography dimension
-all;SOORT_INSTELLING;text;Institution type;No;reguliere inst.;1;0%;Institution dimension
-all;TYPE_HOGER_ONDERWIJS;text;Higher education level;No;associate degree, bachelor, master;3;0%;Program dimension
-all;INSTELLINGSCODE_ACTUEEL;text;Current institution code (BRIN);No;25DW, 28DN, 22OJ, 30GB;36;0%;Institution dimension key
-all;INSTELLINGSNAAM_ACTUEEL;text;Current institution name;No;Hogeschool Utrecht, Hogeschool van Amsterdam;36;0%;Institution dimension
-all;ONDERDEEL;text;ISCED sector / domain;No;TECHNIEK, ECONOMIE, ONDERWIJS, GEZONDHEIDSZORG;8;0%;Program dimension
-all;SUBONDERDEEL;text;Sub-sector / sub-domain;No;leraar basisonderwijs, n.v.t. (techniek);16;0%;Program dimension
-all;AANTAL_INGESCHREVENEN;numeric;Number of enrolled students;No;5, 50, 163, 5247 (also -1 for suppressed);Continuous;0%;Measure
-1a (geslacht);GESLACHT;text;Gender;No;MAN, VROUW;2;0%;Demographic dimension
-1b (niveau);OPLEIDINGSCODE_ACTUEEL;numeric;CROHO program code;No;34267, 34808, 80009;247;0%;Program dimension key
-1b (niveau);OPLEIDINGSNAAM_ACTUEEL;text;Program name;No;B Elektrotechniek, M Smart Systems Engineering;247;0%;Program dimension
-1c (oplvorm);OPLEIDINGSVORM;text;Education delivery form;No;VT (full-time), DT (part-time), DU (dual);3;0%;Program dimension
+Bron;Veld;Type;Beschrijving;Null mogelijk;Voorbeeldwaarden;Kardinaliteit;Null %;Verwachte rol
+alle;STUDIEJAAR;numeriek;Academisch jaar (peildatum 1 oktober);Nee;2020, 2021, 2022, 2023, 2024;5;0%;Tijddimensiesleutel
+alle;PROVINCIENAAM;tekst;Provinciename;Nee;Drenthe, Noord-Holland, Zuid-Holland, Utrecht;12;0%;Geografiedimensie
+alle;GEMEENTENUMMER;tekst;Gemeentecode (CBS);Nee;0106, 0114, 0363, 0599;52;0%;Geografiedimensiesleutel
+alle;GEMEENTENAAM;tekst;Gemeentenaam;Nee;Assen, Amsterdam, Rotterdam, Utrecht;52;0%;Geografiedimensie
+alle;SOORT_INSTELLING;tekst;Instellingstype;Nee;reguliere inst.;1;0%;Instellingsdimensie
+alle;TYPE_HOGER_ONDERWIJS;tekst;Opleidingsniveau;Nee;associate degree, bachelor, master;3;0%;Opleidingsdimensie
+alle;INSTELLINGSCODE_ACTUEEL;tekst;Actuele instellingscode (BRIN);Nee;25DW, 28DN, 22OJ, 30GB;36;0%;Instellingsdimensiesleutel
+alle;INSTELLINGSNAAM_ACTUEEL;tekst;Actuele instellingsnaam;Nee;Hogeschool Utrecht, Hogeschool van Amsterdam;36;0%;Instellingsdimensie
+alle;ONDERDEEL;tekst;ISCED-sector / domein;Nee;TECHNIEK, ECONOMIE, ONDERWIJS, GEZONDHEIDSZORG;8;0%;Opleidingsdimensie
+alle;SUBONDERDEEL;tekst;Subdomein;Nee;leraar basisonderwijs, n.v.t. (techniek);16;0%;Opleidingsdimensie
+alle;AANTAL_INGESCHREVENEN;numeriek;Aantal ingeschrevenen (ook -1 voor onderdrukte waarden);Nee;5, 50, 163, 5247 (ook -1);Continu;0%;Meetwaarde
+1a (geslacht);GESLACHT;tekst;Geslacht;Nee;MAN, VROUW;2;0%;Demografiedimensie
+1b (niveau);OPLEIDINGSCODE_ACTUEEL;numeriek;CROHO-opleidingscode;Nee;34267, 34808, 80009;247;0%;Opleidingsdimensiesleutel
+1b (niveau);OPLEIDINGSNAAM_ACTUEEL;tekst;Opleidingsnaam;Nee;B Elektrotechniek, M Smart Systems Engineering;247;0%;Opleidingsdimensie
+1c (oplvorm);OPLEIDINGSVORM;tekst;Opleidingsvorm;Nee;VT (voltijd), DT (deeltijd), DU (duaal);3;0%;Opleidingsdimensie

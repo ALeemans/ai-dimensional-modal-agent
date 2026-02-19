@@ -1,0 +1,16 @@
+Bron;Veld;Type;Beschrijving;Null mogelijk;Voorbeeldwaarden;Kardinaliteit;Null %;Verwachte rol
+alle;STUDIEJAAR;numeriek;Academisch jaar (peildatum 1 oktober);Nee;2020, 2021, 2022, 2023, 2024;5;0%;Tijddimensiesleutel
+alle;PROVINCIENAAM;tekst;Provinciename;Nee;Drenthe, Noord-Holland, Zuid-Holland, Utrecht;12;0%;Geografiedimensie
+alle;GEMEENTENUMMER;tekst;Gemeentecode (CBS);Nee;0106, 0114, 0363, 0599;52;0%;Geografiedimensiesleutel
+alle;GEMEENTENAAM;tekst;Gemeentenaam;Nee;Assen, Amsterdam, Rotterdam, Utrecht;52;0%;Geografiedimensie
+alle;SOORT_INSTELLING;tekst;Instellingstype;Nee;reguliere inst.;1;0%;Instellingsdimensie
+alle;TYPE_HOGER_ONDERWIJS;tekst;Opleidingsniveau;Nee;associate degree, bachelor;3;0%;Opleidingsdimensie
+alle;INSTELLINGSCODE_ACTUEEL;tekst;Actuele instellingscode (BRIN);Nee;31FR, 25BA, 22OJ;36;0%;Instellingsdimensiesleutel
+alle;INSTELLINGSNAAM_ACTUEEL;tekst;Actuele instellingsnaam;Nee;NHL Stenden Hogeschool, Hogeschool van Amsterdam;36;0%;Instellingsdimensie
+alle;ONDERDEEL;tekst;ISCED-sector / domein;Nee;ONDERWIJS, ECONOMIE, GEDRAG_EN_MAATSCHAPPIJ, TECHNIEK;8;0%;Opleidingsdimensie
+alle;SUBONDERDEEL;tekst;Subdomein;Nee;leraar basisonderwijs, n.v.t. (economie), n.v.t. (gedrag en maatschappij);16;0%;Opleidingsdimensie
+alle;AANTAL_EERSTEJAARS_INGESCHREVENEN;numeriek;Aantal eerstejaars ingeschrevenen (ook -1 voor onderdrukte waarden);Nee;8, 14, 36, 67, -1;Continu;0%;Meetwaarde
+2a (geslacht);GESLACHT;tekst;Geslacht;Nee;MAN, VROUW;2;0%;Demografiedimensie
+2b (niveau);OPLEIDINGSCODE_ACTUEEL;numeriek;CROHO-opleidingscode;Nee;34808, 80009, 80040, 80041, 80103;~247;0%;Opleidingsdimensiesleutel
+2b (niveau);OPLEIDINGSNAAM_ACTUEEL;tekst;Opleidingsnaam;Nee;B Opleiding tot leraar Basisonderwijs, Ad Hotel Management;~247;0%;Opleidingsdimensie
+2c (oplvorm);OPLEIDINGSVORM;tekst;Opleidingsvorm;Nee;VT (voltijd), DT (deeltijd), DU (duaal);3;0%;Opleidingsdimensie

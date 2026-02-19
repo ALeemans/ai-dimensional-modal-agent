@@ -1,0 +1,47 @@
+Bron;Veld;Type;Beschrijving;Null mogelijk;Voorbeeldwaarden;Kardinaliteit;Null %;Verwachte rol
+alle;BEVOEGD_GEZAG_CODE;tekst;Bevoegd-gezagscode;Nee;20045, 24832;~90;0%;Instellingsdimensiesleutel
+alle;BEVOEGD_GEZAG_NAAM;tekst;Naam bevoegd gezag;Nee;Protestantse Theologische Universiteit;~90;0%;Instellingsdimensie
+alle;INSTELLINGSCODE;tekst;Instellingscode (BRIN);Nee;00DV, 00IC;~200;0%;Instellingsdimensiesleutel (BRIN)
+alle;INSTELLINGSNAAM;tekst;Instellingsnaam;Nee;Protestantse Theologische Universiteit;~200;0%;Instellingsdimensie
+alle;VESTIGINGSCODE;tekst;Vestigingscode;Nee;00DV01, 00IC01;~500;0%;Locatiedimensiesleutel
+alle;VESTIGINGSNAAM;tekst;Vestigingsnaam;Nee;Protestantse Theologische Universiteit; Utrecht;~500;0%;Locatiedimensie
+alle;GEMEENTENAAM;tekst;Gemeentenaam;Nee;Utrecht, Amsterdam;~100;0%;Geografiedimensie
+alle;PLAATSNAAM;tekst;Plaatsnaam (hoofdletters);Nee;UTRECHT, AMSTERDAM;~100;0%;Geografiedimensie
+alle;ERKENDEOPLEIDINGSCODE;tekst;CROHO-opleidingscode (teksttype — let op: numeriek in ho_opleidingsoverzicht);Nee;56109, 60254;~700;0%;Opleidingsdimensiesleutel (CROHO)
+alle;INSTROOM_EINDDATUM;tijdstempel;Einddatum instroom (null = actieve opleiding);Ja;null, 2025-08-31;—;Hoog;Opleidingstijdlijn
+alle;OPLEIDINGSEENHEIDCODE;tekst;Opleidingseenheidcode (RIO);Nee;1016O1755, 1001O6573;~700;0%;Opleidingsdimensiesleutel (RIO)
+alle;EIGEN_OPLEIDINGSEENHEIDSLEUTEL;tekst;Eigen sleutel van de instelling;Ja;—;~700;Onbekend;Instellingsintern
+alle;OPLEIDINGSEENHEID_NAAM;tekst;Opleidingsnaam (Nederlands);Nee;Theologie;~700;0%;Opleidingsdimensie
+alle;OPLEIDINGSEENHEID_INTERNATIONALE_NAAM;tekst;Opleidingsnaam (Engels);Ja;Theology;~700;Onbekend;Opleidingsdimensie
+alle;OPLEIDINGSEENHEID_SOORT;tekst;Opleidingssoort;Nee;—;~5;0%;Opleidingsdimensie
+alle;STUDIELAST;numeriek;ECTS-studiepunten;Nee;180, 60;~10;0%;Opleidingsattribuut
+alle;STUDIELASTEENHEID;tekst;Eenheid studiepunten (altijd ECTS);Nee;ECTS;1;0%;Informatief
+alle;NIVEAU;tekst;Opleidingsniveau (scopefilter voor HBO);Nee;WO-BA, WO-MA, HBO-BA;5;0%;Opleidingsdimensie
+alle;GRAAD;tekst;Graadtype;Nee;BACHELOR, MASTER;3;0%;Opleidingsdimensie
+alle;GRAADTOEVOEGING;tekst;Graadtoevoeging (bijv. of Science);Ja;—;~5;Onbekend;Opleidingsdimensie
+alle;ISCED;numeriek;ISCED-studiegebiedcode;Nee;—;~50;0%;Opleidingsdimensie
+alle;NLQF;numeriek;Niveau Nederlands Kwalificatiekader (NLQF);Nee;—;3;0%;Opleidingsdimensie
+alle;EQF;numeriek;Niveau Europees Kwalificatiekader (EQF);Nee;—;3;0%;Opleidingsdimensie
+alle;VORM;tekst;Opleidingsvorm;Nee;VOLTIJD, DEELTIJD;3;0%;Opleidingsdimensie
+alle;ONDERDEEL;tekst;ISCED-sector / domein;Nee;TAAL_EN_CULTUUR, ONDERWIJS;8;0%;Opleidingsdimensie
+alle;SUBONDERDEEL;tekst;Subdomein;Nee;—;~16;0%;Opleidingsdimensie
+alle;BEKOSTIGINGSNIVEAU;tekst;Bekostigingsniveau;Nee;LAAG;~3;0%;Financieringsdimensie
+alle;GRONDSLAG_STUDIELAST;tekst;Grondslag studielast;Ja;—;~5;Onbekend;Opleidingsattribuut
+alle;BEROEPSEISEN;tekst;Beroepseisen;Ja;—;~5;Onbekend;Opleidingsattribuut
+alle;OPLEIDINGSERKENNINGSKADER;tekst;Opleidingserkenningskader;Ja;—;~5;Onbekend;Regelgevend
+alle;INTENSIEFPROGRAMMA;tekst;Indicator intensief programma;Ja;—;2;Onbekend;Opleidingsattribuut
+alle;BEKOSTIGINGSCODE;tekst;Bekostigingscode;Nee;BEKOSTIGD;2;0%;Financieringsdimensie
+alle;AANVULLENDE_EISEN;tekst;Aanvullende eisen;Ja;—;~5;Onbekend;Opleidingsattribuut
+alle;BEKOSTIGINGSDUUR;numeriek;Bekostigingsduur (in jaren);Nee;—;~5;0%;Opleidingsattribuut
+alle;VESTIGINGSLICENTIE_BEGINDATUM;tijdstempel;Begindatum vestigingslicentie;Nee;—;—;0%;Opleidingstijdlijn
+alle;VESTIGINGSLICENTIE_EINDDATUM;tijdstempel;Einddatum vestigingslicentie (null = actief);Ja;—;—;Hoog;Opleidingstijdlijn
+alle;ACCREDITATIE_BESLUITDATUM;tijdstempel;Datum accreditatiebesluit;Nee;—;—;0%;Accreditatietijdlijn
+alle;ACCREDITATIE_BEGINDATUM;tijdstempel;Begindatum accreditatie;Nee;2025-09-01, 2020-04-06;—;0%;Accreditatietijdlijn
+alle;ACCREDITATIE_VERVALDATUM;tijdstempel;Vervaldatum accreditatie;Ja;—;—;Onbekend;Accreditatietijdlijn
+alle;ACCREDITATIE_AFBOUWDATUM;tijdstempel;Afbouwdatum;Ja;—;—;Hoog;Accreditatietijdlijn
+alle;ACCREDITATIE_INLEVERDATUM;tijdstempel;Inleverdatum;Ja;—;—;Hoog;Accreditatietijdlijn
+alle;ACCREDITATIE_VOORWAARDENDATUM;tijdstempel;Datum voorwaardelijke accreditatie;Ja;—;—;Hoog;Accreditatietijdlijn
+alle;ACCREDITATIE_INTREKKINGSDATUM;tekst;Datum intrekking accreditatie;Ja;—;—;Hoog;Accreditatietijdlijn
+alle;ACCREDITATIE_UITSTELDATUM;tijdstempel;Datum uitstel accreditatie;Ja;—;—;Hoog;Accreditatietijdlijn
+alle;ACCREDITATIE_UITSTELREDEN;tekst;Reden voor uitstel;Ja;—;—;Hoog;Accreditatiemetadata
+alle;SAMENWERKENDEINSTELLINGEN;tekst;Samenwerkende instellingen;Ja;—;—;Hoog;Relatieveld

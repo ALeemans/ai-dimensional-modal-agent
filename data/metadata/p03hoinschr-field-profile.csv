@@ -1,0 +1,16 @@
+Bron;Veld;Type;Beschrijving;Null mogelijk;Voorbeeldwaarden;Kardinaliteit;Null %;Verwachte rol
+alle;STUDIEJAAR;numeriek;Academisch jaar (peildatum 1 oktober);Nee;2020, 2021, 2022, 2023, 2024;5;0%;Tijddimensiesleutel
+alle;PROVINCIENAAM;tekst;Provinciename;Nee;Drenthe, Noord-Holland, Zuid-Holland, Utrecht;12;0%;Geografiedimensie
+alle;GEMEENTENUMMER;tekst;Gemeentecode (CBS);Nee;0106, 0114, 0363, 0599;52;0%;Geografiedimensiesleutel
+alle;GEMEENTENAAM;tekst;Gemeentenaam;Nee;Assen, Amsterdam, Rotterdam, Utrecht;52;0%;Geografiedimensie
+alle;SOORT_INSTELLING;tekst;Instellingstype;Nee;reguliere inst.;1;0%;Instellingsdimensie
+alle;TYPE_HOGER_ONDERWIJS;tekst;Opleidingsniveau;Nee;associate degree, bachelor, master;3;0%;Opleidingsdimensie
+alle;INSTELLINGSCODE_ACTUEEL;tekst;Actuele instellingscode (BRIN);Nee;25BE, 31FR, 22OJ;36;0%;Instellingsdimensiesleutel
+alle;INSTELLINGSNAAM_ACTUEEL;tekst;Actuele instellingsnaam;Nee;Hanzehogeschool Groningen, NHL Stenden Hogeschool;36;0%;Instellingsdimensie
+alle;ONDERDEEL;tekst;ISCED-sector / domein;Nee;TECHNIEK, ONDERWIJS, ECONOMIE, GEZONDHEIDSZORG;8;0%;Opleidingsdimensie
+alle;SUBONDERDEEL;tekst;Subdomein;Nee;n.v.t. (techniek), leraar basisonderwijs, n.v.t. (economie);16;0%;Opleidingsdimensie
+alle;AANTAL_INSCHRIJVINGEN;numeriek;Aantal inschrijvingen (ook -1 voor onderdrukte waarden);Nee;5, 23, 53, 57, 111, -1;Continu;0%;Meetwaarde
+3a (geslacht);GESLACHT;tekst;Geslacht;Nee;MAN, VROUW;2;0%;Demografiedimensie
+3b (niveau);OPLEIDINGSCODE_ACTUEEL;numeriek;CROHO-opleidingscode;Nee;34267, 34808, 80009, 80040;~247;0%;Opleidingsdimensiesleutel
+3b (niveau);OPLEIDINGSNAAM_ACTUEEL;tekst;Opleidingsnaam;Nee;B Elektrotechniek, B Opleiding tot leraar Basisonderwijs, Ad Tourism Management;~247;0%;Opleidingsdimensie
+3c (oplvorm);OPLEIDINGSVORM;tekst;Opleidingsvorm;Nee;VT (voltijd), DT (deeltijd), DU (duaal);3;0%;Opleidingsdimensie

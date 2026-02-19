@@ -1,0 +1,19 @@
+Bron;Veld;Type;Beschrijving;Null mogelijk;Voorbeeldwaarden;Kardinaliteit;Null %;Verwachte rol
+alle;SOORT HO;tekst;Type HO (kleine letters: hbo/wo);Nee;hbo, wo;2;0%;Scopefilter
+alle;BEVOEGD GEZAG NUMMER;tekst;Bevoegd-gezagnummer;Nee;24832, 28901, 29615;~50;0%;Bestuurssleutel
+alle;BEVOEGD GEZAG NAAM;tekst;Naam bevoegd gezag;Nee;Stichting Codarts, Stichting HKU;~50;0%;Bestuursdimensie
+alle;STRAATNAAM;tekst;Straatnaam (bezoekadres);Nee;Kruisplein, Nieuwekade, Fred. Roeskestraat;~50;0%;Adresattribuut
+alle;HUISNUMMER-TOEVOEGING;tekst;Huisnummer en toevoeging;Nee;26, 1, 96;~50;0%;Adresattribuut
+alle;POSTCODE;tekst;Postcode (bezoekadres);Nee;3012 CC, 3511 RV, 1076 ED;~50;0%;Adresattribuut
+alle;PLAATSNAAM;tekst;Plaatsnaam (bezoekadres, hoofdletters);Nee;ROTTERDAM, UTRECHT, AMSTERDAM;~50;0%;Geografiedimensie
+alle;GEMEENTENUMMER;tekst;Gemeentecode (CBS, met voorloopnullen);Nee;0599, 0344, 0363;~50;0%;Geografiedimensiesleutel
+alle;GEMEENTENAAM;tekst;Gemeentenaam (hoofdletters);Nee;ROTTERDAM, UTRECHT, AMSTERDAM;~50;0%;Geografiedimensie
+alle;DENOMINATIE;tekst;Denominatie;Nee;Algemeen bijzonder, Openbaar, Protestants-Christelijk;~5;0%;Instellingsattribuut
+alle;TELEFOONNUMMER;tekst;Telefoonnummer;Ja;0102171100, 0302091509;~50;Onbekend;Contactinformatie
+alle;INTERNETADRES;tekst;Website;Ja;www.codarts.nl, www.hku.nl;~50;Onbekend;Contactinformatie
+alle;STRAATNAAM CORRESPONDENTIEADRES;tekst;Straatnaam (correspondentieadres);Ja;Kruisplein, Postbus, Fred. Roeskestraat;~50;Onbekend;Adresattribuut
+alle;HUISNUMMER-TOEVOEGING CORRESPONDENTIEADRES;tekst;Huisnummer (correspondentieadres);Ja;26, 1520, 96;~50;Onbekend;Adresattribuut
+alle;POSTCODE CORRESPONDENTIEADRES;tekst;Postcode (correspondentieadres);Ja;3012 CC, 3500 BM, 1076 ED;~50;Onbekend;Adresattribuut
+alle;PLAATSNAAM CORRESPONDENTIEADRES;tekst;Plaatsnaam (correspondentieadres);Ja;ROTTERDAM, UTRECHT, AMSTERDAM;~50;Onbekend;Adresattribuut
+alle;ADMINISTRATIEKANTOORNUMMER;tekst;Administratiekantoornummer;Ja;164, 639;~50;Onbekend;Kruisreferentie
+alle;KVK-NUMMER;tekst;KVK-nummer;Ja;41126801, 41178974;~50;Onbekend;Juridisch identificatienummer
