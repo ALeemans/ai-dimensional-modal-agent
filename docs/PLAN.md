@@ -44,7 +44,7 @@ Een AI-agent ontwikkelen die vanuit elke gegevensbron (API, database, platte bes
 
 1.3. **Een metagegevenscatalogus aanmaken** met gestructureerde output per dataset
 
-1.4. **Agentinstructie schrijven:** `01-metagegevensverzameling.md` — Hoe een gegevensbron te profileren
+1.4. **Agentinstructie schrijven:** `01-metadata-collection.md` — Hoe een gegevensbron te profileren
 
 ---
 
@@ -62,7 +62,7 @@ Een AI-agent ontwikkelen die vanuit elke gegevensbron (API, database, platte bes
 
 2.4. **Relaties tussen entiteiten documenteren**
 
-2.5. **Agentinstructie schrijven:** `02-bronanalyse.md` — Hoe bedrijfskundige betekenis af te leiden uit metagegevens
+2.5. **Agentinstructie schrijven:** `02-source-analysis.md` — Hoe bedrijfskundige betekenis af te leiden uit metagegevens
 
 ---
 
@@ -82,7 +82,7 @@ Een AI-agent ontwikkelen die vanuit elke gegevensbron (API, database, platte bes
 
 3.5. **Gedownloade data verifiëren** (rijtellingen, bestandsintegriteit, kolomnamen)
 
-3.6. **Agentinstructie schrijven:** `03-gegevensextractie.md` — Hoe brongegevens reproduceerbaar te downloaden
+3.6. **Agentinstructie schrijven:** `03-data-extraction.md` — Hoe brongegevens reproduceerbaar te downloaden
 
 ---
 
@@ -112,7 +112,7 @@ Een AI-agent ontwikkelen die vanuit elke gegevensbron (API, database, platte bes
 
 4.6. **Het sterrenmodel tekenen**
 
-4.7. **Agentinstructie schrijven:** `04-dimensioneel-ontwerp.md` — Hoe feiten en dimensies te ontwerpen vanuit geanalyseerde bronnen
+4.7. **Agentinstructie schrijven:** `04-dimensionalmodel-design.md` — Hoe feiten en dimensies te ontwerpen vanuit geanalyseerde bronnen
 
 ---
 
