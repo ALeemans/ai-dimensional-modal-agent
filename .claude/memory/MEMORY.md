@@ -61,4 +61,10 @@
 - Fase 1.3 ✅ — Metadata catalog complete (`duo-hbo-metadata-catalog.md` — 8 datasets, 16 relationships, 13 data quality notes)
 - Fase 1.4 ✅ — Language rules documented in `agent/instructions/01-metadata-collection.md`
 - **Fase 1 — COMPLETE ✅**
-- Fase 2 → Next — Logical DWH design (star schema)
+- Fase 2.1–2.4 ✅ — Business analysis complete (`docs/fase2-bronanalyse.md` — 10 entities, 3 fact candidates, 7 dimension candidates)
+- Fase 2.5 ✅ — Instruction file written (`agent/instructions/02-source-analysis.md`)
+- **Fase 2 — COMPLETE ✅**
+- Fase 3 → Next — Gegevensextractie (data extraction script, `data/raw/`)
+- Fase 4 → — Dimensional model design (star schema: fact tables + dimensions)
+- Fase 5 → — Model validation
+- Fase 6 → — Agent assembly

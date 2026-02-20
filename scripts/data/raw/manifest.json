@@ -1,0 +1,195 @@
+{
+  "extracted_at": "2026-02-20T10:06:23.691355",
+  "datasets": {
+    "p01hoinges": {
+      "resources": [
+        {
+          "filename": "ingeschrevenengeslhbo.csv",
+          "url": "https://onderwijsdata.duo.nl/dataset/978f900e-088e-4d27-804f-2d897c161c70/resource/c454d7e1-b9b1-4460-b9ff-55938c85788e/download/ingeschrevenengeslhbo.csv",
+          "downloaded_at": "2026-02-20T10:06:31.370858",
+          "rows": 4833,
+          "size_bytes": 761760,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "filename": "ingeschrevenenhbo.csv",
+          "url": "https://onderwijsdata.duo.nl/dataset/978f900e-088e-4d27-804f-2d897c161c70/resource/7761bd6a-b87b-4389-a943-829872116f92/download/ingeschrevenenhbo.csv",
+          "downloaded_at": "2026-02-20T10:06:33.608299",
+          "rows": 7170,
+          "size_bytes": 1337129,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "filename": "ingeschrevenenoplvhbo.csv",
+          "url": "https://onderwijsdata.duo.nl/dataset/978f900e-088e-4d27-804f-2d897c161c70/resource/ef11448c-e8c3-4afe-899f-67f90a3c3be0/download/ingeschrevenenoplvhbo.csv",
+          "downloaded_at": "2026-02-20T10:06:34.611539",
+          "rows": 3889,
+          "size_bytes": 601348,
+          "status": "ok",
+          "warnings": []
+        }
+      ]
+    },
+    "p02ho1ejrs": {
+      "resources": [
+        {
+          "filename": "eerstejaarsingeschrevenengeslhbo.csv",
+          "url": "https://onderwijsdata.duo.nl/dataset/eec8c988-66a6-4b06-9bcf-4038d016f2a1/resource/5338f63e-af6a-434c-8086-c4584767c3fc/download/eerstejaarsingeschrevenengeslhbo.csv",
+          "downloaded_at": "2026-02-20T10:06:35.778710",
+          "rows": 3407,
+          "size_bytes": 534454,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "filename": "eerstejaarsingeschrevenenhbo.csv",
+          "url": "https://onderwijsdata.duo.nl/dataset/eec8c988-66a6-4b06-9bcf-4038d016f2a1/resource/0f594842-cca9-4f17-8cbc-e502dba408b4/download/eerstejaarsingeschrevenenhbo.csv",
+          "downloaded_at": "2026-02-20T10:06:37.910374",
+          "rows": 5834,
+          "size_bytes": 1081902,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "filename": "eerstejaarsingeschrevenenoplvhbo.csv",
+          "url": "https://onderwijsdata.duo.nl/dataset/eec8c988-66a6-4b06-9bcf-4038d016f2a1/resource/2ddccc54-ae20-45dd-ba0a-5af9a69ef713/download/eerstejaarsingeschrevenenoplvhbo.csv",
+          "downloaded_at": "2026-02-20T10:06:38.676896",
+          "rows": 2908,
+          "size_bytes": 448027,
+          "status": "ok",
+          "warnings": []
+        }
+      ]
+    },
+    "p03hoinschr": {
+      "resources": [
+        {
+          "filename": "inschrijvingengeslhbo.csv",
+          "url": "https://onderwijsdata.duo.nl/dataset/3638ab93-ed1f-4df2-ad2b-164e31b792bb/resource/50c36789-8073-41ad-88bd-5dc178d091cb/download/inschrijvingengeslhbo.csv",
+          "downloaded_at": "2026-02-20T10:06:40.271645",
+          "rows": 4835,
+          "size_bytes": 762076,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "filename": "inschrijvingenhbo.csv",
+          "url": "https://onderwijsdata.duo.nl/dataset/3638ab93-ed1f-4df2-ad2b-164e31b792bb/resource/9ec2ffc8-6121-485f-acda-1838d8c44a93/download/inschrijvingenhbo.csv",
+          "downloaded_at": "2026-02-20T10:06:42.702050",
+          "rows": 7174,
+          "size_bytes": 1337994,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "filename": "inschrijvingenoplvhbo.csv",
+          "url": "https://onderwijsdata.duo.nl/dataset/3638ab93-ed1f-4df2-ad2b-164e31b792bb/resource/6a012a57-4664-4e6c-bd4a-82c7e3f587cd/download/inschrijvingenoplvhbo.csv",
+          "downloaded_at": "2026-02-20T10:06:44.038313",
+          "rows": 3891,
+          "size_bytes": 601675,
+          "status": "ok",
+          "warnings": []
+        }
+      ]
+    },
+    "p04hogdipl": {
+      "resources": [
+        {
+          "filename": "gediplomeerdengeslhbo.csv",
+          "url": "https://onderwijsdata.duo.nl/dataset/169aef42-1588-4602-b1ac-d06616db788b/resource/e7b2aabd-1c10-4990-a33c-bf558f02ed12/download/gediplomeerdengeslhbo.csv",
+          "downloaded_at": "2026-02-20T10:06:45.441952",
+          "rows": 4445,
+          "size_bytes": 715813,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "filename": "gediplomeerdenhbo.csv",
+          "url": "https://onderwijsdata.duo.nl/dataset/169aef42-1588-4602-b1ac-d06616db788b/resource/0488fa97-d0ba-4285-9569-19bf26050204/download/gediplomeerdenhbo.csv",
+          "downloaded_at": "2026-02-20T10:06:47.880829",
+          "rows": 6813,
+          "size_bytes": 1293976,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "filename": "gediplomeerdenoplvhbo.csv",
+          "url": "https://onderwijsdata.duo.nl/dataset/169aef42-1588-4602-b1ac-d06616db788b/resource/3f2541ca-6acd-4b98-ac08-7b68d05bb06a/download/gediplomeerdenoplvhbo.csv",
+          "downloaded_at": "2026-02-20T10:06:48.943620",
+          "rows": 3591,
+          "size_bytes": 567874,
+          "status": "ok",
+          "warnings": []
+        }
+      ]
+    },
+    "ho_opleidingsoverzicht": {
+      "resources": [
+        {
+          "filename": "ho_opleidingsoverzicht.csv",
+          "url": "https://onderwijsdata.duo.nl/dataset/7c0686f4-b5c2-418e-8e44-7be0057d8084/resource/ffffa7ad-e6a2-4ba7-9fc2-a09df4128555/download/ho_opleidingsoverzicht.csv",
+          "downloaded_at": "2026-02-20T10:06:55.461405",
+          "rows": 7063,
+          "size_bytes": 3719616,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "filename": "ba907450-e4c4-44aa-93ed-6b177eeade88",
+          "url": "https://onderwijsdata.duo.nl/datastore/dump/ba907450-e4c4-44aa-93ed-6b177eeade88",
+          "downloaded_at": "2026-02-20T10:06:55.614421",
+          "rows": 1,
+          "size_bytes": 119,
+          "status": "ok",
+          "warnings": []
+        }
+      ]
+    },
+    "overzicht-erkenningen-ho": {
+      "resources": [
+        {
+          "filename": "ho_erkenningen_rio.csv",
+          "url": "https://onderwijsdata.duo.nl/dataset/bb07cc6e-00fe-4100-9528-a0c5fd27d2fb/resource/28a4d89b-c223-4dbc-8deb-9d02a533f215/download/ho_erkenningen_rio.csv",
+          "downloaded_at": "2026-02-20T10:07:01.544944",
+          "rows": 6747,
+          "size_bytes": 3126376,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "filename": "d22f70ca-7d8a-4f97-9c65-73584c1c841d",
+          "url": "https://onderwijsdata.duo.nl/datastore/dump/d22f70ca-7d8a-4f97-9c65-73584c1c841d",
+          "downloaded_at": "2026-02-20T10:07:01.708385",
+          "rows": 1,
+          "size_bytes": 115,
+          "status": "ok",
+          "warnings": []
+        }
+      ]
+    },
+    "adressen": {
+      "resources": [
+        {
+          "filename": "01.-instellingen-hbo-en-wo.csv",
+          "url": "https://duo.nl/open_onderwijsdata/images/01.-instellingen-hbo-en-wo.csv",
+          "downloaded_at": "2026-02-20T10:07:02.075655",
+          "rows": 54,
+          "size_bytes": 15811,
+          "status": "ok",
+          "warnings": []
+        },
+        {
+          "filename": "03.-bevoegde-gezagen-hbo-en-wo.csv",
+          "url": "https://duo.nl/open_onderwijsdata/images/03.-bevoegde-gezagen-hbo-en-wo.csv",
+          "downloaded_at": "2026-02-20T10:07:02.132234",
+          "rows": 54,
+          "size_bytes": 9929,
+          "status": "ok",
+          "warnings": []
+        }
+      ]
+    }
+  }
+}
