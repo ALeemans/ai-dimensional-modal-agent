@@ -1,22 +1,64 @@
-# Projectgeheugen: AI Dimensioneel Modelleeringsagent
+# AI Dimensional Modeling Agent — Project Memory
 
-## Taalvereiste
-The DUO project needs to be in Dutch since it contains Dutch data, the instructions, and Memo can be in English. Alle projectbestanden, documentatie, datasets en beschrijvingen moeten in het **Nederlands** zijn.
-De gebruiker (Anne Leemans) communiceert in het Engels met de agent, maar alle output moet Nederlands zijn.
+> This file is tracked in git and is the canonical memory for this project.
+> It is available across machines. Always read this file at the start of a session.
 
-## Projectoverzicht
-- Doel: AI-agent bouwen die dimensionele modellen (sterrenmodellen) genereert vanuit brondata
-- Pilotdataset: DUO Open Onderwijsdata HBO
-- Methode: Kimball-methodologie
-- Maplocatie: d:\HogeschoolUtrecht\GithubRepos\ai-dimensional-modal-agent
+## Language Rules
 
-## Bestandsconventies
-- CSV-scheidingsteken: `;` (puntkomma)
-- Codering: `utf-8-sig` (UTF-8 met BOM — voor Excel)
-- Kolomkoppen in CSV: Nederlands
+**Communication:** English — Claude and user discuss, plan, and review in English.
 
-## Voortgang
-- Fase 1.1 ✅ — Datasetinventarisatie voltooid (8 datasets)
-- Fase 1.2 ✅ — Alle 8 datasets geprofiled (veldniveau)
-- Fase 1.3 → In uitvoering — Metagegevenscatalogus (duo-hbo-metadata-catalog.md)
-- Fase 1.4 → Nog te doen — Agentinstructie 01-metagegevensverzameling.md
+**Project content:** Use the project language for all artifacts and deliverables.
+- Project language is determined per project based on the target audience.
+- DUO HBO pilot: **Dutch** 🇳🇱 — all output files, metadata, documentation, and data in Dutch.
+
+### File language reference (DUO HBO pilot)
+
+| File / Type | Language | Reason |
+|---|---|---|
+| `agent/instructions/*.md` | English | Reusable process documentation |
+| `.claude/memory/MEMORY.md` | English | Agent memory / communication |
+| `README.md` | Dutch | Deliverable for Dutch stakeholders |
+| `docs/PLAN.md` | Dutch | Project plan for Dutch stakeholders |
+| `data/metadata/*.csv` | Dutch | Data artifacts |
+| `data/metadata/*-metadata-catalog.md` | Dutch | Data artifacts |
+| CSV column headers | Dutch | Data artifacts |
+| Field descriptions, data quality notes | Dutch | Data artifacts |
+
+---
+
+## Project Overview
+
+- **Goal:** Build an AI agent that generates dimensional models (star schemas) from source data
+- **Pilot dataset:** DUO Open Onderwijsdata HBO
+- **Method:** Kimball methodology
+- **Repo:** `d:\HogeschoolUtrecht\GithubRepos\ai-dimensional-modal-agent`
+
+## DUO Dataset Conventions
+
+- CSV separator: `;` (semicolon)
+- Encoding: `utf-8-sig` (UTF-8 with BOM — for Excel compatibility)
+- Gender field: `MAN` / `VROUW` (text)
+- Privacy suppression: `-1` for counts < 5 (not 4 as DUO documentation suggests)
+- Municipality codes: stored as text with leading zeros (e.g. `"0106"`)
+
+## Dutch Dimensional Modeling Terminology
+
+| Dutch | English |
+|---|---|
+| sterrenmodel | star schema |
+| feitentabel | fact table |
+| dimensietabel | dimension table |
+| meetwaarde | measure |
+| granulariteit | grain |
+| langzaam veranderende dimensie | slowly changing dimension |
+| peildatum | reference date |
+| academisch jaar | academic year |
+
+## Phase Progress
+
+- Fase 1.1 ✅ — Dataset inventory complete (8 datasets)
+- Fase 1.2 ✅ — All 8 datasets profiled at field level
+- Fase 1.3 ✅ — Metadata catalog complete (`duo-hbo-metadata-catalog.md` — 8 datasets, 16 relationships, 13 data quality notes)
+- Fase 1.4 ✅ — Language rules documented in `agent/instructions/01-metadata-collection.md`
+- **Fase 1 — COMPLETE ✅**
+- Fase 2 → Next — Logical DWH design (star schema)

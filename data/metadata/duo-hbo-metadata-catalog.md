@@ -1,505 +1,505 @@
-# Metadata Catalog: DUO Open Onderwijsdata — HBO
+# Metagegevenscatalogus: DUO Open Onderwijsdata — HBO
 
-**Author:** Anne Leemans, in collaboration with Claude Sonnet 4.6
-**Date:** 2026-02-19
-**Source:** DUO Open Onderwijsdata (https://onderwijsdata.duo.nl)
+**Auteur:** Anne Leemans, in samenwerking met Claude Sonnet 4.6
+**Datum:** 2026-02-19
+**Bron:** DUO Open Onderwijsdata (https://onderwijsdata.duo.nl)
 
 ---
 
-## Dataset Inventory
+## Datasetinventarisatie
 
-| # | Dataset ID | Name | Description | Resources (HBO) | Row Count (HBO total) | Grain | Update Freq | History |
+| # | Dataset-ID | Naam | Beschrijving | Bronbestanden (HBO) | Aantal rijen (HBO totaal) | Granulariteit | Updatefrequentie | Historische diepte |
 |---|-----------|------|-------------|-----------------|----------------------|-------|-------------|---------|
-| 1 | p01hoinges | Ingeschrevenen HBO | Enrolled students in HBO, by geography, institution, program, and demographics | 3 CSVs (gender, level, education form) | ~15,892 | Students per institution/program/year | Annual (Oct 1) | Last 5 academic years |
-| 2 | p02ho1ejrs | Eerstejaars ingeschrevenen HBO | First-year enrolled students in HBO | 3 CSVs (gender, level, education form) | ~12,149 | First-year students per institution/program/year | Annual (Oct 1) | Last 5 academic years |
-| 3 | p03hoinschr | Inschrijvingen HBO | Enrollments (inscriptions) in HBO | 3 CSVs (gender, level, education form) | ~15,900 | Enrollments per institution/program/year | Annual (Oct 1) | Last 5 academic years |
-| 4 | p04hogdipl | Gediplomeerden HBO | Graduates from HBO programs | 3 CSVs (gender, level, education form) | ~14,849 | Graduates per institution/program/year | Annual (Oct 1) | Last 5 academic years |
-| 5 | ho_opleidingsoverzicht | HO Opleidingsoverzicht | Overview of all funded HO programs from RIO | 1 CSV | 7,090 | One row per program/location | Daily | Current |
-| 6 | overzicht-erkenningen-ho | Overzicht Erkenningen HO | OCW-recognized HO institutions and programs | 1 CSV + PDF docs | 6,747 | One row per accreditation | Daily | Current |
-| 7 | — | Adressen hogescholen en universiteiten | Addresses of HBO institutions and universities | 1 CSV + 1 XLSX | Small (~50) | One row per institution (main campus) | Monthly | Current |
-| 8 | — | Adressen besturen | Addresses of governing boards | 1 CSV + 1 XLSX | Small (~50) | One row per governing board | Monthly | Current |
+| 1 | p01hoinges | Ingeschrevenen HBO | Ingeschrevenen in HBO, naar geografie, instelling, opleiding en demografische kenmerken | 3 CSV's (geslacht, niveau, opleidingsvorm) | ~15.892 | Studenten per instelling/opleiding/jaar | Jaarlijks (1 oktober) | Laatste 5 academische jaren |
+| 2 | p02ho1ejrs | Eerstejaars ingeschrevenen HBO | Eerstejaars ingeschrevenen in HBO | 3 CSV's (geslacht, niveau, opleidingsvorm) | ~12.149 | Eerstejaars per instelling/opleiding/jaar | Jaarlijks (1 oktober) | Laatste 5 academische jaren |
+| 3 | p03hoinschr | Inschrijvingen HBO | Inschrijvingen in HBO | 3 CSV's (geslacht, niveau, opleidingsvorm) | ~15.900 | Inschrijvingen per instelling/opleiding/jaar | Jaarlijks (1 oktober) | Laatste 5 academische jaren |
+| 4 | p04hogdipl | Gediplomeerden HBO | Gediplomeerden van HBO-programma's | 3 CSV's (geslacht, niveau, opleidingsvorm) | ~14.849 | Gediplomeerden per instelling/opleiding/jaar | Jaarlijks (1 oktober) | Laatste 5 academische jaren |
+| 5 | ho_opleidingsoverzicht | HO Opleidingsoverzicht | Overzicht van alle bekostigde HO-programma's uit RIO | 1 CSV | 7.090 | Een rij per opleiding/locatie | Dagelijks | Huidig |
+| 6 | overzicht-erkenningen-ho | Overzicht Erkenningen HO | Door OCW erkende HO-instellingen en -programma's | 1 CSV + PDF-documenten | 6.747 | Een rij per erkenning | Dagelijks | Huidig |
+| 7 | — | Adressen hogescholen en universiteiten | Adressen van HBO-instellingen en universiteiten | 1 CSV + 1 XLSX | Klein (~50) | Een rij per instelling (hoofdvestiging) | Maandelijks | Huidig |
+| 8 | — | Adressen besturen | Adressen van bevoegde gezagen | 1 CSV + 1 XLSX | Klein (~50) | Een rij per bevoegd gezag | Maandelijks | Huidig |
 
 ---
 
-## Resource Detail: HBO-Specific Files
+## Resourcedetails: HBO-specifieke bestanden
 
 ### p01hoinges — Ingeschrevenen HBO
 
-| # | Resource | File | Records | Size | Description |
+| # | Resource | Bestand | Records | Grootte | Beschrijving |
 |---|----------|------|---------|------|-------------|
-| 1a | HBO incl. geslacht | ingeschrevenengeslhbo.csv | 4,833 | 762 KB | Enrolled students by geography, institution, program, gender |
-| 1b | HBO niveau opleiding | ingeschrevenenhbo.csv | 7,170 | 1.34 MB | Enrolled students by geography, institution, program level |
-| 1c | HBO incl. opleidingsvorm | ingeschrevenenoplvhbo.csv | 3,889 | 601 KB | Enrolled students by geography, institution, education form (VT/DT/DU) |
+| 1a | HBO incl. geslacht | ingeschrevenengeslhbo.csv | 4.833 | 762 KB | Ingeschrevenen naar geografie, instelling, opleiding, geslacht |
+| 1b | HBO niveau opleiding | ingeschrevenenhbo.csv | 7.170 | 1,34 MB | Ingeschrevenen naar geografie, instelling, opleidingsniveau |
+| 1c | HBO incl. opleidingsvorm | ingeschrevenenoplvhbo.csv | 3.889 | 601 KB | Ingeschrevenen naar geografie, instelling, opleidingsvorm (VT/DT/DU) |
 
 ### p02ho1ejrs — Eerstejaars Ingeschrevenen HBO
 
-| # | Resource | File | Records | Size | Description |
+| # | Resource | Bestand | Records | Grootte | Beschrijving |
 |---|----------|------|---------|------|-------------|
-| 2a | HBO incl. geslacht | 1ejrsingeschrevenengeslhbo.csv | 3,407 | 534 KB | First-year students by geography, institution, program, gender |
-| 2b | HBO niveau opleiding | 1ejrsingeschrevenenhbo.csv | 5,834 | 1.08 MB | First-year students by geography, institution, program level |
-| 2c | HBO incl. opleidingsvorm | 1ejrsingeschrevenenoplvhbo.csv | 2,908 | 448 KB | First-year students by geography, institution, education form |
+| 2a | HBO incl. geslacht | 1ejrsingeschrevenengeslhbo.csv | 3.407 | 534 KB | Eerstejaars naar geografie, instelling, opleiding, geslacht |
+| 2b | HBO niveau opleiding | 1ejrsingeschrevenenhbo.csv | 5.834 | 1,08 MB | Eerstejaars naar geografie, instelling, opleidingsniveau |
+| 2c | HBO incl. opleidingsvorm | 1ejrsingeschrevenenoplvhbo.csv | 2.908 | 448 KB | Eerstejaars naar geografie, instelling, opleidingsvorm |
 
 ### p03hoinschr — Inschrijvingen HBO
 
-| # | Resource | File | Records | Size | Description |
+| # | Resource | Bestand | Records | Grootte | Beschrijving |
 |---|----------|------|---------|------|-------------|
-| 3a | HBO incl. geslacht | inschrijvingengeslhbo.csv | 4,835 | ~762 KB | Enrollments by geography, institution, program, gender |
-| 3b | HBO niveau opleiding | inschrijvingenhbo.csv | 7,174 | ~1.34 MB | Enrollments by geography, institution, program level |
-| 3c | HBO incl. opleidingsvorm | inschrijvingenoplvhbo.csv | 3,891 | ~601 KB | Enrollments by geography, institution, education form |
+| 3a | HBO incl. geslacht | inschrijvingengeslhbo.csv | 4.835 | ~762 KB | Inschrijvingen naar geografie, instelling, opleiding, geslacht |
+| 3b | HBO niveau opleiding | inschrijvingenhbo.csv | 7.174 | ~1,34 MB | Inschrijvingen naar geografie, instelling, opleidingsniveau |
+| 3c | HBO incl. opleidingsvorm | inschrijvingenoplvhbo.csv | 3.891 | ~601 KB | Inschrijvingen naar geografie, instelling, opleidingsvorm |
 
 ### p04hogdipl — Gediplomeerden HBO
 
-| # | Resource | File | Records | Size | Description |
+| # | Resource | Bestand | Records | Grootte | Beschrijving |
 |---|----------|------|---------|------|-------------|
-| 4a | HBO incl. geslacht | gediplomeerdengeslhbo.csv | 4,445 | 716 KB | Graduates by geography, institution, program, gender |
-| 4b | HBO niveau opleiding | gediplomeerdenhbo.csv | 6,813 | 1.3 MB | Graduates by geography, institution, program level |
-| 4c | HBO incl. opleidingsvorm | gediplomeerdenoplvhbo.csv | 3,591 | 568 KB | Graduates by geography, institution, education form |
+| 4a | HBO incl. geslacht | gediplomeerdengeslhbo.csv | 4.445 | 716 KB | Gediplomeerden naar geografie, instelling, opleiding, geslacht |
+| 4b | HBO niveau opleiding | gediplomeerdenhbo.csv | 6.813 | 1,3 MB | Gediplomeerden naar geografie, instelling, opleidingsniveau |
+| 4c | HBO incl. opleidingsvorm | gediplomeerdenoplvhbo.csv | 3.591 | 568 KB | Gediplomeerden naar geografie, instelling, opleidingsvorm |
 
-### Reference Datasets
+### Referentiedatasets
 
-| # | Resource | File | Records | Description |
+| # | Resource | Bestand | Records | Beschrijving |
 |---|----------|------|---------|-------------|
-| 5 | HO Opleidingsoverzicht | ho_opleidingsoverzicht.csv | 7,090 | All funded HO programs from RIO register |
-| 6 | Erkenningen HO | ho_erkenningen_rio.csv | 6,747 | OCW-recognized HO accreditations |
-| 7 | Adressen instellingen | Adressen hogescholen en universiteiten.csv | ~50 | Institution main campus addresses |
-| 8 | Adressen besturen | Adressen besturen hogescholen en universiteiten.csv | ~50 | Governing board addresses |
+| 5 | HO Opleidingsoverzicht | ho_opleidingsoverzicht.csv | 7.090 | Alle bekostigde HO-programma's uit RIO-register |
+| 6 | Erkenningen HO | ho_erkenningen_rio.csv | 6.747 | Door OCW erkende HO-erkenningen |
+| 7 | Adressen instellingen | Adressen hogescholen en universiteiten.csv | ~50 | Adressen hoofdvestiging instellingen |
+| 8 | Adressen besturen | Adressen besturen hogescholen en universiteiten.csv | ~50 | Adressen bevoegde gezagen |
 
 ---
 
-## General Notes
+## Algemene opmerkingen
 
-- **License:** All datasets are CC-BY (Creative Commons Attribution)
-- **Privacy filter:** Student counts < 5 are displayed as 4 (GDPR compliance)
-- **Scope:** Datasets p01–p04 cover both HBO and WO; only HBO resources are in scope for this pilot
-- **Reference date:** Student data is measured on October 1st of each academic year
-- **Source system:** "Één Cijfer Hoger Onderwijs" (One Number Higher Education)
+- **Licentie:** Alle datasets zijn CC-BY (Creative Commons Naamsvermelding)
+- **Privacyfilter:** Studentenaantallen < 5 worden weergegeven als -1 (AVG-naleving)
+- **Bereik:** Datasets p01–p04 omvatten zowel HBO als WO; alleen HBO-bronbestanden zijn in scope voor deze pilot
+- **Peildatum:** Studentengegevens worden gemeten op 1 oktober van elk academisch jaar
+- **Bronsysteem:** "Één Cijfer Hoger Onderwijs"
 - **Contact:** informatieproducten@duo.nl / gegevensmagazijn@duo.nl
-- **API portal:** https://onderwijsdata.duo.nl/datasets/
+- **API-portaal:** https://onderwijsdata.duo.nl/datasets/
 
 ---
 
-## Field Metadata
+## Veldmetadata
 
 ### Dataset: p01hoinges — Ingeschrevenen HBO
 
-All 3 HBO resources share a **common core** of 10 fields plus one resource-specific field each. The measure field is always `AANTAL_INGESCHREVENEN`.
+Alle 3 HBO-bronbestanden delen een **gemeenschappelijke kern** van 10 velden plus één bronbestand-specifiek veld elk. Het meetveld is altijd `AANTAL_INGESCHREVENEN`.
 
-**Source data separator:** `,` (comma) — note: DUO uses comma-separated CSVs
+**Brondatascheidingsteken:** `,` (komma) — opmerking: DUO gebruikt komma-gescheiden CSV's
 
-#### Common Fields (all 3 resources)
+#### Gemeenschappelijke velden (alle 3 bronbestanden)
 
-| # | Field | Type | Description | Nullable | Sample Values | Cardinality | Null % | Role Guess |
+| # | Veld | Type | Beschrijving | Null mogelijk | Voorbeeldwaarden | Kardinaliteit | Null % | Verwachte rol |
 |---|-------|------|-------------|----------|---------------|-------------|--------|------------|
-| 1 | STUDIEJAAR | numeric | Academic year (reference date Oct 1) | No | 2020, 2021, 2022, 2023, 2024 | 5 | 0% | Date/time dimension key |
-| 2 | PROVINCIENAAM | text | Province name | No | Drenthe, Noord-Holland, Zuid-Holland, Utrecht | 12 | 0% | Geography dimension |
-| 3 | GEMEENTENUMMER | text | Municipality code (CBS) | No | 0106, 0114, 0363, 0599 | 52 | 0% | Geography dimension key |
-| 4 | GEMEENTENAAM | text | Municipality name | No | Assen, Amsterdam, Rotterdam, Utrecht | 52 | 0% | Geography dimension |
-| 5 | SOORT_INSTELLING | text | Institution type | No | reguliere inst. | 1 | 0% | Institution dimension |
-| 6 | TYPE_HOGER_ONDERWIJS | text | Higher education level | No | associate degree, bachelor, master | 3 | 0% | Program dimension |
-| 7 | INSTELLINGSCODE_ACTUEEL | text | Current institution code (BRIN) | No | 25DW, 28DN, 22OJ, 30GB | 36 | 0% | Institution dimension key |
-| 8 | INSTELLINGSNAAM_ACTUEEL | text | Current institution name | No | Hogeschool Utrecht, Hogeschool van Amsterdam | 36 | 0% | Institution dimension |
-| 9 | ONDERDEEL | text | ISCED sector / domain | No | TECHNIEK, ECONOMIE, ONDERWIJS, GEZONDHEIDSZORG, GEDRAG_EN_MAATSCHAPPIJ, LANDBOUW_EN_NATUURLIJKE_OMGEVING, TAAL_EN_CULTUUR, SECTOROVERSTIJGEND | 8 | 0% | Program dimension |
-| 10 | SUBONDERDEEL | text | Sub-sector / sub-domain | No | leraar basisonderwijs, n.v.t. (techniek), voortgezette kunstopleidingen | 16 | 0% | Program dimension |
-| 11 | AANTAL_INGESCHREVENEN | numeric | Number of enrolled students | No | 5, 50, 163, 5247 (also -1 for suppressed) | Continuous | 0% | **Measure** |
+| 1 | STUDIEJAAR | numeric | Academisch jaar (peildatum 1 oktober) | Nee | 2020, 2021, 2022, 2023, 2024 | 5 | 0% | Tijddimensiesleutel |
+| 2 | PROVINCIENAAM | text | Provincienaam | Nee | Drenthe, Noord-Holland, Zuid-Holland, Utrecht | 12 | 0% | Geografiedimensie |
+| 3 | GEMEENTENUMMER | text | Gemeentecode (CBS) | Nee | 0106, 0114, 0363, 0599 | 52 | 0% | Geografiedimensiesleutel |
+| 4 | GEMEENTENAAM | text | Gemeentenaam | Nee | Assen, Amsterdam, Rotterdam, Utrecht | 52 | 0% | Geografiedimensie |
+| 5 | SOORT_INSTELLING | text | Type instelling | Nee | reguliere inst. | 1 | 0% | Instellingsdimensie |
+| 6 | TYPE_HOGER_ONDERWIJS | text | Hoger onderwijsniveau | Nee | associate degree, bachelor, master | 3 | 0% | Opleidingsdimensie |
+| 7 | INSTELLINGSCODE_ACTUEEL | text | Huidige instellingscode (BRIN) | Nee | 25DW, 28DN, 22OJ, 30GB | 36 | 0% | Instellingsdimensiesleutel |
+| 8 | INSTELLINGSNAAM_ACTUEEL | text | Huidige instellingsnaam | Nee | Hogeschool Utrecht, Hogeschool van Amsterdam | 36 | 0% | Instellingsdimensie |
+| 9 | ONDERDEEL | text | ISCED-sector / domein | Nee | TECHNIEK, ECONOMIE, ONDERWIJS, GEZONDHEIDSZORG, GEDRAG_EN_MAATSCHAPPIJ, LANDBOUW_EN_NATUURLIJKE_OMGEVING, TAAL_EN_CULTUUR, SECTOROVERSTIJGEND | 8 | 0% | Opleidingsdimensie |
+| 10 | SUBONDERDEEL | text | Subsector / subdomein | Nee | leraar basisonderwijs, n.v.t. (techniek), voortgezette kunstopleidingen | 16 | 0% | Opleidingsdimensie |
+| 11 | AANTAL_INGESCHREVENEN | numeric | Aantal ingeschrevenen | Nee | 5, 50, 163, 5247 (ook -1 voor onderdrukt) | Continu | 0% | **Meetwaarde** |
 
-#### Resource-Specific Fields
+#### Bronbestand-specifieke velden
 
-| Resource | Extra Field | Type | Description | Sample Values | Cardinality | Role Guess |
+| Bronbestand | Extra veld | Type | Beschrijving | Voorbeeldwaarden | Kardinaliteit | Verwachte rol |
 |----------|-----------|------|-------------|---------------|-------------|------------|
-| 1a (geslacht) | GESLACHT | text | Gender | MAN, VROUW | 2 | Demographic dimension |
-| 1b (niveau) | OPLEIDINGSCODE_ACTUEEL | numeric | CROHO program code | 34267, 34808, 80009 | 247 | Program dimension key |
-| 1b (niveau) | OPLEIDINGSNAAM_ACTUEEL | text | Program name | B Elektrotechniek, M Smart Systems Engineering | 247 | Program dimension |
-| 1c (oplvorm) | OPLEIDINGSVORM | text | Education delivery form | VT (full-time), DT (part-time), DU (dual) | 3 | Program dimension |
+| 1a (geslacht) | GESLACHT | text | Geslacht | MAN, VROUW | 2 | Demografiedimensie |
+| 1b (niveau) | OPLEIDINGSCODE_ACTUEEL | numeric | CROHO-opleidingscode | 34267, 34808, 80009 | 247 | Opleidingsdimensiesleutel |
+| 1b (niveau) | OPLEIDINGSNAAM_ACTUEEL | text | Opleidingsnaam | B Elektrotechniek, M Smart Systems Engineering | 247 | Opleidingsdimensie |
+| 1c (oplvorm) | OPLEIDINGSVORM | text | Vorm van onderwijs | VT (fulltime), DT (deeltijd), DU (duaal) | 3 | Opleidingsdimensie |
 
-#### Resource Summary
+#### Bronbestandoverzicht
 
-| Resource | File | Records | Grain |
+| Bronbestand | Bestand | Records | Granulariteit |
 |----------|------|---------|-------|
-| 1a | ingeschrevenengeslhbo.csv | 4,833 | Students per year × municipality × institution × sector × subsector × education level × gender |
-| 1b | ingeschrevenenhbo.csv | 7,170 | Students per year × municipality × institution × program (CROHO) |
-| 1c | ingeschrevenenoplvhbo.csv | 3,889 | Students per year × municipality × institution × sector × subsector × education level × education form |
+| 1a | ingeschrevenengeslhbo.csv | 4.833 | Studenten per jaar × gemeente × instelling × sector × subsector × onderwijsniveau × geslacht |
+| 1b | ingeschrevenenhbo.csv | 7.170 | Studenten per jaar × gemeente × instelling × opleiding (CROHO) |
+| 1c | ingeschrevenenoplvhbo.csv | 3.889 | Studenten per jaar × gemeente × instelling × sector × subsector × onderwijsniveau × opleidingsvorm |
 
-#### Data Quality Notes (p01hoinges)
+#### Datakwaliteitsopmerkingen (p01hoinges)
 
-- [ ] **Privacy suppression:** `AANTAL_INGESCHREVENEN = -1` occurs in 273 of 4,833 records (5.7%) in resource 1a — these represent counts < 5 suppressed for GDPR compliance. Note: DUO documentation states counts < 5 are displayed as 4, but the actual data uses -1 for suppression. **Needs human verification.**
-- [ ] `SOORT_INSTELLING` has cardinality 1 (always "reguliere inst.") — may be redundant for HBO-only scope, but could differ when combining with WO data
-- [ ] `GEMEENTENUMMER` is stored as text (not integer) — padded with leading zeros (e.g. "0106")
-- [ ] The 3 resources represent different cross-tabulations of the same base data — not independent observations. They cannot be simply joined or unioned
-- [ ] `ONDERDEEL` and `SUBONDERDEEL` use a hierarchical classification; `SUBONDERDEEL` often contains "n.v.t. (sector)" meaning the sector has no further subdivision
+- [ ] **Privacyonderdrukking:** `AANTAL_INGESCHREVENEN = -1` komt voor in 273 van 4.833 records (5,7%) in bronbestand 1a — deze vertegenwoordigen aantallen < 5 onderdrukt voor AVG-naleving. Opmerking: DUO-documentatie stelt dat aantallen < 5 als 4 worden weergegeven, maar de werkelijke gegevens gebruiken -1 voor onderdrukking. **Behoeft mensenhandmatige verificatie.**
+- [ ] `SOORT_INSTELLING` heeft kardinaliteit 1 (altijd "reguliere inst.") — mogelijk overbodig voor HBO-bereik, maar kan verschillen bij combinatie met WO-gegevens
+- [ ] `GEMEENTENUMMER` wordt als tekst opgeslagen (niet als geheel getal) — aangevuld met voorloopnullen (bijv. "0106")
+- [ ] De 3 bronbestanden vertegenwoordigen verschillende kruistabellaties van dezelfde basisgegevens — geen onafhankelijke waarnemingen. Ze kunnen niet eenvoudig worden samengevoegd of gecombineerd
+- [ ] `ONDERDEEL` en `SUBONDERDEEL` gebruiken een hiërarchische indeling; `SUBONDERDEEL` bevat vaak "n.v.t. (sector)" wat betekent dat de sector geen verdere onderverdeling heeft
 
 ---
 
-## Field Metadata
+## Veldmetadata
 
 ### Dataset: p02ho1ejrs — Eerstejaars Ingeschrevenen HBO
 
-Identical structure to p01hoinges. Key difference: measure field is `AANTAL_EERSTEJAARS_INGESCHREVENEN`.
+Identieke structuur als p01hoinges. Belangrijk verschil: meetveld is `AANTAL_EERSTEJAARS_INGESCHREVENEN`.
 
-#### Common Fields (all 3 resources)
+#### Gemeenschappelijke velden (alle 3 bronbestanden)
 
-Same 10 common fields as p01hoinges (STUDIEJAAR, PROVINCIENAAM, GEMEENTENUMMER, GEMEENTENAAM, SOORT_INSTELLING, TYPE_HOGER_ONDERWIJS, INSTELLINGSCODE_ACTUEEL, INSTELLINGSNAAM_ACTUEEL, ONDERDEEL, SUBONDERDEEL) plus:
+Dezelfde 10 gemeenschappelijke velden als p01hoinges (STUDIEJAAR, PROVINCIENAAM, GEMEENTENUMMER, GEMEENTENAAM, SOORT_INSTELLING, TYPE_HOGER_ONDERWIJS, INSTELLINGSCODE_ACTUEEL, INSTELLINGSNAAM_ACTUEEL, ONDERDEEL, SUBONDERDEEL) plus:
 
-| # | Field | Type | Description | Nullable | Sample Values | Cardinality | Null % | Role Guess |
+| # | Veld | Type | Beschrijving | Null mogelijk | Voorbeeldwaarden | Kardinaliteit | Null % | Verwachte rol |
 |---|-------|------|-------------|----------|---------------|-------------|--------|------------|
-| 11 | AANTAL_EERSTEJAARS_INGESCHREVENEN | numeric | Number of first-year enrolled students | No | 8, 14, 36, 67, -1 | Continuous | 0% | **Measure** |
+| 11 | AANTAL_EERSTEJAARS_INGESCHREVENEN | numeric | Aantal eerstejaars ingeschrevenen | Nee | 8, 14, 36, 67, -1 | Continu | 0% | **Meetwaarde** |
 
-#### Resource-Specific Fields
+#### Bronbestand-specifieke velden
 
-| Resource | Extra Field | Type | Description | Sample Values | Cardinality | Role Guess |
+| Bronbestand | Extra veld | Type | Beschrijving | Voorbeeldwaarden | Kardinaliteit | Verwachte rol |
 |----------|-------------|------|-------------|---------------|-------------|------------|
-| 2a (geslacht) | GESLACHT | text | Gender | MAN, VROUW | 2 | Demographic dimension |
-| 2b (niveau) | OPLEIDINGSCODE_ACTUEEL | numeric | CROHO program code | 34808, 80009, 80040 | ~247 | Program dimension key |
-| 2b (niveau) | OPLEIDINGSNAAM_ACTUEEL | text | Program name | B Opleiding tot leraar Basisonderwijs, Ad Hotel Management | ~247 | Program dimension |
-| 2c (oplvorm) | OPLEIDINGSVORM | text | Education delivery form | VT (full-time), DT (part-time), DU (dual) | 3 | Program dimension |
+| 2a (geslacht) | GESLACHT | text | Geslacht | MAN, VROUW | 2 | Demografiedimensie |
+| 2b (niveau) | OPLEIDINGSCODE_ACTUEEL | numeric | CROHO-opleidingscode | 34808, 80009, 80040 | ~247 | Opleidingsdimensiesleutel |
+| 2b (niveau) | OPLEIDINGSNAAM_ACTUEEL | text | Opleidingsnaam | B Opleiding tot leraar Basisonderwijs, Ad Hotel Management | ~247 | Opleidingsdimensie |
+| 2c (oplvorm) | OPLEIDINGSVORM | text | Vorm van onderwijs | VT (fulltime), DT (deeltijd), DU (duaal) | 3 | Opleidingsdimensie |
 
-#### Resource Summary
+#### Bronbestandoverzicht
 
-| Resource | File | Records | Grain |
+| Bronbestand | Bestand | Records | Granulariteit |
 |----------|------|---------|-------|
-| 2a | eerstejaarsingeschrevenengeslhbo.csv | 3,407 | First-year students per year × municipality × institution × sector × subsector × education level × gender |
-| 2b | eerstejaarsingeschrevenenhbo.csv | 5,834 | First-year students per year × municipality × institution × program (CROHO) |
-| 2c | eerstejaarsingeschrevenenoplvhbo.csv | 2,908 | First-year students per year × municipality × institution × sector × subsector × education level × education form |
+| 2a | eerstejaarsingeschrevenengeslhbo.csv | 3.407 | Eerstejaars per jaar × gemeente × instelling × sector × subsector × onderwijsniveau × geslacht |
+| 2b | eerstejaarsingeschrevenenhbo.csv | 5.834 | Eerstejaars per jaar × gemeente × instelling × opleiding (CROHO) |
+| 2c | eerstejaarsingeschrevenenoplvhbo.csv | 2.908 | Eerstejaars per jaar × gemeente × instelling × sector × subsector × onderwijsniveau × opleidingsvorm |
 
-#### Data Quality Notes (p02ho1ejrs)
+#### Datakwaliteitsopmerkingen (p02ho1ejrs)
 
-- [ ] Privacy suppression: `AANTAL_EERSTEJAARS_INGESCHREVENEN = -1` occurs in resource 2a (exact rate not yet measured) — same GDPR mechanism as p01hoinges
-- [ ] Structure is identical to p01hoinges. First-year students are a subset of all enrolled students — the two datasets should not be simply unioned
+- [ ] Privacyonderdrukking: `AANTAL_EERSTEJAARS_INGESCHREVENEN = -1` komt voor in bronbestand 2a (precieze frequentie nog niet gemeten) — hetzelfde AVG-mechanisme als p01hoinges
+- [ ] Structuur is identiek aan p01hoinges. Eerstejaars zijn een deelverzameling van alle ingeschrevenen — de twee datasets moeten niet eenvoudig worden gecombineerd
 
 ---
 
 ### Dataset: p03hoinschr — Inschrijvingen HBO
 
-Almost identical structure to p01hoinges. Key difference: measure field is `AANTAL_INSCHRIJVINGEN`. The distinction between p01 ("Ingeschrevenen" = enrolled persons) and p03 ("Inschrijvingen" = enrollments) may reflect a subtle conceptual difference or a different extraction from the source system. Row counts are nearly identical (p01: 15,892 vs p03: 15,900 total).
+Bijna identieke structuur als p01hoinges. Belangrijk verschil: meetveld is `AANTAL_INSCHRIJVINGEN`. Het onderscheid tussen p01 ("Ingeschrevenen" = ingeschrevenen personen) en p03 ("Inschrijvingen" = inschrijvingen) kan een subtiel conceptueel verschil weerspiegelen of een andere extractie uit het bronsysteem. Aantallen rijen zijn bijna identiek (p01: 15.892 vs p03: 15.900 totaal).
 
-#### Common Fields (all 3 resources)
+#### Gemeenschappelijke velden (alle 3 bronbestanden)
 
-Same 10 common fields as p01hoinges plus:
+Dezelfde 10 gemeenschappelijke velden als p01hoinges plus:
 
-| # | Field | Type | Description | Nullable | Sample Values | Cardinality | Null % | Role Guess |
+| # | Veld | Type | Beschrijving | Null mogelijk | Voorbeeldwaarden | Kardinaliteit | Null % | Verwachte rol |
 |---|-------|------|-------------|----------|---------------|-------------|--------|------------|
-| 11 | AANTAL_INSCHRIJVINGEN | numeric | Number of enrollments | No | 5, 23, 53, 57, 111, -1 | Continuous | 0% | **Measure** |
+| 11 | AANTAL_INSCHRIJVINGEN | numeric | Aantal inschrijvingen | Nee | 5, 23, 53, 57, 111, -1 | Continu | 0% | **Meetwaarde** |
 
-#### Resource-Specific Fields
+#### Bronbestand-specifieke velden
 
-| Resource | Extra Field | Type | Description | Sample Values | Cardinality | Role Guess |
+| Bronbestand | Extra veld | Type | Beschrijving | Voorbeeldwaarden | Kardinaliteit | Verwachte rol |
 |----------|-------------|------|-------------|---------------|-------------|------------|
-| 3a (geslacht) | GESLACHT | text | Gender | MAN, VROUW | 2 | Demographic dimension |
-| 3b (niveau) | OPLEIDINGSCODE_ACTUEEL | numeric | CROHO program code | 34267, 34808, 80009, 80040 | ~247 | Program dimension key |
-| 3b (niveau) | OPLEIDINGSNAAM_ACTUEEL | text | Program name | B Elektrotechniek, Ad Tourism Management | ~247 | Program dimension |
-| 3c (oplvorm) | OPLEIDINGSVORM | text | Education delivery form | VT, DT, DU | 3 | Program dimension |
+| 3a (geslacht) | GESLACHT | text | Geslacht | MAN, VROUW | 2 | Demografiedimensie |
+| 3b (niveau) | OPLEIDINGSCODE_ACTUEEL | numeric | CROHO-opleidingscode | 34267, 34808, 80009, 80040 | ~247 | Opleidingsdimensiesleutel |
+| 3b (niveau) | OPLEIDINGSNAAM_ACTUEEL | text | Opleidingsnaam | B Elektrotechniek, Ad Tourism Management | ~247 | Opleidingsdimensie |
+| 3c (oplvorm) | OPLEIDINGSVORM | text | Vorm van onderwijs | VT, DT, DU | 3 | Opleidingsdimensie |
 
-#### Resource Summary
+#### Bronbestandoverzicht
 
-| Resource | File | Records | Grain |
+| Bronbestand | Bestand | Records | Granulariteit |
 |----------|------|---------|-------|
-| 3a | inschrijvingengeslhbo.csv | 4,835 | Enrollments per year × municipality × institution × sector × subsector × education level × gender |
-| 3b | inschrijvingenhbo.csv | 7,174 | Enrollments per year × municipality × institution × program (CROHO) |
-| 3c | inschrijvingenoplvhbo.csv | 3,891 | Enrollments per year × municipality × institution × sector × subsector × education level × education form |
+| 3a | inschrijvingengeslhbo.csv | 4.835 | Inschrijvingen per jaar × gemeente × instelling × sector × subsector × onderwijsniveau × geslacht |
+| 3b | inschrijvingenhbo.csv | 7.174 | Inschrijvingen per jaar × gemeente × instelling × opleiding (CROHO) |
+| 3c | inschrijvingenoplvhbo.csv | 3.891 | Inschrijvingen per jaar × gemeente × instelling × sector × subsector × onderwijsniveau × opleidingsvorm |
 
-#### Data Quality Notes (p03hoinschr)
+#### Datakwaliteitsopmerkingen (p03hoinschr)
 
-- [ ] Semantic relationship with p01hoinges unclear — structure and row counts nearly identical. Needs verification with DUO documentation whether these represent the same or different underlying counts
-- [ ] Privacy suppression: `AANTAL_INSCHRIJVINGEN = -1` occurs in resources (exact rate not yet measured)
+- [ ] Semantische relatie met p01hoinges onduidelijk — structuur en aantallen rijen bijna identiek. Verificatie met DUO-documentatie nodig of deze dezelfde of verschillende onderliggende aantallen vertegenwoordigen
+- [ ] Privacyonderdrukking: `AANTAL_INSCHRIJVINGEN = -1` komt voor in bronbestanden (precieze frequentie nog niet gemeten)
 
 ---
 
 ### Dataset: p04hogdipl — Gediplomeerden HBO
 
-Differs structurally from p01–p03:
-- Year dimension: `DIPLOMAJAAR` (diploma award year), not `STUDIEJAAR` (enrollment year Oct 1)
-- `TYPE_HOGER_ONDERWIJS` is absent — replaced by `SOORT_DIPLOMA`
-- Measure: `AANTAL_GEDIPLOMEERDEN`
+Structureel verschillend van p01–p03:
+- Jaardimensie: `DIPLOMAJAAR` (diplomaverleningsjaar), niet `STUDIEJAAR` (inschrijvingsjaar 1 oktober)
+- `TYPE_HOGER_ONDERWIJS` ontbreekt — vervangen door `SOORT_DIPLOMA`
+- Meetwaarde: `AANTAL_GEDIPLOMEERDEN`
 
-#### Common Fields (all 3 resources)
+#### Gemeenschappelijke velden (alle 3 bronbestanden)
 
-| # | Field | Type | Description | Nullable | Sample Values | Cardinality | Null % | Role Guess |
+| # | Veld | Type | Beschrijving | Null mogelijk | Voorbeeldwaarden | Kardinaliteit | Null % | Verwachte rol |
 |---|-------|------|-------------|----------|---------------|-------------|--------|------------|
-| 1 | DIPLOMAJAAR | numeric | Year diploma was awarded | No | 2019, 2020, 2021, 2022, 2023 | 5 | 0% | Date dimension key |
-| 2 | PROVINCIENAAM | text | Province name | No | Drenthe, Gelderland, Noord-Holland | 12 | 0% | Geography dimension |
-| 3 | GEMEENTENUMMER | text | Municipality code (CBS) | No | 0106, 0114, 0228 | 52 | 0% | Geography dimension key |
-| 4 | GEMEENTENAAM | text | Municipality name | No | Assen, Emmen, Ede | 52 | 0% | Geography dimension |
-| 5 | SOORT_INSTELLING | text | Institution type | No | reguliere inst. | 1 | 0% | Institution dimension |
-| 6 | INSTELLINGSCODE_ACTUEEL | text | Current institution code (BRIN) | No | 25BE, 31FR | 36 | 0% | Institution dimension key |
-| 7 | INSTELLINGSNAAM_ACTUEEL | text | Current institution name | No | Hanzehogeschool Groningen, NHL Stenden Hogeschool | 36 | 0% | Institution dimension |
-| 8 | ONDERDEEL | text | ISCED sector / domain | No | TECHNIEK, ONDERWIJS, ECONOMIE | 8 | 0% | Program dimension |
-| 9 | SUBONDERDEEL | text | Sub-sector / sub-domain | No | n.v.t. (techniek), leraar basisonderwijs | 16 | 0% | Program dimension |
-| 10 | SOORT_DIPLOMA | text | Type of diploma awarded | No | hbo bachelor, hbo associate degree | 3 | 0% | Program dimension |
-| 11 | AANTAL_GEDIPLOMEERDEN | numeric | Number of graduates | No | 9, 23, 42, -1 | Continuous | 0% | **Measure** |
+| 1 | DIPLOMAJAAR | numeric | Jaar diploma werd verleend | Nee | 2019, 2020, 2021, 2022, 2023 | 5 | 0% | Tijddimensiesleutel |
+| 2 | PROVINCIENAAM | text | Provincienaam | Nee | Drenthe, Gelderland, Noord-Holland | 12 | 0% | Geografiedimensie |
+| 3 | GEMEENTENUMMER | text | Gemeentecode (CBS) | Nee | 0106, 0114, 0228 | 52 | 0% | Geografiedimensiesleutel |
+| 4 | GEMEENTENAAM | text | Gemeentenaam | Nee | Assen, Emmen, Ede | 52 | 0% | Geografiedimensie |
+| 5 | SOORT_INSTELLING | text | Type instelling | Nee | reguliere inst. | 1 | 0% | Instellingsdimensie |
+| 6 | INSTELLINGSCODE_ACTUEEL | text | Huidige instellingscode (BRIN) | Nee | 25BE, 31FR | 36 | 0% | Instellingsdimensiesleutel |
+| 7 | INSTELLINGSNAAM_ACTUEEL | text | Huidige instellingsnaam | Nee | Hanzehogeschool Groningen, NHL Stenden Hogeschool | 36 | 0% | Instellingsdimensie |
+| 8 | ONDERDEEL | text | ISCED-sector / domein | Nee | TECHNIEK, ONDERWIJS, ECONOMIE | 8 | 0% | Opleidingsdimensie |
+| 9 | SUBONDERDEEL | text | Subsector / subdomein | Nee | n.v.t. (techniek), leraar basisonderwijs | 16 | 0% | Opleidingsdimensie |
+| 10 | SOORT_DIPLOMA | text | Type verleend diploma | Nee | hbo bachelor, hbo associate degree | 3 | 0% | Opleidingsdimensie |
+| 11 | AANTAL_GEDIPLOMEERDEN | numeric | Aantal gediplomeerden | Nee | 9, 23, 42, -1 | Continu | 0% | **Meetwaarde** |
 
-#### Resource-Specific Fields
+#### Bronbestand-specifieke velden
 
-| Resource | Extra Field | Type | Description | Sample Values | Cardinality | Role Guess |
+| Bronbestand | Extra veld | Type | Beschrijving | Voorbeeldwaarden | Kardinaliteit | Verwachte rol |
 |----------|-------------|------|-------------|---------------|-------------|------------|
-| 4a (geslacht) | GESLACHT | text | Gender | MAN, VROUW | 2 | Demographic dimension |
-| 4b (niveau) | OPLEIDINGSCODE_ACTUEEL | numeric | CROHO program code | 34267, 34808, 35520 | ~200 | Program dimension key |
-| 4b (niveau) | OPLEIDINGSNAAM_ACTUEEL | text | Program name | B Elektrotechniek, B International Business | ~200 | Program dimension |
-| 4c (oplvorm) | OPLEIDINGSVORM | text | Education delivery form | VT, DT, DU | 3 | Program dimension |
+| 4a (geslacht) | GESLACHT | text | Geslacht | MAN, VROUW | 2 | Demografiedimensie |
+| 4b (niveau) | OPLEIDINGSCODE_ACTUEEL | numeric | CROHO-opleidingscode | 34267, 34808, 35520 | ~200 | Opleidingsdimensiesleutel |
+| 4b (niveau) | OPLEIDINGSNAAM_ACTUEEL | text | Opleidingsnaam | B Elektrotechniek, B International Business | ~200 | Opleidingsdimensie |
+| 4c (oplvorm) | OPLEIDINGSVORM | text | Vorm van onderwijs | VT, DT, DU | 3 | Opleidingsdimensie |
 
-#### Resource Summary
+#### Bronbestandoverzicht
 
-| Resource | File | Records | Grain |
+| Bronbestand | Bestand | Records | Granulariteit |
 |----------|------|---------|-------|
-| 4a | gediplomeerdengeslhbo.csv | 4,445 | Graduates per diploma year × municipality × institution × sector × diploma type × gender |
-| 4b | gediplomeerdenhbo.csv | 6,813 | Graduates per diploma year × municipality × institution × program (CROHO) × diploma type |
-| 4c | gediplomeerdenoplvhbo.csv | 3,591 | Graduates per diploma year × municipality × institution × sector × diploma type × education form |
+| 4a | gediplomeerdengeslhbo.csv | 4.445 | Gediplomeerden per diplomajaar × gemeente × instelling × sector × diplomatype × geslacht |
+| 4b | gediplomeerdenhbo.csv | 6.813 | Gediplomeerden per diplomajaar × gemeente × instelling × opleiding (CROHO) × diplomatype |
+| 4c | gediplomeerdenoplvhbo.csv | 3.591 | Gediplomeerden per diplomajaar × gemeente × instelling × sector × diplomatype × opleidingsvorm |
 
-#### Data Quality Notes (p04hogdipl)
+#### Datakwaliteitsopmerkingen (p04hogdipl)
 
-- [ ] `DIPLOMAJAAR` earliest value in samples is 2019 (vs 2020 for p01–p03 `STUDIEJAAR`) — verify full year range
-- [ ] `SOORT_DIPLOMA` expected values: "hbo bachelor", "hbo associate degree", "hbo master" — only first two seen in HBO resources
-- [ ] Privacy suppression: `AANTAL_GEDIPLOMEERDEN = -1` observed in samples (exact rate not measured)
-- [ ] `SOORT_DIPLOMA` serves the same role as `TYPE_HOGER_ONDERWIJS` in p01–p03 but uses different vocabulary ("hbo bachelor" vs "bachelor")
+- [ ] `DIPLOMAJAAR` vroegste waarde in samples is 2019 (vs 2020 voor p01–p03 `STUDIEJAAR`) — volledig jaarbereik verifiëren
+- [ ] `SOORT_DIPLOMA` verwachte waarden: "hbo bachelor", "hbo associate degree", "hbo master" — alleen eerste twee gezien in HBO-bronbestanden
+- [ ] Privacyonderdrukking: `AANTAL_GEDIPLOMEERDEN = -1` waargenomen in samples (precieze frequentie niet gemeten)
+- [ ] `SOORT_DIPLOMA` vervult dezelfde rol als `TYPE_HOGER_ONDERWIJS` in p01–p03 maar gebruikt ander vocabulaire ("hbo bachelor" vs "bachelor")
 
 ---
 
 ### Dataset: ho_opleidingsoverzicht — HO Opleidingsoverzicht
 
-Reference dataset from RIO. All currently funded HO programs (both HBO and WO). Master program catalog.
+Referentiedataset uit RIO. Alle momenteel bekostigde HO-programma's (zowel HBO als WO). Hoofdcatalogus van opleidingen.
 
-**Row count:** 7,090 | **Grain:** One row per offered program variant (program × form × location) | **Scope:** All HO — filter NIVEAU for HBO
+**Aantal rijen:** 7.090 | **Granulariteit:** Een rij per aangeboden programmavariant (programma × vorm × locatie) | **Bereik:** Alle HO — filter NIVEAU voor HBO
 
-| # | Field | Type | Description | Nullable | Sample Values | Cardinality | Null % | Role Guess |
+| # | Veld | Type | Beschrijving | Null mogelijk | Voorbeeldwaarden | Kardinaliteit | Null % | Verwachte rol |
 |---|-------|------|-------------|----------|---------------|-------------|--------|------------|
-| 1 | ONDERWIJSBESTUURID | text | Education authority ID (RIO) | No | 100B349 | ~90 | 0% | Institution dimension key (RIO) |
-| 2 | ONDERWIJSBESTUUR_NAAM | text | Education authority name | No | Stichting HZ University of Appl. Scienc. | ~90 | 0% | Institution dimension |
-| 3 | ONDERWIJSAANBIEDERID | text | Provider ID (may differ from authority) | Yes | — | ~90 | Unknown | Institution dimension key |
-| 4 | ONDERWIJSAANBIEDER_NAAM | text | Provider name | Yes | — | ~90 | Unknown | Institution dimension |
-| 5 | ONDERWIJSLOCATIECODE | text | Teaching location code | Yes | — | ~300 | Unknown | Location dimension key |
-| 6 | ONDERWIJSLOCATIESTRAAT | text | Teaching location street | Yes | — | ~300 | Unknown | Location dimension |
-| 7 | ONDERWIJSLOCATIEPLAATS | text | Teaching location city | Yes | — | ~100 | Unknown | Location dimension |
-| 8 | SOORT | text | Always "OPLEIDING" | No | OPLEIDING | 1 | 0% | Redundant |
-| 9 | OPLEIDINGSEENHEIDCODE | text | Program unit code (RIO) | No | 1001O2869, 1001O3168 | ~700 | 0% | Program dimension key (RIO) |
-| 10 | ERKENDEOPLEIDINGSCODE | numeric | CROHO program code | No | 34074, 34279, 49506 | ~700 | 0% | Program dimension key (CROHO) |
-| 11 | AANGEBODEN_OPLEIDINGCODE | text | Offered program code | Yes | — | ~700 | Unknown | Program dimension key |
-| 12 | EIGEN_AANGEBODEN_OPLEIDINGSLEUTEL | text | Institution's own program key | Yes | — | ~700 | Unknown | Institution-internal |
-| 13 | NAAM_LANG | text | Full program name (Dutch) | No | Watermanagement, Civiele Techniek | ~700 | 0% | Program dimension |
-| 14 | INTERNATIONALE_NAAM | text | International program name | Yes | Water Management, Civil Engineering | ~700 | Unknown | Program dimension |
-| 15 | EIGENNAAM | text | Institution's proprietary name | Yes | — | ~700 | High | Program dimension |
-| 16 | EIGENNAAM_DUITS | text | German proprietary name | Yes | — | ~700 | Very high | Rarely used |
-| 17 | EIGENNAAM_ENGELS | text | English proprietary name | Yes | — | ~700 | High | Program dimension |
-| 18 | VARIANT_VAN | text | Reference to variant-of program code | Yes | — | ~700 | Unknown | Relationship field |
-| 19 | ERKENNER | text | Accreditation body | No | NVAO | 1–2 | 0% | Dimension |
-| 20 | NIVEAU | text | Education level | No | HBO-BA, HBO-MA, HBO-AD, WO-BA, WO-MA | 5 | 0% | Program dimension — **use as scope filter** |
-| 21 | GRAAD | text | Degree type | No | BACHELOR, MASTER, ASSOCIATE_DEGREE | 3 | 0% | Program dimension |
-| 22 | STUDIELAST | numeric | ECTS credits | No | 60, 120, 180, 240 | ~10 | 0% | Program attribute |
-| 23 | EQF | numeric | European Qualifications Framework level | No | 5, 6, 7 | 3 | 0% | Program dimension |
-| 24 | ISCED | numeric | ISCED field of study code | No | — | ~50 | 0% | Program dimension |
-| 25 | NLQF | numeric | Dutch Qualifications Framework level | No | 5, 6, 7 | 3 | 0% | Program dimension |
-| 26 | WAARDEDOCUMENTSOORT | text | Certificate type | No | GETUIGSCHRIFT | 1–2 | 0% | Dimension |
-| 27 | VORM | text | Education delivery form | Yes | VOLTIJD, DEELTIJD | 2–3 | Unknown | Program dimension |
-| 28 | VOERTAAL | text | Language of instruction | Yes | NLD, ENG | 2–3 | Unknown | Program dimension |
-| 29 | BEGINDATUM | timestamp | Program accreditation start date | No | 2002-09-01, 2015-09-01 | — | 0% | Slowly changing dimension |
-| 30 | EINDDATUM | timestamp | Program accreditation end date | Yes | — | — | High | Slowly changing dimension |
-| 31 | AANGEBODEN_OPLEIDING_BEGINDATUM | timestamp | Offered program start date | Yes | — | — | Unknown | Offering timeline |
-| 32 | AANGEBODEN_OPLEIDING_EINDDATUM | timestamp | Offered program end date | Yes | — | — | Unknown | Offering timeline |
-| 33 | EERSTE_INSTROOMDATUM | timestamp | First enrollment open date | Yes | — | — | Unknown | Offering timeline |
-| 34 | LAATSTE_INSTROOMDATUM | timestamp | Last enrollment close date | Yes | — | — | Unknown | Offering timeline |
-| 35 | DEFICIENTIE | text | Deficiency/prerequisite requirements | Yes | — | — | High | Program requirement |
-| 36 | EISEN_WERKZAAMHEDEN | text | Work experience requirements | Yes | — | — | High | Program requirement |
-| 37 | PROPEDEUTISCHE_FASE | text | Propaedeutic phase indicator | Yes | — | Low | Unknown | Program attribute |
-| 38 | STUDIEKEUZECHECK | text | Study choice check indicator | Yes | — | Low | Unknown | Program attribute |
-| 39 | VERSNELD_TRAJECT | text | Accelerated track indicator | Yes | — | Low | Unknown | Program attribute |
-| 40 | PENVOERDER | text | Lead institution for joint programs | Yes | — | ~90 | High | Relationship field |
-| 41 | SAMENWERKEND_MET | text | Cooperating institutions | Yes | — | — | Very high | Relationship field |
-| 42 | BUITENLANDSEPARTNER | text | International partners | Yes | — | — | Very high | Rarely populated |
-| 43 | WEBSITE | text | Program website URL | Yes | — | ~700 | Unknown | Informational |
-| 44 | OMSCHRIJVING | text | Program description (free text) | Yes | — | — | Unknown | Informational |
-| 45 | _id | int | CKAN internal row ID | No | 1–7090 | 7090 | 0% | System field |
+| 1 | ONDERWIJSBESTUURID | text | ID onderwijsbestuur (RIO) | Nee | 100B349 | ~90 | 0% | Instellingsdimensiesleutel (RIO) |
+| 2 | ONDERWIJSBESTUUR_NAAM | text | Naam onderwijsbestuur | Nee | Stichting HZ University of Appl. Scienc. | ~90 | 0% | Instellingsdimensie |
+| 3 | ONDERWIJSAANBIEDERID | text | ID onderwijsaanbieder (kan verschillen van bestuur) | Ja | — | ~90 | Onbekend | Instellingsdimensiesleutel |
+| 4 | ONDERWIJSAANBIEDER_NAAM | text | Naam onderwijsaanbieder | Ja | — | ~90 | Onbekend | Instellingsdimensie |
+| 5 | ONDERWIJSLOCATIECODE | text | Code onderwijslocatie | Ja | — | ~300 | Onbekend | Locatiedimensiesleutel |
+| 6 | ONDERWIJSLOCATIESTRAAT | text | Straat onderwijslocatie | Ja | — | ~300 | Onbekend | Locatiedimensie |
+| 7 | ONDERWIJSLOCATIEPLAATS | text | Plaats onderwijslocatie | Ja | — | ~100 | Onbekend | Locatiedimensie |
+| 8 | SOORT | text | Altijd "OPLEIDING" | Nee | OPLEIDING | 1 | 0% | Overbodig |
+| 9 | OPLEIDINGSEENHEIDCODE | text | Code opleidingseenheid (RIO) | Nee | 1001O2869, 1001O3168 | ~700 | 0% | Opleidingsdimensiesleutel (RIO) |
+| 10 | ERKENDEOPLEIDINGSCODE | numeric | CROHO-opleidingscode | Nee | 34074, 34279, 49506 | ~700 | 0% | Opleidingsdimensiesleutel (CROHO) |
+| 11 | AANGEBODEN_OPLEIDINGCODE | text | Code aangeboden opleiding | Ja | — | ~700 | Onbekend | Opleidingsdimensiesleutel |
+| 12 | EIGEN_AANGEBODEN_OPLEIDINGSLEUTEL | text | Eigen programmasleutel instelling | Ja | — | ~700 | Onbekend | Instellingsintern |
+| 13 | NAAM_LANG | text | Volledige programmanaam (Nederlands) | Nee | Watermanagement, Civiele Techniek | ~700 | 0% | Opleidingsdimensie |
+| 14 | INTERNATIONALE_NAAM | text | Internationale programmanaam | Ja | Water Management, Civil Engineering | ~700 | Onbekend | Opleidingsdimensie |
+| 15 | EIGENNAAM | text | Eigen naam instelling | Ja | — | ~700 | Hoog | Opleidingsdimensie |
+| 16 | EIGENNAAM_DUITS | text | Duitse eigen naam | Ja | — | ~700 | Zeer hoog | Zelden gebruikt |
+| 17 | EIGENNAAM_ENGELS | text | Engelse eigen naam | Ja | — | ~700 | Hoog | Opleidingsdimensie |
+| 18 | VARIANT_VAN | text | Verwijzing naar variantopleiding | Ja | — | ~700 | Onbekend | Relatieveld |
+| 19 | ERKENNER | text | Accreditatieorgaan | Nee | NVAO | 1–2 | 0% | Dimensie |
+| 20 | NIVEAU | text | Onderwijsniveau | Nee | HBO-BA, HBO-MA, HBO-AD, WO-BA, WO-MA | 5 | 0% | Opleidingsdimensie — **gebruik als bereikfilter** |
+| 21 | GRAAD | text | Type graad | Nee | BACHELOR, MASTER, ASSOCIATE_DEGREE | 3 | 0% | Opleidingsdimensie |
+| 22 | STUDIELAST | numeric | ECTS-punten | Nee | 60, 120, 180, 240 | ~10 | 0% | Opleidingskenmerk |
+| 23 | EQF | numeric | Europees Kwalificatieraamwerk-niveau | Nee | 5, 6, 7 | 3 | 0% | Opleidingsdimensie |
+| 24 | ISCED | numeric | ISCED-code studierichting | Nee | — | ~50 | 0% | Opleidingsdimensie |
+| 25 | NLQF | numeric | Nederlands Kwalificatieraamwerk-niveau | Nee | 5, 6, 7 | 3 | 0% | Opleidingsdimensie |
+| 26 | WAARDEDOCUMENTSOORT | text | Type certificaat | Nee | GETUIGSCHRIFT | 1–2 | 0% | Dimensie |
+| 27 | VORM | text | Vorm van onderwijs | Ja | VOLTIJD, DEELTIJD | 2–3 | Onbekend | Opleidingsdimensie |
+| 28 | VOERTAAL | text | Voertaal | Ja | NLD, ENG | 2–3 | Onbekend | Opleidingsdimensie |
+| 29 | BEGINDATUM | timestamp | Begindatum accreditatie programma | Nee | 2002-09-01, 2015-09-01 | — | 0% | Langzaam veranderende dimensie |
+| 30 | EINDDATUM | timestamp | Einddatum accreditatie programma | Ja | — | — | Hoog | Langzaam veranderende dimensie |
+| 31 | AANGEBODEN_OPLEIDING_BEGINDATUM | timestamp | Begindatum aangeboden opleiding | Ja | — | — | Onbekend | Aanbodtijdlijn |
+| 32 | AANGEBODEN_OPLEIDING_EINDDATUM | timestamp | Einddatum aangeboden opleiding | Ja | — | — | Onbekend | Aanbodtijdlijn |
+| 33 | EERSTE_INSTROOMDATUM | timestamp | Begindatum instroom openen | Ja | — | — | Onbekend | Aanbodtijdlijn |
+| 34 | LAATSTE_INSTROOMDATUM | timestamp | Einddatum instroom sluiten | Ja | — | — | Onbekend | Aanbodtijdlijn |
+| 35 | DEFICIENTIE | text | Deficiëntie/voorvereisteneisen | Ja | — | — | Hoog | Programmavereiste |
+| 36 | EISEN_WERKZAAMHEDEN | text | Eisen werkervaring | Ja | — | — | Hoog | Programmavereiste |
+| 37 | PROPEDEUTISCHE_FASE | text | Indicator propedeusefase | Ja | — | Laag | Onbekend | Programmakenmerk |
+| 38 | STUDIEKEUZECHECK | text | Indicator studiekeuzecheck | Ja | — | Laag | Onbekend | Programmakenmerk |
+| 39 | VERSNELD_TRAJECT | text | Indicator versneld traject | Ja | — | Laag | Onbekend | Programmakenmerk |
+| 40 | PENVOERDER | text | Leidende instelling voor samenwerkingsprogramma's | Ja | — | ~90 | Hoog | Relatieveld |
+| 41 | SAMENWERKEND_MET | text | Samenwerkende instellingen | Ja | — | — | Zeer hoog | Relatieveld |
+| 42 | BUITENLANDSEPARTNER | text | Internationale partners | Ja | — | — | Zeer hoog | Zelden ingevuld |
+| 43 | WEBSITE | text | Website programma | Ja | — | ~700 | Onbekend | Informatief |
+| 44 | OMSCHRIJVING | text | Programmaomschrijving (vrije tekst) | Ja | — | — | Onbekend | Informatief |
+| 45 | _id | int | CKAN interne rij-ID | Nee | 1–7090 | 7090 | 0% | Systeemveld |
 
-#### Data Quality Notes (ho_opleidingsoverzicht)
+#### Datakwaliteitsopmerkingen (ho_opleidingsoverzicht)
 
-- [ ] Dataset covers all HO (HBO + WO) — must filter `NIVEAU IN ('HBO-BA','HBO-MA','HBO-AD')` for HBO scope
-- [ ] `SOORT` = "OPLEIDING" for all records — redundant field in this dataset
-- [ ] Many nullable fields have unknown null rates — especially location fields (ONDERWIJSLOCATIECODE etc.), name variants, and timeline fields
-- [ ] `EINDDATUM` null for active programs — treat null as "currently active"
+- [ ] Dataset omvat alle HO (HBO + WO) — moet `NIVEAU IN ('HBO-BA','HBO-MA','HBO-AD')` filteren voor HBO-bereik
+- [ ] `SOORT` = "OPLEIDING" voor alle records — overbodig veld in deze dataset
+- [ ] Veel velden kunnen null zijn met onbekende frequentie — vooral locatievelden (ONDERWIJSLOCATIECODE etc.), naamvarianten en tijdlijnvelden
+- [ ] `EINDDATUM` null voor actieve programma's — null behandelen als "momenteel actief"
 
 ---
 
 ### Dataset: overzicht-erkenningen-ho — Overzicht Erkenningen HO
 
-Reference dataset of OCW-recognized HO programs and their accreditation status from the RIO register. Covers both HBO and WO.
+Referentiedataset van door OCW erkende HO-programma's en hun accreditatiestatus uit het RIO-register. Omvat zowel HBO als WO.
 
-**Row count:** 6,747 | **Grain:** One row per program recognition per institution branch | **Scope:** All HO — filter NIVEAU for HBO
+**Aantal rijen:** 6.747 | **Granulariteit:** Een rij per programmaerkenning per vestiging | **Bereik:** Alle HO — filter NIVEAU voor HBO
 
-| # | Field | Type | Description | Nullable | Sample Values | Cardinality | Null % | Role Guess |
+| # | Veld | Type | Beschrijving | Null mogelijk | Voorbeeldwaarden | Kardinaliteit | Null % | Verwachte rol |
 |---|-------|------|-------------|----------|---------------|-------------|--------|------------|
-| 1 | BEVOEGD_GEZAG_CODE | text | Governing board code | No | 20045, 24832 | ~90 | 0% | Institution dimension key |
-| 2 | BEVOEGD_GEZAG_NAAM | text | Governing board name | No | Protestantse Theologische Universiteit | ~90 | 0% | Institution dimension |
-| 3 | INSTELLINGSCODE | text | Institution code (BRIN) | No | 00DV, 00IC | ~200 | 0% | Institution dimension key (BRIN) |
-| 4 | INSTELLINGSNAAM | text | Institution name | No | Protestantse Theologische Universiteit | ~200 | 0% | Institution dimension |
-| 5 | VESTIGINGSCODE | text | Branch/campus code | No | 00DV01, 00IC01 | ~500 | 0% | Location dimension key |
-| 6 | VESTIGINGSNAAM | text | Branch/campus name | No | Protestantse Theologische Universiteit; Utrecht | ~500 | 0% | Location dimension |
-| 7 | GEMEENTENAAM | text | Municipality name | No | Utrecht, Amsterdam | ~100 | 0% | Geography dimension |
-| 8 | PLAATSNAAM | text | City name (uppercase) | No | UTRECHT, AMSTERDAM | ~100 | 0% | Geography dimension |
-| 9 | ERKENDEOPLEIDINGSCODE | text | CROHO program code | No | 56109, 60254 | ~700 | 0% | Program dimension key (CROHO) |
-| 10 | INSTROOM_EINDDATUM | timestamp | Last enrollment date (null = active) | Yes | null, 2025-08-31 | — | High | Program timeline |
-| 11 | OPLEIDINGSEENHEIDCODE | text | Program unit code (RIO) | No | 1016O1755, 1001O6573 | ~700 | 0% | Program dimension key (RIO) |
-| 12 | EIGEN_OPLEIDINGSEENHEIDSLEUTEL | text | Institution's own program key | Yes | — | ~700 | Unknown | Institution-internal |
-| 13 | OPLEIDINGSEENHEID_NAAM | text | Program name (Dutch) | No | Theologie | ~700 | 0% | Program dimension |
-| 14 | OPLEIDINGSEENHEID_INTERNATIONALE_NAAM | text | Program name (English) | Yes | Theology | ~700 | Unknown | Program dimension |
-| 15 | OPLEIDINGSEENHEID_SOORT | text | Program type | No | — | ~5 | 0% | Program dimension |
-| 16 | STUDIELAST | numeric | ECTS credits | No | 180, 60 | ~10 | 0% | Program attribute |
-| 17 | STUDIELASTEENHEID | text | Credits unit | No | ECTS | 1 | 0% | Informational |
-| 18 | NIVEAU | text | Education level | No | WO-BA, WO-MA, HBO-BA | 5 | 0% | Program dimension — **use as scope filter** |
-| 19 | GRAAD | text | Degree type | No | BACHELOR, MASTER | 3 | 0% | Program dimension |
-| 20 | GRAADTOEVOEGING | text | Degree suffix (e.g. of Science) | Yes | — | ~5 | Unknown | Program dimension |
-| 21 | ISCED | numeric | ISCED field of study code | No | — | ~50 | 0% | Program dimension |
-| 22 | NLQF | numeric | Dutch Qualifications Framework level | No | — | 3 | 0% | Program dimension |
-| 23 | EQF | numeric | European Qualifications Framework level | No | — | 3 | 0% | Program dimension |
-| 24 | VORM | text | Education delivery form | No | VOLTIJD, DEELTIJD | 3 | 0% | Program dimension |
-| 25 | ONDERDEEL | text | ISCED sector / domain | No | TAAL_EN_CULTUUR, ONDERWIJS | 8 | 0% | Program dimension |
-| 26 | SUBONDERDEEL | text | Sub-sector / sub-domain | No | — | ~16 | 0% | Program dimension |
-| 27 | BEKOSTIGINGSNIVEAU | text | Funding level | No | LAAG | ~3 | 0% | Funding dimension |
-| 28 | GRONDSLAG_STUDIELAST | text | Basis for study load determination | Yes | — | ~5 | Unknown | Program attribute |
-| 29 | BEROEPSEISEN | text | Professional requirements | Yes | — | ~5 | Unknown | Program attribute |
-| 30 | OPLEIDINGSERKENNINGSKADER | text | Recognition framework | Yes | — | ~5 | Unknown | Regulatory |
-| 31 | INTENSIEFPROGRAMMA | text | Intensive program indicator | Yes | — | 2 | Unknown | Program attribute |
-| 32 | BEKOSTIGINGSCODE | text | Funding type | No | BEKOSTIGD | 2 | 0% | Funding dimension |
-| 33 | AANVULLENDE_EISEN | text | Additional admission requirements | Yes | — | ~5 | Unknown | Program attribute |
-| 34 | BEKOSTIGINGSDUUR | numeric | Funded duration (years) | No | — | ~5 | 0% | Program attribute |
-| 35 | VESTIGINGSLICENTIE_BEGINDATUM | timestamp | Branch license start date | No | — | — | 0% | Program timeline |
-| 36 | VESTIGINGSLICENTIE_EINDDATUM | timestamp | Branch license end date (null = active) | Yes | — | — | High | Program timeline |
-| 37 | ACCREDITATIE_BESLUITDATUM | timestamp | Accreditation decision date | No | — | — | 0% | Accreditation timeline |
-| 38 | ACCREDITATIE_BEGINDATUM | timestamp | Accreditation start date | No | 2025-09-01, 2020-04-06 | — | 0% | Accreditation timeline |
-| 39 | ACCREDITATIE_VERVALDATUM | timestamp | Accreditation expiry date | Yes | — | — | Unknown | Accreditation timeline |
-| 40 | ACCREDITATIE_AFBOUWDATUM | timestamp | Phase-out date | Yes | — | — | High | Accreditation timeline |
-| 41 | ACCREDITATIE_INLEVERDATUM | timestamp | Submission deadline date | Yes | — | — | High | Accreditation timeline |
-| 42 | ACCREDITATIE_VOORWAARDENDATUM | timestamp | Conditional accreditation date | Yes | — | — | High | Accreditation timeline |
-| 43 | ACCREDITATIE_INTREKKINGSDATUM | text | Accreditation revocation date | Yes | — | — | High | Accreditation timeline |
-| 44 | ACCREDITATIE_UITSTELDATUM | timestamp | Accreditation postponement date | Yes | — | — | High | Accreditation timeline |
-| 45 | ACCREDITATIE_UITSTELREDEN | text | Reason for postponement | Yes | — | — | High | Accreditation metadata |
-| 46 | SAMENWERKENDEINSTELLINGEN | text | Cooperating institutions | Yes | — | — | High | Relationship field |
-| 47 | _id | int | CKAN internal row ID | No | 1–6747 | 6747 | 0% | System field |
+| 1 | BEVOEGD_GEZAG_CODE | text | Code bevoegd gezag | Nee | 20045, 24832 | ~90 | 0% | Instellingsdimensiesleutel |
+| 2 | BEVOEGD_GEZAG_NAAM | text | Naam bevoegd gezag | Nee | Protestantse Theologische Universiteit | ~90 | 0% | Instellingsdimensie |
+| 3 | INSTELLINGSCODE | text | Instellingscode (BRIN) | Nee | 00DV, 00IC | ~200 | 0% | Instellingsdimensiesleutel (BRIN) |
+| 4 | INSTELLINGSNAAM | text | Instellingsnaam | Nee | Protestantse Theologische Universiteit | ~200 | 0% | Instellingsdimensie |
+| 5 | VESTIGINGSCODE | text | Code vestiging/campus | Nee | 00DV01, 00IC01 | ~500 | 0% | Locatiedimensiesleutel |
+| 6 | VESTIGINGSNAAM | text | Naam vestiging/campus | Nee | Protestantse Theologische Universiteit; Utrecht | ~500 | 0% | Locatiedimensie |
+| 7 | GEMEENTENAAM | text | Gemeentenaam | Nee | Utrecht, Amsterdam | ~100 | 0% | Geografiedimensie |
+| 8 | PLAATSNAAM | text | Plaatsnaam (hoofdletters) | Nee | UTRECHT, AMSTERDAM | ~100 | 0% | Geografiedimensie |
+| 9 | ERKENDEOPLEIDINGSCODE | text | CROHO-opleidingscode | Nee | 56109, 60254 | ~700 | 0% | Opleidingsdimensiesleutel (CROHO) |
+| 10 | INSTROOM_EINDDATUM | timestamp | Laatste inschrijvingsdatum (null = actief) | Ja | null, 2025-08-31 | — | Hoog | Programmatijdlijn |
+| 11 | OPLEIDINGSEENHEIDCODE | text | Code opleidingseenheid (RIO) | Nee | 1016O1755, 1001O6573 | ~700 | 0% | Opleidingsdimensiesleutel (RIO) |
+| 12 | EIGEN_OPLEIDINGSEENHEIDSLEUTEL | text | Eigen programmasleutel instelling | Ja | — | ~700 | Onbekend | Instellingsintern |
+| 13 | OPLEIDINGSEENHEID_NAAM | text | Programmanaam (Nederlands) | Nee | Theologie | ~700 | 0% | Opleidingsdimensie |
+| 14 | OPLEIDINGSEENHEID_INTERNATIONALE_NAAM | text | Programmanaam (Engels) | Ja | Theology | ~700 | Onbekend | Opleidingsdimensie |
+| 15 | OPLEIDINGSEENHEID_SOORT | text | Type programma | Nee | — | ~5 | 0% | Opleidingsdimensie |
+| 16 | STUDIELAST | numeric | ECTS-punten | Nee | 180, 60 | ~10 | 0% | Programmakenmerk |
+| 17 | STUDIELASTEENHEID | text | Eenheid punten | Nee | ECTS | 1 | 0% | Informatief |
+| 18 | NIVEAU | text | Onderwijsniveau | Nee | WO-BA, WO-MA, HBO-BA | 5 | 0% | Opleidingsdimensie — **gebruik als bereikfilter** |
+| 19 | GRAAD | text | Type graad | Nee | BACHELOR, MASTER | 3 | 0% | Opleidingsdimensie |
+| 20 | GRAADTOEVOEGING | text | Graadtoevoeging (bijv. of Science) | Ja | — | ~5 | Onbekend | Opleidingsdimensie |
+| 21 | ISCED | numeric | ISCED-code studierichting | Nee | — | ~50 | 0% | Opleidingsdimensie |
+| 22 | NLQF | numeric | Nederlands Kwalificatieraamwerk-niveau | Nee | — | 3 | 0% | Opleidingsdimensie |
+| 23 | EQF | numeric | Europees Kwalificatieraamwerk-niveau | Nee | — | 3 | 0% | Opleidingsdimensie |
+| 24 | VORM | text | Vorm van onderwijs | Nee | VOLTIJD, DEELTIJD | 3 | 0% | Opleidingsdimensie |
+| 25 | ONDERDEEL | text | ISCED-sector / domein | Nee | TAAL_EN_CULTUUR, ONDERWIJS | 8 | 0% | Opleidingsdimensie |
+| 26 | SUBONDERDEEL | text | Subsector / subdomein | Nee | — | ~16 | 0% | Opleidingsdimensie |
+| 27 | BEKOSTIGINGSNIVEAU | text | Bekostigingsniveau | Nee | LAAG | ~3 | 0% | Bekostigingsdimensie |
+| 28 | GRONDSLAG_STUDIELAST | text | Grondslag bepaling studiebelas­ting | Ja | — | ~5 | Onbekend | Programmakenmerk |
+| 29 | BEROEPSEISEN | text | Beroepsvereisten | Ja | — | ~5 | Onbekend | Programmakenmerk |
+| 30 | OPLEIDINGSERKENNINGSKADER | text | Erkennngskader | Ja | — | ~5 | Onbekend | Regelgeving |
+| 31 | INTENSIEFPROGRAMMA | text | Indicator intensief programma | Ja | — | 2 | Onbekend | Programmakenmerk |
+| 32 | BEKOSTIGINGSCODE | text | Type bekostiging | Nee | BEKOSTIGD | 2 | 0% | Bekostigingsdimensie |
+| 33 | AANVULLENDE_EISEN | text | Aanvullende toelatingsvoorwaarden | Ja | — | ~5 | Onbekend | Programmakenmerk |
+| 34 | BEKOSTIGINGSDUUR | numeric | Bekostigde duur (jaren) | Nee | — | ~5 | 0% | Programmakenmerk |
+| 35 | VESTIGINGSLICENTIE_BEGINDATUM | timestamp | Begindatum vestigingslicentie | Nee | — | — | 0% | Programmatijdlijn |
+| 36 | VESTIGINGSLICENTIE_EINDDATUM | timestamp | Einddatum vestigingslicentie (null = actief) | Ja | — | — | Hoog | Programmatijdlijn |
+| 37 | ACCREDITATIE_BESLUITDATUM | timestamp | Accreditatiebesluitdatum | Nee | — | — | 0% | Accrediteringstijdlijn |
+| 38 | ACCREDITATIE_BEGINDATUM | timestamp | Begindatum accreditatie | Nee | 2025-09-01, 2020-04-06 | — | 0% | Accrediteringstijdlijn |
+| 39 | ACCREDITATIE_VERVALDATUM | timestamp | Vervaldatum accreditatie | Ja | — | — | Onbekend | Accrediteringstijdlijn |
+| 40 | ACCREDITATIE_AFBOUWDATUM | timestamp | Afbouwdatum | Ja | — | — | Hoog | Accrediteringstijdlijn |
+| 41 | ACCREDITATIE_INLEVERDATUM | timestamp | Inleverdatum | Ja | — | — | Hoog | Accrediteringstijdlijn |
+| 42 | ACCREDITATIE_VOORWAARDENDATUM | timestamp | Datum voorwaardelijke accreditatie | Ja | — | — | Hoog | Accrediteringstijdlijn |
+| 43 | ACCREDITATIE_INTREKKINGSDATUM | text | Intrekkingsdatum accreditatie | Ja | — | — | Hoog | Accrediteringstijdlijn |
+| 44 | ACCREDITATIE_UITSTELDATUM | timestamp | Uitsteldatum accreditatie | Ja | — | — | Hoog | Accrediteringstijdlijn |
+| 45 | ACCREDITATIE_UITSTELREDEN | text | Reden uitstel | Ja | — | — | Hoog | Accrediteringsmetadata |
+| 46 | SAMENWERKENDEINSTELLINGEN | text | Samenwerkende instellingen | Ja | — | — | Hoog | Relatieveld |
+| 47 | _id | int | CKAN interne rij-ID | Nee | 1–6747 | 6747 | 0% | Systeemveld |
 
-#### Data Quality Notes (overzicht-erkenningen-ho)
+#### Datakwaliteitsopmerkingen (overzicht-erkenningen-ho)
 
-- [ ] Dataset covers all HO (HBO + WO) — filter `NIVEAU` for HBO scope
-- [ ] `ERKENDEOPLEIDINGSCODE` stored as text here vs numeric in ho_opleidingsoverzicht — type mismatch requires cast when joining on CROHO code
-- [ ] Many accreditation date fields expected to be mostly null (only populated when the specific event occurred)
-- [ ] `INSTROOM_EINDDATUM` null indicates program is currently accepting enrollments
+- [ ] Dataset omvat alle HO (HBO + WO) — filter `NIVEAU` voor HBO-bereik
+- [ ] `ERKENDEOPLEIDINGSCODE` hier als tekst opgeslagen vs numeric in ho_opleidingsoverzicht — typemismatching vereist CAST bij combinatie op CROHO-code
+- [ ] Veel accrediteringsdatumvelden worden naar verwachting meestal null (alleen ingevuld wanneer specifieke gebeurtenis plaatsvond)
+- [ ] `INSTROOM_EINDDATUM` null geeft aan dat programma momenteel instroom accepteert
 
 ---
 
 ### Dataset: Adressen hogescholen en universiteiten
 
-Reference dataset with visiting and mailing addresses for all HBO and WO institutions. One row per institution (primary campus only).
+Referentiedataset met bezoek- en correspondentieadressen voor alle HBO- en WO-instellingen. Een rij per instelling (alleen hoofdvestiging).
 
-**Row count:** ~50 | **Grain:** One row per institution | **Scope:** All HO — filter `SOORT HO` = 'hbo' for HBO
-**Source:** RIO | **Update frequency:** Monthly
+**Aantal rijen:** ~50 | **Granulariteit:** Een rij per instelling | **Bereik:** Alle HO — filter `SOORT HO` = 'hbo' voor HBO
+**Bron:** RIO | **Updatefrequentie:** Maandelijks
 
-| # | Field | Type | Description | Nullable | Sample Values | Cardinality | Null % | Role Guess |
+| # | Veld | Type | Beschrijving | Null mogelijk | Voorbeeldwaarden | Kardinaliteit | Null % | Verwachte rol |
 |---|-------|------|-------------|----------|---------------|-------------|--------|------------|
-| 1 | SOORT HO | text | Education type (lowercase) | No | hbo, wo | 2 | 0% | Scope filter |
-| 2 | PROVINCIE | text | Province | No | Friesland, Gelderland | 12 | 0% | Geography dimension |
-| 3 | BEVOEGD GEZAG NUMMER | text | Governing board number | No | 30156, 40235 | ~50 | 0% | Institution dimension key |
-| 4 | INSTELLINGSCODE | text | Institution code (BRIN) | No | 31FR, 25BA | ~50 | 0% | Institution dimension key (BRIN) |
-| 5 | INSTELLINGSNAAM | text | Institution name | No | NHL Stenden Hogeschool, CHE | ~50 | 0% | Institution dimension |
-| 6 | STRAATNAAM | text | Street name (visiting address) | No | Rengerslaan, Oude Kerkweg | ~50 | 0% | Address attribute |
-| 7 | HUISNUMMER-TOEVOEGING | text | House number + suffix | No | 10, 100 | ~50 | 0% | Address attribute |
-| 8 | POSTCODE | text | Postal code (visiting) | No | 8917 DD, 6717 JS | ~50 | 0% | Address attribute |
-| 9 | PLAATSNAAM | text | City (visiting address, uppercase) | No | LEEUWARDEN, EDE | ~50 | 0% | Geography dimension |
-| 10 | GEMEENTENUMMER | text | Municipality code (CBS) | No | 0080, 0228 | ~50 | 0% | Geography dimension key |
-| 11 | GEMEENTENAAM | text | Municipality name (uppercase) | No | LEEUWARDEN, EDE | ~50 | 0% | Geography dimension |
-| 12 | DENOMINATIE | text | Religious/philosophical affiliation | No | Overige, Protestants-Christelijk | ~5 | 0% | Institution attribute |
-| 13 | TELEFOONNUMMER | text | Phone number | Yes | 0582512345 | ~50 | Unknown | Contact info |
-| 14 | INTERNETADRES | text | Website URL | Yes | www.nhl.nl | ~50 | Unknown | Contact info |
-| 15 | STRAATNAAM CORRESPONDENTIEADRES | text | Street name (mailing address) | Yes | Postbus | ~50 | Unknown | Address attribute |
-| 16 | HUISNUMMER-TOEVOEGING CORRESPONDENTIEADRES | text | House number (mailing) | Yes | 1080 | ~50 | Unknown | Address attribute |
-| 17 | POSTCODE CORRESPONDENTIEADRES | text | Postal code (mailing) | Yes | 8900 CB | ~50 | Unknown | Address attribute |
-| 18 | PLAATSNAAM CORRESPONDENTIEADRES | text | City (mailing address) | Yes | LEEUWARDEN | ~50 | Unknown | Address attribute |
-| 19 | NODAAL GEBIED CODE | text | Nodal region code | No | 10, 29 | ~40 | 0% | Geography dimension |
-| 20 | NODAAL GEBIED NAAM | text | Nodal region name | No | Leeuwarden, Ede | ~40 | 0% | Geography dimension |
-| 21 | RPA-GEBIED CODE | text | RPA region code | No | 04, 10 | ~30 | 0% | Geography dimension |
-| 22 | RPA-GEBIED NAAM | text | RPA region name | No | Fryslân, De Vallei | ~30 | 0% | Geography dimension |
-| 23 | WGR-GEBIED CODE | text | WGR region code | No | 04, 16 | ~30 | 0% | Geography dimension |
-| 24 | WGR-GEBIED NAAM | text | WGR region name | No | Friesland-Noord, Eem en Vallei | ~30 | 0% | Geography dimension |
-| 25 | COROPGEBIED CODE | text | COROP region code | No | 04, 13 | ~40 | 0% | Geography dimension |
-| 26 | COROPGEBIED NAAM | text | COROP region name | No | Noord-Friesland, Veluwe | ~40 | 0% | Geography dimension |
-| 27 | ONDERWIJSGEBIED CODE | text | Education region code | No | 03, 09 | ~12 | 0% | Geography dimension |
-| 28 | ONDERWIJSGEBIED NAAM | text | Education region name | No | Friesland, Arnhem en omstreken | ~12 | 0% | Geography dimension |
-| 29 | RMC-REGIO CODE | text | RMC region code | No | 04, 16 | ~39 | 0% | Geography dimension |
-| 30 | RMC-REGIO NAAM | text | RMC region name | No | Friesland Noord, Eem en Vallei | ~39 | 0% | Geography dimension |
+| 1 | SOORT HO | text | Type onderwijs (kleine letters) | Nee | hbo, wo | 2 | 0% | Bereikfilter |
+| 2 | PROVINCIE | text | Provincie | Nee | Friesland, Gelderland | 12 | 0% | Geografiedimensie |
+| 3 | BEVOEGD GEZAG NUMMER | text | Nummer bevoegd gezag | Nee | 30156, 40235 | ~50 | 0% | Instellingsdimensiesleutel |
+| 4 | INSTELLINGSCODE | text | Instellingscode (BRIN) | Nee | 31FR, 25BA | ~50 | 0% | Instellingsdimensiesleutel (BRIN) |
+| 5 | INSTELLINGSNAAM | text | Instellingsnaam | Nee | NHL Stenden Hogeschool, CHE | ~50 | 0% | Instellingsdimensie |
+| 6 | STRAATNAAM | text | Straatnaam (bezoekadres) | Nee | Rengerslaan, Oude Kerkweg | ~50 | 0% | Adreskenm erk |
+| 7 | HUISNUMMER-TOEVOEGING | text | Huisnummer + toevoeging | Nee | 10, 100 | ~50 | 0% | Adeskenmerk |
+| 8 | POSTCODE | text | Postcode (bezoek) | Nee | 8917 DD, 6717 JS | ~50 | 0% | Adeskenmerk |
+| 9 | PLAATSNAAM | text | Plaats (bezoekadres, hoofdletters) | Nee | LEEUWARDEN, EDE | ~50 | 0% | Geografiedimensie |
+| 10 | GEMEENTENUMMER | text | Gemeentecode (CBS) | Nee | 0080, 0228 | ~50 | 0% | Geografiedimensiesleutel |
+| 11 | GEMEENTENAAM | text | Gemeentenaam (hoofdletters) | Nee | LEEUWARDEN, EDE | ~50 | 0% | Geografiedimensie |
+| 12 | DENOMINATIE | text | Religieuze/filosofische achtergrond | Nee | Overige, Protestants-Christelijk | ~5 | 0% | Instellingskenmerk |
+| 13 | TELEFOONNUMMER | text | Telefoonnummer | Ja | 0582512345 | ~50 | Onbekend | Contactinfo |
+| 14 | INTERNETADRES | text | Website-URL | Ja | www.nhl.nl | ~50 | Onbekend | Contactinfo |
+| 15 | STRAATNAAM CORRESPONDENTIEADRES | text | Straatnaam (correspondentieadres) | Ja | Postbus | ~50 | Onbekend | Adreskenmerk |
+| 16 | HUISNUMMER-TOEVOEGING CORRESPONDENTIEADRES | text | Huisnummer (correspondentie) | Ja | 1080 | ~50 | Onbekend | Adreskenmerk |
+| 17 | POSTCODE CORRESPONDENTIEADRES | text | Postcode (correspondentie) | Ja | 8900 CB | ~50 | Onbekend | Adreskenmerk |
+| 18 | PLAATSNAAM CORRESPONDENTIEADRES | text | Plaats (correspondentieadres) | Ja | LEEUWARDEN | ~50 | Onbekend | Adreskenmerk |
+| 19 | NODAAL GEBIED CODE | text | Code nodale regio | Nee | 10, 29 | ~40 | 0% | Geografiedimensie |
+| 20 | NODAAL GEBIED NAAM | text | Naam nodale regio | Nee | Leeuwarden, Ede | ~40 | 0% | Geografiedimensie |
+| 21 | RPA-GEBIED CODE | text | Code RPA-regio | Nee | 04, 10 | ~30 | 0% | Geografiedimensie |
+| 22 | RPA-GEBIED NAAM | text | Naam RPA-regio | Nee | Fryslân, De Vallei | ~30 | 0% | Geografiedimensie |
+| 23 | WGR-GEBIED CODE | text | Code WGR-regio | Nee | 04, 16 | ~30 | 0% | Geografiedimensie |
+| 24 | WGR-GEBIED NAAM | text | Naam WGR-regio | Nee | Friesland-Noord, Eem en Vallei | ~30 | 0% | Geografiedimensie |
+| 25 | COROPGEBIED CODE | text | Code COROP-regio | Nee | 04, 13 | ~40 | 0% | Geografiedimensie |
+| 26 | COROPGEBIED NAAM | text | Naam COROP-regio | Nee | Noord-Friesland, Veluwe | ~40 | 0% | Geografiedimensie |
+| 27 | ONDERWIJSGEBIED CODE | text | Code onderwijsregio | Nee | 03, 09 | ~12 | 0% | Geografiedimensie |
+| 28 | ONDERWIJSGEBIED NAAM | text | Naam onderwijsregio | Nee | Friesland, Arnhem en omstreken | ~12 | 0% | Geografiedimensie |
+| 29 | RMC-REGIO CODE | text | Code RMC-regio | Nee | 04, 16 | ~39 | 0% | Geografiedimensie |
+| 30 | RMC-REGIO NAAM | text | Naam RMC-regio | Nee | Friesland Noord, Eem en Vallei | ~39 | 0% | Geografiedimensie |
 
-#### Data Quality Notes (Adressen hogescholen)
+#### Datakwaliteitsopmerkingen (Adressen hogescholen)
 
-- [ ] Column names contain spaces — requires transformation (quoting or renaming) before loading
-- [ ] `SOORT HO` is lowercase ("hbo", "wo") — inconsistent with uppercase convention in statistical datasets
-- [ ] Only primary campus address per institution — institutions with multiple locations have one row
-- [ ] `GEMEENTENAAM` and `PLAATSNAAM` are uppercase — same field, different casing vs statistical datasets
-- [ ] Six regional classification systems present (Nodaal, RPA, WGR, COROP, Onderwijsgebied, RMC) — alternative geography hierarchies; most can be collapsed into one dim_geography
+- [ ] Kolomnamen bevatten spaties — vereist transformatie (aanhalingstekens of hernoemen) vóór laden
+- [ ] `SOORT HO` is kleine letters ("hbo", "wo") — inconsistent met hoofdletterconventie in statistische datasets
+- [ ] Alleen primair campusadres per instelling — instellingen met meerdere locaties hebben één rij
+- [ ] `GEMEENTENAAM` en `PLAATSNAAM` zijn hoofdletters — hetzelfde veld, verschillende gebruik van hoofdletters vs statistische datasets
+- [ ] Zes geografische classificatiesystemen aanwezig (Nodaal, RPA, WGR, COROP, Onderwijsgebied, RMC) — alternatieve geografische hiërarchieën; meeste kunnen in één dim_geography worden samengevat
 
 ---
 
 ### Dataset: Adressen besturen hogescholen en universiteiten
 
-Reference dataset with addresses for governing boards (bevoegde gezagen) of all HBO and WO institutions.
+Referentiedataset met adressen voor bevoegde gezagen (besturen) van alle HBO- en WO-instellingen.
 
-**Row count:** ~50 | **Grain:** One row per governing board | **Scope:** All HO — filter `SOORT HO` = 'hbo' for HBO
-**Update frequency:** Monthly
+**Aantal rijen:** ~50 | **Granulariteit:** Een rij per bevoegd gezag | **Bereik:** Alle HO — filter `SOORT HO` = 'hbo' voor HBO
+**Updatefrequentie:** Maandelijks
 
-| # | Field | Type | Description | Nullable | Sample Values | Cardinality | Null % | Role Guess |
+| # | Veld | Type | Beschrijving | Null mogelijk | Voorbeeldwaarden | Kardinaliteit | Null % | Verwachte rol |
 |---|-------|------|-------------|----------|---------------|-------------|--------|------------|
-| 1 | SOORT HO | text | Education type (lowercase) | No | hbo, wo | 2 | 0% | Scope filter |
-| 2 | BEVOEGD GEZAG NUMMER | text | Governing board number | No | 24832, 28901, 29615 | ~50 | 0% | **Governing board key** |
-| 3 | BEVOEGD GEZAG NAAM | text | Governing board name | No | Stichting Codarts, Stichting HKU | ~50 | 0% | Governing board dimension |
-| 4 | STRAATNAAM | text | Street name (visiting address) | No | Kruisplein, Nieuwekade | ~50 | 0% | Address attribute |
-| 5 | HUISNUMMER-TOEVOEGING | text | House number + suffix | No | 26, 1 | ~50 | 0% | Address attribute |
-| 6 | POSTCODE | text | Postal code (visiting) | No | 3012 CC, 3511 RV | ~50 | 0% | Address attribute |
-| 7 | PLAATSNAAM | text | City (visiting address, uppercase) | No | ROTTERDAM, UTRECHT | ~50 | 0% | Geography dimension |
-| 8 | GEMEENTENUMMER | text | Municipality code (CBS) | No | 0599, 0344 | ~50 | 0% | Geography dimension key |
-| 9 | GEMEENTENAAM | text | Municipality name (uppercase) | No | ROTTERDAM, UTRECHT | ~50 | 0% | Geography dimension |
-| 10 | DENOMINATIE | text | Religious/philosophical affiliation | No | Algemeen bijzonder, Openbaar | ~5 | 0% | Institution attribute |
-| 11 | TELEFOONNUMMER | text | Phone number | Yes | 0102171100 | ~50 | Unknown | Contact info |
-| 12 | INTERNETADRES | text | Website URL | Yes | www.codarts.nl | ~50 | Unknown | Contact info |
-| 13 | STRAATNAAM CORRESPONDENTIEADRES | text | Street name (mailing address) | Yes | Kruisplein, Postbus | ~50 | Unknown | Address attribute |
-| 14 | HUISNUMMER-TOEVOEGING CORRESPONDENTIEADRES | text | House number (mailing) | Yes | 26, 1520 | ~50 | Unknown | Address attribute |
-| 15 | POSTCODE CORRESPONDENTIEADRES | text | Postal code (mailing) | Yes | 3012 CC, 3500 BM | ~50 | Unknown | Address attribute |
-| 16 | PLAATSNAAM CORRESPONDENTIEADRES | text | City (mailing address) | Yes | ROTTERDAM, UTRECHT | ~50 | Unknown | Address attribute |
-| 17 | ADMINISTRATIEKANTOORNUMMER | text | Administrative office number | Yes | 164, 639 | ~50 | Unknown | Cross-reference |
-| 18 | KVK-NUMMER | text | Chamber of Commerce number | Yes | 41126801, 41178974 | ~50 | Unknown | Legal identifier |
+| 1 | SOORT HO | text | Type onderwijs (kleine letters) | Nee | hbo, wo | 2 | 0% | Bereikfilter |
+| 2 | BEVOEGD GEZAG NUMMER | text | Nummer bevoegd gezag | Nee | 24832, 28901, 29615 | ~50 | 0% | **Sleutel bevoegd gezag** |
+| 3 | BEVOEGD GEZAG NAAM | text | Naam bevoegd gezag | Nee | Stichting Codarts, Stichting HKU | ~50 | 0% | Dimensie bevoegd gezag |
+| 4 | STRAATNAAM | text | Straatnaam (bezoekadres) | Nee | Kruisplein, Nieuwekade | ~50 | 0% | Adreskenmerk |
+| 5 | HUISNUMMER-TOEVOEGING | text | Huisnummer + toevoeging | Nee | 26, 1 | ~50 | 0% | Adreskenmerk |
+| 6 | POSTCODE | text | Postcode (bezoek) | Nee | 3012 CC, 3511 RV | ~50 | 0% | Adreskenmerk |
+| 7 | PLAATSNAAM | text | Plaats (bezoekadres, hoofdletters) | Nee | ROTTERDAM, UTRECHT | ~50 | 0% | Geografiedimensie |
+| 8 | GEMEENTENUMMER | text | Gemeentecode (CBS) | Nee | 0599, 0344 | ~50 | 0% | Geografiedimensiesleutel |
+| 9 | GEMEENTENAAM | text | Gemeentenaam (hoofdletters) | Nee | ROTTERDAM, UTRECHT | ~50 | 0% | Geografiedimensie |
+| 10 | DENOMINATIE | text | Religieuze/filosofische achtergrond | Nee | Algemeen bijzonder, Openbaar | ~5 | 0% | Instellingskenmerk |
+| 11 | TELEFOONNUMMER | text | Telefoonnummer | Ja | 0102171100 | ~50 | Onbekend | Contactinfo |
+| 12 | INTERNETADRES | text | Website-URL | Ja | www.codarts.nl | ~50 | Onbekend | Contactinfo |
+| 13 | STRAATNAAM CORRESPONDENTIEADRES | text | Straatnaam (correspondentieadres) | Ja | Kruisplein, Postbus | ~50 | Onbekend | Adreskenmerk |
+| 14 | HUISNUMMER-TOEVOEGING CORRESPONDENTIEADRES | text | Huisnummer (correspondentie) | Ja | 26, 1520 | ~50 | Onbekend | Adreskenmerk |
+| 15 | POSTCODE CORRESPONDENTIEADRES | text | Postcode (correspondentie) | Ja | 3012 CC, 3500 BM | ~50 | Onbekend | Adreskenmerk |
+| 16 | PLAATSNAAM CORRESPONDENTIEADRES | text | Plaats (correspondentieadres) | Ja | ROTTERDAM, UTRECHT | ~50 | Onbekend | Adreskenmerk |
+| 17 | ADMINISTRATIEKANTOORNUMMER | text | Nummer administratiekantoor | Ja | 164, 639 | ~50 | Onbekend | Kruisverwijzing |
+| 18 | KVK-NUMMER | text | KvK-nummer | Ja | 41126801, 41178974 | ~50 | Onbekend | Juridisch kenmerk |
 
-#### Data Quality Notes (Adressen besturen)
+#### Datakwaliteitsopmerkingen (Adressen besturen)
 
-- [ ] Column names contain spaces — same transformation needed as Adressen hogescholen
-- [ ] `BEVOEGD GEZAG NUMMER` values differ in format from `BEVOEGD_GEZAG_CODE` in overzicht-erkenningen-ho (e.g. "24832" vs "20045") — verify if same namespace before joining
+- [ ] Kolomnamen bevatten spaties — dezelfde transformatie nodig als Adressen hogescholen
+- [ ] `BEVOEGD GEZAG NUMMER` waarden verschillen in formaat van `BEVOEGD_GEZAG_CODE` in overzicht-erkenningen-ho (bijv. "24832" vs "20045") — verificatie of dezelfde namespace vóór combinatie
 
 ---
 
-## Relationships
+## Relaties
 
-| Source | Target | Relationship | Confidence | Notes |
+| Bron | Doel | Relatie | Zekerheid | Opmerkingen |
 |--------|--------|--------------|------------|-------|
-| p01hoinges.INSTELLINGSCODE_ACTUEEL | adressen-hogescholen.INSTELLINGSCODE | N:1 | High | Both are BRIN codes; statistical datasets join to address lookup |
-| p01hoinges.INSTELLINGSCODE_ACTUEEL | overzicht-erkenningen-ho.INSTELLINGSCODE | N:1 | High | BRIN code: multiple programs per institution |
-| p02ho1ejrs.INSTELLINGSCODE_ACTUEEL | adressen-hogescholen.INSTELLINGSCODE | N:1 | High | Same as p01 |
-| p03hoinschr.INSTELLINGSCODE_ACTUEEL | adressen-hogescholen.INSTELLINGSCODE | N:1 | High | Same as p01 |
-| p04hogdipl.INSTELLINGSCODE_ACTUEEL | adressen-hogescholen.INSTELLINGSCODE | N:1 | High | Same as p01 |
-| p01b.OPLEIDINGSCODE_ACTUEEL | ho_opleidingsoverzicht.ERKENDEOPLEIDINGSCODE | N:1 | High | CROHO code joins statistical data to program master (both numeric) |
-| p02b.OPLEIDINGSCODE_ACTUEEL | ho_opleidingsoverzicht.ERKENDEOPLEIDINGSCODE | N:1 | High | Same as p01b |
-| p03b.OPLEIDINGSCODE_ACTUEEL | ho_opleidingsoverzicht.ERKENDEOPLEIDINGSCODE | N:1 | High | Same as p01b |
-| p04b.OPLEIDINGSCODE_ACTUEEL | ho_opleidingsoverzicht.ERKENDEOPLEIDINGSCODE | N:1 | High | Same as p01b |
-| ho_opleidingsoverzicht.ERKENDEOPLEIDINGSCODE | overzicht-erkenningen-ho.ERKENDEOPLEIDINGSCODE | 1:N | High | **Type mismatch**: numeric vs text — needs CAST when joining on CROHO code |
-| ho_opleidingsoverzicht.OPLEIDINGSEENHEIDCODE | overzicht-erkenningen-ho.OPLEIDINGSEENHEIDCODE | 1:N | High | RIO program unit code — consistent text type |
-| adressen-hogescholen.INSTELLINGSCODE | overzicht-erkenningen-ho.INSTELLINGSCODE | 1:N | High | BRIN code: one institution address → many program accreditations |
-| adressen-hogescholen.BEVOEGD GEZAG NUMMER | adressen-besturen.BEVOEGD GEZAG NUMMER | N:1 | High | Governing board number: institution → board address |
-| adressen-hogescholen.BEVOEGD GEZAG NUMMER | overzicht-erkenningen-ho.BEVOEGD_GEZAG_CODE | N:1 | Medium | Same governing board concept; **verify value overlap** — naming/format differ |
-| p01–p04.ONDERDEEL | overzicht-erkenningen-ho.ONDERDEEL | N:N | High | Shared vocabulary (TECHNIEK, ECONOMIE, etc.) — same classification system |
-| p01–p04.SUBONDERDEEL | overzicht-erkenningen-ho.SUBONDERDEEL | N:N | High | Shared vocabulary |
+| p01hoinges.INSTELLINGSCODE_ACTUEEL | adressen-hogescholen.INSTELLINGSCODE | N:1 | Hoog | Beide zijn BRIN-codes; statistische datasets voegen toe aan adresopzoeking |
+| p01hoinges.INSTELLINGSCODE_ACTUEEL | overzicht-erkenningen-ho.INSTELLINGSCODE | N:1 | Hoog | BRIN-code: meerdere programma's per instelling |
+| p02ho1ejrs.INSTELLINGSCODE_ACTUEEL | adressen-hogescholen.INSTELLINGSCODE | N:1 | Hoog | Identiek aan p01 |
+| p03hoinschr.INSTELLINGSCODE_ACTUEEL | adressen-hogescholen.INSTELLINGSCODE | N:1 | Hoog | Identiek aan p01 |
+| p04hogdipl.INSTELLINGSCODE_ACTUEEL | adressen-hogescholen.INSTELLINGSCODE | N:1 | Hoog | Identiek aan p01 |
+| p01b.OPLEIDINGSCODE_ACTUEEL | ho_opleidingsoverzicht.ERKENDEOPLEIDINGSCODE | N:1 | Hoog | CROHO-code voegt statistische gegevens toe aan programmamaster (beide numeric) |
+| p02b.OPLEIDINGSCODE_ACTUEEL | ho_opleidingsoverzicht.ERKENDEOPLEIDINGSCODE | N:1 | Hoog | Identiek aan p01b |
+| p03b.OPLEIDINGSCODE_ACTUEEL | ho_opleidingsoverzicht.ERKENDEOPLEIDINGSCODE | N:1 | Hoog | Identiek aan p01b |
+| p04b.OPLEIDINGSCODE_ACTUEEL | ho_opleidingsoverzicht.ERKENDEOPLEIDINGSCODE | N:1 | Hoog | Identiek aan p01b |
+| ho_opleidingsoverzicht.ERKENDEOPLEIDINGSCODE | overzicht-erkenningen-ho.ERKENDEOPLEIDINGSCODE | 1:N | Hoog | **Typemismatching**: numeric vs text — vereist CAST bij combinatie op CROHO-code |
+| ho_opleidingsoverzicht.OPLEIDINGSEENHEIDCODE | overzicht-erkenningen-ho.OPLEIDINGSEENHEIDCODE | 1:N | Hoog | RIO-programma-eenheidscode — consistente teksttype |
+| adressen-hogescholen.INSTELLINGSCODE | overzicht-erkenningen-ho.INSTELLINGSCODE | 1:N | Hoog | BRIN-code: één instellingsadres → veel programmaerkenningen |
+| adressen-hogescholen.BEVOEGD GEZAG NUMMER | adressen-besturen.BEVOEGD GEZAG NUMMER | N:1 | Hoog | Nummer bevoegd gezag: instelling → adres bestuursorgaan |
+| adressen-hogescholen.BEVOEGD GEZAG NUMMER | overzicht-erkenningen-ho.BEVOEGD_GEZAG_CODE | N:1 | Gemiddeld | Hetzelfde bevoegd gezag-concept; **verificatie van waarde-overlap** — naming/formaat verschillen |
+| p01–p04.ONDERDEEL | overzicht-erkenningen-ho.ONDERDEEL | N:N | Hoog | Gedeeld vocabulaire (TECHNIEK, ECONOMIE, etc.) — hetzelfde classificatiesysteem |
+| p01–p04.SUBONDERDEEL | overzicht-erkenningen-ho.SUBONDERDEEL | N:N | Hoog | Gedeeld vocabulaire |
 
 ---
 
-## Data Quality Notes
+## Datakwaliteitsopmerkingen
 
-- [ ] **Privacy suppression (all p01–p04):** Measure fields use `-1` for counts < 5 (GDPR). DUO documentation states values < 5 are displayed as 4, but actual data uses -1. Rate in p01 resource 1a: 5.7% (273/4,833 records). Rates for p02–p04 not yet measured.
-- [ ] **p01 vs p03 semantic overlap:** "Ingeschrevenen" (enrolled persons) vs "Inschrijvingen" (enrollments) — almost identical structure and similar row counts (15,892 vs 15,900 total). Exact semantic difference needs verification with DUO documentation.
-- [ ] **Year field naming inconsistency:** p01–p03 use `STUDIEJAAR`, p04 uses `DIPLOMAJAAR`. Both are integers representing academic/calendar year but describe different events.
-- [ ] **SOORT_INSTELLING always = "reguliere inst."** in all p01–p04 datasets — zero analytical value for HBO-only scope. May differ when combining with WO data.
-- [ ] **TYPE_HOGER_ONDERWIJS absent from p04hogdipl** — replaced by `SOORT_DIPLOMA`. Same concept, different vocabulary: "bachelor" (p01–p03) vs "hbo bachelor" (p04).
-- [ ] **Column naming convention mismatch:** p01–p04 use UPPER_SNAKE_CASE. Address datasets use "UPPER CASE WITH SPACES". Needs normalization during loading.
-- [ ] **CROHO code type mismatch:** `ho_opleidingsoverzicht.ERKENDEOPLEIDINGSCODE` is numeric; `overzicht-erkenningen-ho.ERKENDEOPLEIDINGSCODE` is text. Values are equivalent — requires CAST when joining.
-- [ ] **Reference datasets cover all HO (HBO + WO):** Filter ho_opleidingsoverzicht and overzicht-erkenningen-ho by `NIVEAU IN ('HBO-BA','HBO-MA','HBO-AD')` to scope to HBO.
-- [ ] **GEMEENTENUMMER stored as text** (leading zeros, e.g. "0106") across all datasets — consistent, but must not be cast to integer.
-- [ ] **Three resource splits per dataset (p01–p04):** Each statistical dataset has 3 resources representing different cross-tabulations (gender, program code, education form). These are NOT independent — they represent different aggregations of the same underlying data. Cannot be simply unioned or joined without double-counting.
-- [ ] **Null rates for reference dataset nullable fields unknown** — especially EINDDATUM (null for active programs), location fields in ho_opleidingsoverzicht, and accreditation date fields in overzicht-erkenningen-ho.
-- [ ] **DIPLOMAJAAR historical window may differ** — samples show 2019 as earliest value for p04hogdipl vs 2020 for p01–p03. Verify full available year range.
-- [ ] **GEMEENTENAAM casing inconsistency:** Uppercase in address datasets ("LEEUWARDEN"), mixed case in statistical datasets ("Leeuwarden"). Needs normalization for joining.
+- [ ] **Privacyonderdrukking (alle p01–p04):** Meetvelden gebruiken `-1` voor aantallen < 5 (AVG). DUO-documentatie stelt dat waarden < 5 als 4 worden weergegeven, maar werkelijke gegevens gebruiken -1. Frequentie in p01-bronbestand 1a: 5,7% (273/4.833 records). Frequentie voor p02–p04 nog niet gemeten.
+- [ ] **p01 vs p03 semantische overlap:** "Ingeschrevenen" (ingeschrevenen personen) vs "Inschrijvingen" (inschrijvingen) — bijna identieke structuur en vergelijkbare aantallen rijen (15.892 vs 15.900 totaal). Precieus semantisch verschil vereist verificatie met DUO-documentatie.
+- [ ] **Inconsistentie jaarveldenaming:** p01–p03 gebruiken `STUDIEJAAR`, p04 gebruikt `DIPLOMAJAAR`. Beide zijn gehele getallen die academisch/kalenderjaar vertegenwoordigen maar beschrijven verschillende gebeurtenissen.
+- [ ] **SOORT_INSTELLING altijd = "reguliere inst."** in alle p01–p04 datasets — nul analytische waarde voor HBO-bereik. Kan verschillen bij combinatie met WO-gegevens.
+- [ ] **TYPE_HOGER_ONDERWIJS ontbreekt in p04hogdipl** — vervangen door `SOORT_DIPLOMA`. Hetzelfde concept, ander vocabulaire: "bachelor" (p01–p03) vs "hbo bachelor" (p04).
+- [ ] **Kolomnaamconventie-mismatch:** p01–p04 gebruiken UPPER_SNAKE_CASE. Adresgegevenssets gebruiken "UPPER CASE WITH SPACES". Vereist normalisatie bij laden.
+- [ ] **CROHO-codetype-mismatch:** `ho_opleidingsoverzicht.ERKENDEOPLEIDINGSCODE` is numeric; `overzicht-erkenningen-ho.ERKENDEOPLEIDINGSCODE` is text. Waarden zijn equivalent — vereist CAST bij combinatie.
+- [ ] **Referentiedatasets omvatten alle HO (HBO + WO):** Filter ho_opleidingsoverzicht en overzicht-erkenningen-ho op `NIVEAU IN ('HBO-BA','HBO-MA','HBO-AD')` om HBO-bereik in te stellen.
+- [ ] **GEMEENTENUMMER opgeslagen als tekst** (voorloopnullen, bijv. "0106") in alle datasets — consistent, maar mag niet naar integer worden geconverteerd.
+- [ ] **Drie resourcesplitsingen per dataset (p01–p04):** Elke statistische dataset heeft 3 bronbestanden die verschillende kruistabellaties vertegenwoordigen (geslacht, programmacode, opleidingsvorm). Dit zijn GEEN onafhankelijke waarnemingen — ze vertegenwoordigen verschillende aggregaties van dezelfde onderliggende gegevens. Kunnen niet eenvoudig worden gecombineerd of samengevoegd zonder dubbeltelling.
+- [ ] **Nulfrequentie voor referentiedataset-nullabelvelden onbekend** — vooral EINDDATUM (null voor actieve programma's), locatievelden in ho_opleidingsoverzicht en accrediteringsdatumvelden in overzicht-erkenningen-ho.
+- [ ] **DIPLOMAJAAR historisch venster kan verschillen** — samples tonen 2019 als vroegste waarde voor p04hogdipl vs 2020 voor p01–p03. Verificatie van volledig beschikbaar jaarbereik.
+- [ ] **GEMEENTENAAM hoofdlettergebruik-inconsistentie:** Hoofdletters in adresgegevenssets ("LEEUWARDEN"), gemengde letters in statistische datasets ("Leeuwarden"). Vereist normalisatie voor combinatie.

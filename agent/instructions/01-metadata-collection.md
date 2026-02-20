@@ -4,6 +4,23 @@
 
 > This is a reusable instruction document. It describes how an AI agent should collect and catalog metadata from any data source as the first step toward building a dimensional model.
 
+## Language Policy
+
+🌍 **Communication & Instructions:** English (this document and agent-human discussion)
+
+🇳🇱 **Project Content & Artifacts:** Dutch (all outputs, metadata, documentation, and data intended for use by Dutch stakeholders)
+
+For DUO HBO projects:
+- Dataset names, descriptions → Dutch
+- Field names, metadata, data dictionaries → Dutch
+- README, PLAN, project documentation → Dutch
+- CSV headers and data → Dutch
+- Agent outputs and catalogs → Dutch
+
+**Rationale:** All content that will be reviewed, used, or delivered to Dutch education institutions must be in Dutch. Instructions about *how* the process works can be in English for international reusability.
+
+---
+
 ## Collaboration Model
 
 This project is a human–AI collaboration:
@@ -104,11 +121,22 @@ The data source must provide at least one of:
 
 The metadata catalog should be saved as: `data/metadata/{source-name}-metadata-catalog.md`
 
+### Language in Output
+**For Dutch projects (DUO HBO):** All output content must be in Dutch
+- Dataset names and descriptions → Dutch
+- Field names and descriptions → Dutch
+- Column headers in CSV files → Dutch
+- Data quality notes → Dutch
+- All narrative text → Dutch
+
+**Exception:** The metadata catalog structure/headings can follow English patterns, but all content within must be Dutch.
+
 ### CSV File Convention
 
 All CSV output files must use:
 - **Separator:** `;` (semicolon)
 - **Encoding:** `utf-8-sig` (UTF-8 with BOM — ensures correct opening in Excel)
+- **Language:** All headers and content in Dutch (for Dutch projects)
 
 Each output document must begin with:
 
@@ -174,3 +202,15 @@ For the DUO pilot:
 - The API follows OData conventions — use `$metadata` endpoints where available
 - Data is updated annually with a reference date of October 1st
 - Last 5 academic years are typically available
+
+### Dutch Language Requirements for DUO Projects
+
+**All outputs must be in Dutch:**
+- Dataset inventory → translate to Dutch
+- Field metadata tables → all headers and content in Dutch
+- Relationship descriptions → Dutch
+- Data quality notes → Dutch
+- All narrative documentation → Dutch
+- Example headers: `Datasetnaam`, `Veldenmaatschappij`, `Beschrijving`, `Null mogelijk`, `Voorbeeldwaarden`, `Kardinaliteit`
+
+DUO data stakeholders and the target audience (HBO institutions) are Dutch-speaking. All deliverables must be accessible in Dutch.
