@@ -22,30 +22,41 @@ Deze zijn **niet combineerbaar** — samenvoegen leidt tot dubbeltellingen.
 
 ## Ontwerpbeslissingen
 
-### Beslissing 1: Drie feitentabelfamilies
+### Beslissing 1: Vier feitentabelfamilies
 
-Drie bedrijfsprocessen, elk met de b-variant als **primaire feitentabel** (fijnste korrel op opleidingsniveau):
+Vier bedrijfsprocessen, elk met de b-variant als **primaire feitentabel** (fijnste korrel op opleidingsniveau):
 
 | # | Feitentabel | Bron | Korrel (één rij = ...) | Meetwaarde |
 |---|-------------|------|------------------------|------------|
 | 1 | `feit_ingeschrevenen` | p01b | studiejaar × gemeente × instelling × opleiding(CROHO) | AANTAL_INGESCHREVENEN |
-| 2 | `feit_eerstejaars` | p02b | studiejaar × gemeente × instelling × opleiding(CROHO) | AANTAL_EERSTEJAARS_INGESCHREVENEN |
-| 3 | `feit_gediplomeerden` | p04b | diplomajaar × gemeente × instelling × opleiding(CROHO) × soort_diploma | AANTAL_GEDIPLOMEERDEN |
+| 2 | `feit_inschrijvingen` | p03b | studiejaar × gemeente × instelling × opleiding(CROHO) | AANTAL_INSCHRIJVINGEN |
+| 3 | `feit_eerstejaars` | p02b | studiejaar × gemeente × instelling × opleiding(CROHO) | AANTAL_EERSTEJAARS_INGESCHREVENEN |
+| 4 | `feit_gediplomeerden` | p04b | diplomajaar × gemeente × instelling × opleiding(CROHO) × soort_diploma | AANTAL_GEDIPLOMEERDEN |
 
 **Aanvullende feitentabellen** (bouwen indien nodig):
 
 | # | Feitentabel | Bron | Extra dimensie t.o.v. primair |
 |---|-------------|------|-------------------------------|
-| 4 | `feit_ingeschrevenen_geslacht` | p01a | + GESLACHT (maar zonder CROHO-code) |
-| 5 | `feit_ingeschrevenen_oplvorm` | p01c | + OPLEIDINGSVORM (maar zonder CROHO-code) |
-| 6–7 | `feit_eerstejaars_geslacht/_oplvorm` | p02a/c | idem |
-| 8–9 | `feit_gediplomeerden_geslacht/_oplvorm` | p04a/c | idem |
+| 5 | `feit_ingeschrevenen_geslacht` | p01a | + GESLACHT (maar zonder CROHO-code) |
+| 6 | `feit_ingeschrevenen_oplvorm` | p01c | + OPLEIDINGSVORM (maar zonder CROHO-code) |
+| 7–8 | `feit_inschrijvingen_geslacht/_oplvorm` | p03a/c | idem |
+| 9–10 | `feit_eerstejaars_geslacht/_oplvorm` | p02a/c | idem |
+| 11–12 | `feit_gediplomeerden_geslacht/_oplvorm` | p04a/c | idem |
 
 **Motivatie:** De b-variant biedt CROHO-code-niveau detail, wat de meest bruikbare analyse-as is (welke specifieke opleiding?). De a/c-varianten voegen geslacht resp. opleidingsvorm toe, maar op een grover opleidingsniveau (sector). Omdat de varianten niet combineerbaar zijn, worden ze als aparte feitentabellen gemodelleerd.
 
-### Beslissing 2: p03 (inschrijvingen) wordt overgeslagen
+### Beslissing 2: p01 (ingeschrevenen) en p03 (inschrijvingen) zijn aparte feitentabellen
 
-p01 (ingeschrevenen = unieke personen) en p03 (inschrijvingen = inschrijvingsrecords) hebben bijna identieke structuur en aantallen (~15.900 rijen). Het verschil is semantisch (personen vs. inschrijvingen) maar voor deze proof of concept niet cruciaal. p01 is de primaire bron. p03 kan later als aparte feitentabelfamilie worden toegevoegd.
+Hoewel p01 en p03 een bijna identieke structuur en vergelijkbaar aantal rijen (~15.900) hebben, meten ze fundamenteel verschillende dingen:
+
+- **p01 — Ingeschrevenen** = **unieke personen** (natuurlijke personen). Van alle inschrijvingen op peildatum 1 oktober worden alleen de **hoofdinschrijvingen** geteld. Elke persoon telt maximaal **één keer** binnen het gehele hoger onderwijs.
+- **p03 — Inschrijvingen** = **alle inschrijvingsrecords**. Zowel **hoofd- als echte neveninschrijvingen** worden meegeteld. Een student met twee studies telt als **twee inschrijvingen**.
+
+> *Voorbeeld: Een student die zowel B Informatica als B Wiskunde studeert, telt als 1 ingeschrevene (p01) maar als 2 inschrijvingen (p03).*
+
+Dit onderscheid is analytisch waardevol: het verschil tussen p01 en p03 aantallen per instelling/opleiding geeft inzicht in de mate van **meervoudige inschrijvingen** (dubbelstudeerders).
+
+**Bron:** DUO CKAN API-documentatie (p01hoinges: *"natuurlijke personen [...] slechts één keer worden geteld"*; p03hoinschr: *"zowel de hoofd- als de echte neveninschrijvingen meegeteld"*).
 
 ### Beslissing 3: Twee dimensieniveaus voor opleidingen
 
@@ -229,6 +240,17 @@ Kleine dimensie (6 rijen). Alle jaren uit het beschikbare bereik.
 **Bron:** p01b — `ingeschrevenenhbo.csv` (7.170 rijen)
 **Type:** Periodieke snapshot feitentabel
 
+#### `feit_inschrijvingen`
+
+Identieke structuur als `feit_ingeschrevenen`, met:
+- Meetwaarde: `aantal_inschrijvingen` i.p.v. `aantal_ingeschrevenen`
+
+**Korrel:** Eén rij per studiejaar × gemeente × instelling × opleiding (CROHO)
+**Bron:** p03b — `inschrijvingenhbo.csv` (7.174 rijen)
+**Type:** Periodieke snapshot feitentabel
+
+**Semantisch verschil met feit_ingeschrevenen:** feit_ingeschrevenen telt unieke personen (hoofdinschrijving); feit_inschrijvingen telt alle inschrijvingsrecords (hoofd + neveninschrijvingen). Een student met twee studies telt als 1 ingeschrevene maar 2 inschrijvingen.
+
 #### `feit_eerstejaars`
 
 Identieke structuur als `feit_ingeschrevenen`, met:
@@ -271,6 +293,7 @@ Identieke structuur als `feit_ingeschrevenen`, met:
 **Bron:** p01a — `ingeschrevenengeslhbo.csv` (4.833 rijen)
 
 Dezelfde structuur geldt voor:
+- `feit_inschrijvingen_geslacht` (bron: p03a, 4.835 rijen)
 - `feit_eerstejaars_geslacht` (bron: p02a, 3.407 rijen)
 - `feit_gediplomeerden_geslacht` (bron: p04a, 4.445 rijen — met `soort_diploma_key` i.p.v. `type_hoger_onderwijs` in dim_sector)
 
@@ -283,6 +306,7 @@ Zelfde structuur als geslacht-variant, maar met `opleidingsvorm_key` (FK → dim
 **Bron:** p01c — `ingeschrevenenoplvhbo.csv` (3.889 rijen)
 
 Dezelfde structuur geldt voor:
+- `feit_inschrijvingen_oplvorm` (bron: p03c, 3.891 rijen)
 - `feit_eerstejaars_oplvorm` (bron: p02c, 2.908 rijen)
 - `feit_gediplomeerden_oplvorm` (bron: p04c, 3.591 rijen)
 
@@ -321,6 +345,7 @@ Dezelfde structuur geldt voor:
                         └─────────────────┘
 
   Zelfde patroon voor:
+  • feit_inschrijvingen (zelfde dimensies — telt inschrijvingen i.p.v. personen)
   • feit_eerstejaars (zelfde dimensies)
   • feit_gediplomeerden (+dim_soort_diploma)
 ```
@@ -384,5 +409,5 @@ Dezelfde structuur geldt voor:
 2. **Geslacht, opleiding en opleidingsvorm niet combineerbaar** — drie aparte feitentabelfamilies door DUO's pre-aggregatie. De vraag "hoeveel vrouwen studeren B Elektrotechniek?" is niet beantwoordbaar.
 3. **Alleen huidige codes** — `_ACTUEEL`-velden verbergen historische fusies/naamswijzigingen (bijv. NHL + Stenden → NHL Stenden). SCD Type 1 is de enige optie.
 4. **Privacyonderdrukking** — 5-7% van meetwaarden is NULL (oorspronkelijk -1). Totalen berekend via SUM zullen iets te laag zijn.
-5. **p01 vs p03 niet onderscheidbaar** — semantisch verschil (personen vs. inschrijvingen) niet verifieerbaar zonder DUO-documentatie. p03 is voorlopig uitgesloten.
+5. **Meervoudige inschrijvingen niet op persoonsniveau traceerbaar** — het verschil tussen feit_ingeschrevenen en feit_inschrijvingen toont het totale effect van dubbelstudeerders, maar niet welke specifieke personen meerdere inschrijvingen hebben.
 6. **Geen locatiedimensie** — statistische datasets kennen alleen gemeente, geen campuslocatie. Locatiedata uit ho_opleidingsoverzicht/erkenningen past niet op de korrel van de feitentabellen.

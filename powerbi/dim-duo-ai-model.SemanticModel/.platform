@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "dim-duo-ai-model"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "141124ce-8bc4-4ee5-a91e-73120dbb5bfd"
+  }
+}

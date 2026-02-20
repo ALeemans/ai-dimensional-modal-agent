@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:onderwijsdata.duo.nl)",
-      "WebFetch(domain:duo.nl)"
+      "WebFetch(domain:duo.nl)",
+      "Bash(curl:*)",
+      "Bash(python -m json.tool:*)",
+      "Bash(python:*)"
     ]
   }
 }

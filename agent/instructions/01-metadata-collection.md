@@ -63,6 +63,56 @@ The data source must provide at least one of:
 
 ---
 
+### Step 1.5: Fetch Official Source Documentation
+
+**Goal:** Collect and preserve the official, authoritative definitions and selection criteria for every dataset — before profiling the data itself.
+
+**Why this matters:** Field names and sample values alone cannot tell you:
+- What is *included* vs *excluded* from a count
+- What a metric *actually measures* (e.g. persons vs. records)
+- What privacy or filtering rules affect the data
+- Official definitions of domain-specific terms
+
+These definitions are **critical for correct dimensional modeling** and must be documented verbatim to avoid misinterpretation later.
+
+**Actions:**
+1. For every dataset found in Step 1, retrieve the **official dataset description** from its source:
+   - For CKAN APIs (e.g. DUO): `GET /api/3/action/package_show?id={dataset_id}` — extract the `notes` field
+   - For REST APIs: look for `/docs`, `/swagger`, or `/metadata` endpoints
+   - For databases: query `information_schema.columns.column_comment` or equivalent
+   - For file-based sources: look for README, data dictionaries, codebooks, or accompanying PDF documentation
+
+2. For each dataset, extract and record:
+   - **Selection criteria** — exactly what records are included and excluded
+   - **Counting unit** — is this counting persons, events, records, amounts?
+   - **Reference date / peildatum** — when is the data measured?
+   - **Time scope** — which periods are covered?
+   - **Privacy / suppression rules** — are small counts suppressed, rounded, or replaced?
+   - **Known exclusions** — what categories are deliberately left out?
+   - **Source system** — what upstream system generates this data?
+
+3. Quote the relevant text **verbatim** in the metadata catalog — do not paraphrase definitions that affect analytical meaning. This prevents future misinterpretation and provides an audit trail.
+
+4. Immediately compare documentation against the actual data:
+   - Does the claimed suppression rule match what you see in the data? (e.g. documentation says "shown as 4" but data contains -1)
+   - Does the claimed grain match the actual row count and distinct key combinations?
+   - Are stated exclusions visible in the data (i.e., missing expected categories)?
+
+5. Build a **begrippenoverzicht** (glossary) of all domain-specific terms with official definitions. Include at minimum:
+   - Every measure (what exactly is being counted)
+   - Every key domain concept (e.g. "ingeschrevene", "hoofdinschrijving", "peildatum")
+   - All coded values (e.g. VT/DT/DU, M/V, MAN/VROUW)
+   - Any terms whose meaning differs from everyday usage
+
+**Output:** A section titled "Officiële Brondocumentatie en Definities" in the metadata catalog, containing:
+- Verbatim selection criteria per dataset
+- A begrippenoverzicht (glossary table) with: Term | Definition | Dataset(s)
+- Any discrepancies found between documentation and actual data
+
+**⚠️ Do not skip this step even if the data source seems self-explanatory.** Subtle definitional differences (e.g. persons vs. enrollments, main vs. secondary registrations) directly determine how many fact tables are needed and whether analytical results will be correct.
+
+---
+
 ### Step 2: Profile Each Dataset
 
 **Goal:** For every dataset, collect detailed field-level metadata.
@@ -146,6 +196,30 @@ Each output document must begin with:
 **Source:** {data source name}
 ```
 
+### Official Documentation (per dataset)
+
+```markdown
+## Officiële Brondocumentatie en Definities
+
+> Bron: {API endpoint / document name}, opgehaald {date}. Tekst letterlijk overgenomen.
+
+### {Dataset name} — Selectiecriteria
+
+**Selectie:** *"{verbatim selection criteria from official documentation}"*
+
+**Kernbegrip:** {one-sentence plain-language summary of what is counted}
+
+**AVG/privacy-filter:** *"{verbatim suppression rule}"*
+
+> **Let op:** {any discrepancy between documentation and actual data}
+
+### Begrippenoverzicht
+
+| Begrip | Definitie | Dataset(s) |
+|--------|-----------|------------|
+| **{Term}** | {Official definition} | {Which datasets use it} |
+```
+
 ### Dataset Inventory
 
 ```markdown
@@ -190,6 +264,10 @@ Each output document must begin with:
 - **Record everything.** Even fields that seem irrelevant may become useful dimensions.
 - **Use the data, not just the schema.** Sample values reveal more than data types alone.
 - **Ask about scope early.** If only a subset of data is in scope (e.g., HBO only), filter early.
+- **Always fetch official documentation first (Step 1.5).** Two datasets can have nearly identical structure, row counts, and field names yet measure completely different things (e.g. "persons" vs "enrollments"). You cannot discover this from the data alone — only official definitions reveal it.
+- **Quote verbatim, don't paraphrase.** Selection criteria and exclusions must be exact. A paraphrase may lose the precise boundary condition that determines whether your fact tables are correct.
+- **Verify documentation against data.** Discrepancies between official documentation and actual data values (e.g. suppression value "-1" vs "4") are important findings that affect downstream modeling.
+- **Build the glossary early.** Domain terms that look similar but mean different things (like "ingeschrevene" vs "inschrijving") will cause modeling errors if left undefined.
 
 ---
 

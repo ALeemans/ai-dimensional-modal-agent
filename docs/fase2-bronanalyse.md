@@ -88,7 +88,11 @@ Twee kernbedrijfsprocessen zijn geïdentificeerd in de DUO HBO-data:
 | Peildatum | 1 oktober van het studiejaar |
 | Historische diepte | 5 studiejaren |
 
-**Semantisch onderscheid p01 vs p03:** "Ingeschrevenen" verwijst naar het aantal unieke personen dat ingeschreven staat; "Inschrijvingen" verwijst naar het aantal inschrijvingsrecords. Conceptueel vergelijkbaar maar technisch mogelijk verschillend. Nader te verifiëren met DUO-documentatie.
+**Semantisch onderscheid p01 vs p03 (geverifieerd via DUO CKAN API-documentatie):**
+- **p01 — Ingeschrevenen** = unieke personen (natuurlijke personen). Alleen **hoofdinschrijvingen** worden geteld. Elke persoon telt maximaal **één keer** binnen het gehele hoger onderwijs.
+- **p03 — Inschrijvingen** = alle inschrijvingsrecords. Zowel **hoofd- als echte neveninschrijvingen** worden meegeteld.
+- *Voorbeeld: Een student met twee HBO-studies telt als 1 ingeschrevene (p01) maar als 2 inschrijvingen (p03).*
+- Dit is analytisch waardevol: het verschil geeft inzicht in de mate van meervoudige inschrijvingen (dubbelstudeerders).
 
 ### Bedrijfsproces 2: Afstudering
 

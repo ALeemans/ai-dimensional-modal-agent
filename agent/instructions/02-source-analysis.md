@@ -27,8 +27,10 @@ The output of this phase directly drives Phase 3 (dimensional model design).
 
 ## Prerequisites
 
-- Completed metadata catalog from Phase 1 (field-level profiles for all datasets)
-- Understanding of the domain (or access to domain documentation)
+- Completed metadata catalog from Phase 1, including:
+  - Field-level profiles for all datasets
+  - **Official source documentation** (Step 1.5) — verbatim selection criteria and glossary per dataset
+- If Step 1.5 was skipped or incomplete: fetch the official dataset descriptions now before proceeding. Business meaning cannot be reliably derived from field names and sample values alone.
 
 ---
 
@@ -178,6 +180,9 @@ Save the business analysis as: `docs/fase2-bronanalyse.md` (or language-appropri
 ## Tips for the Agent
 
 - **Don't guess business meaning from field names alone.** Check sample values, cardinality, and relationships to confirm your interpretation.
+- **Always use official documentation (from Step 1.5) before drawing conclusions.** Two datasets with nearly identical structure, row counts, and field names may measure fundamentally different things. This is only discoverable from official selection criteria — not from the data itself. Example: "ingeschrevenen" (unique persons, main enrollment only) vs. "inschrijvingen" (all enrollment records including secondary) look identical in the CSV but require separate fact tables.
+- **Selection criteria determine fact table count.** Each dataset with a different counting unit or inclusion rule typically becomes a separate fact table, not just a different measure in the same table.
+- **Verify official exclusions.** Official documentation often lists what is *excluded* (e.g. "propedeuse diplomas are not counted", "aangewezen instellingen are excluded"). These exclusions define the analytical scope and must be documented as model limitations.
 - **Pre-aggregated data is common in government open data.** Always determine whether data is transactional or already summarized — this defines whether your fact table will be transactional or a periodic snapshot.
 - **Multiple files covering the same process** (e.g. one split by gender, one by program code) are typically alternative cross-tabulations of the same underlying fact. Model them as one fact table with nullable dimension keys, or as separate fact tables depending on analytical needs.
 - **Privacy constraints** may mean individual-level data is unavailable. Pre-aggregated counts are the finest grain possible — design the model accordingly.

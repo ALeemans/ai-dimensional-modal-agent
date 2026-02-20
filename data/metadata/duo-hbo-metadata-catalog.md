@@ -21,6 +21,93 @@
 
 ---
 
+## Officiële DUO-definities en selectiecriteria
+
+> Bron: DUO CKAN API-documentatie (veld `notes`), opgehaald 2026-02-20. Tekst letterlijk overgenomen uit de officiële datasetbeschrijvingen.
+
+### Bronsysteem
+
+Alle statistische datasets (p01–p04) zijn afkomstig uit het bronsysteem **"Één Cijfer Hoger Onderwijs"** met peildatum 1 oktober, aangevuld met de **Basis Registratie Instellingen (BRIN)**. De werkgroep Één Cijfer Hoger Onderwijs bestaat uit leden van het CBS, DUO, VSNU, Vereniging Hogescholen, Inspectie van het Onderwijs en de directie hoger onderwijs van OCW.
+
+### p01hoinges — Ingeschrevenen
+
+**Selectie:** *"Van alle inschrijvingen op de peildatum 1 oktober worden de hoofdinschrijvingen bepaald en geteld als ingeschrevenen (natuurlijke personen). Het aantal ingeschrevenen binnen het domein hoger onderwijs wordt bepaald door de inschrijvingen in het hbo en het wo gezamenlijk te bekijken. Bij het domein hoger onderwijs is het uitgangspunt dat de natuurlijke personen binnen het gehele hoger onderwijs slechts één keer worden geteld. Een ingeschrevene met een hoofdinschrijving in het hbo kan dus geen hoofdinschrijving in het wo hebben of andersom. De inschrijvingen behorende bij opleidingen aan aangewezen instellingen worden niet meegeteld."*
+
+**Kernbegrip:** Eén persoon = maximaal één telling, ongeacht het aantal inschrijvingen. Alleen hoofdinschrijvingen tellen mee.
+
+**AVG-filter:** *"Oorspronkelijke aantallen kleiner dan 5 (1,2,3,4) allemaal worden weergegeven door 4."*
+
+> **Let op:** De documentatie stelt dat waarden < 5 als **4** worden weergegeven. In de werkelijke CSV-bestanden komen echter waarden van **-1** voor. Dit verschil is nog niet opgehelderd met DUO.
+
+### p02ho1ejrs — Eerstejaars ingeschrevenen
+
+**Selectie:** *"Alleen de inschrijvingen op de peildatum 1 oktober die voor het eerst in het domein hoger onderwijs voorkomen worden meegenomen. Van deze inschrijvingen worden de hoofdinschrijvingen bepaald en geteld als eerstejaars ingeschrevenen. Het aantal eerstejaars ingeschrevenen binnen het domein hoger onderwijs wordt bepaald door de inschrijvingen in het hbo en het wo gezamenlijk te bekijken. Bij het domein hoger onderwijs is het uitgangspunt dat de natuurlijke personen binnen het gehele hoger onderwijs slechts één keer worden geteld. De inschrijvingen behorende bij opleidingen aan aangewezen instellingen worden niet meegeteld. De master inschrijvingen in het hoger beroepsonderwijs zijn eveneens buiten beschouwing gelaten."*
+
+**Kernbegrip:** Deelverzameling van p01 — alleen personen die voor het **eerst** in het hoger onderwijs voorkomen. HBO-masterinschrijvingen zijn **uitgesloten**.
+
+**AVG-filter:** Identiek aan p01.
+
+### p03hoinschr — Inschrijvingen
+
+**Selectie:** *"Voor de inschrijvingen op de peildatum 1 oktober worden zowel de hoofd- als de echte neveninschrijvingen meegeteld. De inschrijvingen behorende bij opleidingen aan aangewezen instellingen worden niet meegeteld."*
+
+**Kernbegrip:** Telt **inschrijvingsrecords**, niet personen. Een student met twee studies telt als twee inschrijvingen. Zowel hoofd- als neveninschrijvingen worden meegeteld.
+
+**AVG-filter:** Identiek aan p01.
+
+### p04hogdipl — Gediplomeerden
+
+**Selectie:** *"Het aantal gediplomeerden wordt geteld door te selecteren op hoofd-associate degree-diploma (hbo), hoofd-bachelor-diploma (hbo of wo), hoofd-master-diploma (hbo of wo), hoofd-doctoraal-diploma (wo) en hoofddiploma beroepsfase/postmaster (wo) op de peildatum 1 oktober. De propedeuse diploma's, postinitiële diploma's en diploma's behaald door uitwisselingsstudenten worden buiten beschouwing gelaten."*
+
+**Kernbegrip:** Telt **hoofddiploma's**. Propedeuse, postinitieel en uitwisselingsdiploma's zijn uitgesloten. Peildatum is 1 oktober (niet de werkelijke diplomadatum).
+
+**AVG-filter:** Identiek aan p01.
+
+### ho_opleidingsoverzicht — HO Opleidingsoverzicht
+
+**Selectie:** *"Het ho opleidingsoverzicht bevat informatie over bekostigde, actuele en toekomstige opleidingen in het hoger onderwijs."*
+
+**Bron:** Registratie Instellingen en Opleidingen (RIO). Gegevens worden vastgelegd door onderwijsinstellingen zelf; kwaliteitsborging van opleidingserkenningen en opleidingseenheden ligt bij RIO.
+
+**Periode:** Dagelijks geactualiseerd.
+
+### overzicht-erkenningen-ho — Overzicht Erkenningen HO
+
+**Selectie:** *"In het Overzicht Erkenningen ho staan de actuele gegevens van de OCW erkende instellingen en opleidingen in het hoger onderwijs."*
+
+**Bron:** RIO. Nieuwe OCW-erkende opleidingen, wijzigingen en beëindigingen worden geregistreerd via het Loket Erkenningen Onderwijs ho (LEO ho, voorheen aCROHO).
+
+**Periode:** Dagelijks geactualiseerd.
+
+### adressen_ho — Adressen hogescholen en universiteiten / besturen
+
+**Selectie:** *"Door OCW bekostigde Nederlandse HO-instellingen die actief zijn op het moment van aanmaak van de adreslevering en de bijbehorende besturen."*
+
+**Bron:** Basis Registratie Instellingen (BRIN). Actuele stand op moment van aanmaak.
+
+### Begrippenoverzicht
+
+| Begrip | Definitie | Dataset(s) |
+|--------|-----------|------------|
+| **Ingeschrevene** | Een natuurlijke persoon met een hoofdinschrijving in het HO op peildatum 1 oktober. Per persoon maximaal één telling in het gehele HO. | p01 |
+| **Inschrijving** | Een inschrijvingsrecord (hoofd- of neveninschrijving) op peildatum 1 oktober. Eén persoon kan meerdere inschrijvingen hebben. | p03 |
+| **Eerstejaars ingeschrevene** | Een ingeschrevene die voor het eerst in het domein HO voorkomt op peildatum 1 oktober. HBO-masterinschrijvingen uitgesloten. | p02 |
+| **Gediplomeerde** | Een persoon met een hoofd-AD-, bachelor-, master- of doctoraal-diploma. Propedeuse, postinitieel en uitwisselingsdiploma's uitgesloten. | p04 |
+| **Hoofdinschrijving** | De primaire inschrijving van een persoon in het HO op peildatum. Bepaalt in welk type HO (hbo/wo) de persoon wordt geteld. | p01, p02 |
+| **Neveninschrijving** | Een aanvullende (niet-primaire) inschrijving naast de hoofdinschrijving. Alleen meegeteld in p03 (inschrijvingen), niet in p01 (ingeschrevenen). | p03 |
+| **Peildatum** | 1 oktober van het betreffende studiejaar. Het meetmoment waarop alle tellingen worden bepaald. | p01–p04 |
+| **Studiejaar** | Het academisch jaar waarvoor de peildatum geldt (bijv. 2024 = studiejaar 2024/2025, peildatum 1 oktober 2024). | p01–p03 |
+| **Diplomajaar** | Het kalenderjaar waarin het diploma is verleend (niet per se gelijk aan het studiejaar). | p04 |
+| **BRIN-code** | Vier-letterige code uit de Basis Registratie Instellingen, uniek per instelling. | Alle |
+| **CROHO-code** | Centraal Register Opleidingen Hoger Onderwijs — numerieke code die een opleiding uniek identificeert. | p01b–p04b, ho_opleidingsoverzicht, erkenningen |
+| **Aangewezen instelling** | Een niet door OCW bekostigde HO-instelling. Inschrijvingen aan aangewezen instellingen zijn **uitgesloten** uit alle p01–p04 datasets. | p01–p04 |
+| **AVG-filter** | Privacybescherming: aantallen < 5 worden aangepast. Documentatie zegt "weergegeven door 4"; CSV-bestanden bevatten -1. | p01–p04 |
+| **RIO** | Registratie Instellingen en Opleidingen — het landelijke register van onderwijsinstellingen en -programma's. | ho_opleidingsoverzicht, erkenningen |
+| **NVAO** | Nederlands-Vlaamse Accreditatieorganisatie — verantwoordelijk voor accreditatie van HO-opleidingen. | erkenningen |
+| **Opleidingsvorm** | Wijze van onderwijs: VT = voltijd, DT = deeltijd, DU = duaal. | p01c–p04c |
+
+---
+
 ## Resourcedetails: HBO-specifieke bestanden
 
 ### p01hoinges — Ingeschrevenen HBO
@@ -69,7 +156,7 @@
 ## Algemene opmerkingen
 
 - **Licentie:** Alle datasets zijn CC-BY (Creative Commons Naamsvermelding)
-- **Privacyfilter:** Studentenaantallen < 5 worden weergegeven als -1 (AVG-naleving)
+- **Privacyfilter (AVG):** Officiële documentatie stelt dat aantallen < 5 worden weergegeven als **4**. In de werkelijke CSV-bestanden komen echter waarden van **-1** voor. Dit verschil is niet opgehelderd met DUO. Zie sectie "Officiële DUO-definities" voor details.
 - **Bereik:** Datasets p01–p04 omvatten zowel HBO als WO; alleen HBO-bronbestanden zijn in scope voor deze pilot
 - **Peildatum:** Studentengegevens worden gemeten op 1 oktober van elk academisch jaar
 - **Bronsysteem:** "Één Cijfer Hoger Onderwijs"
