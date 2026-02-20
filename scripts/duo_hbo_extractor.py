@@ -4,7 +4,7 @@ duo_hbo_extractor.py — DUO HBO Gegevensextractie
 Downloads alle benodigde ruwe brongegevens van DUO Open Onderwijsdata
 en slaat ze op in data/raw/ voor gebruik in Fase 4 (modelontwerp) en Fase 5 (validatie).
 
-Gebruik (vanuit projectroot):
+Gebruik (vanuit elke map):
     python scripts/duo_hbo_extractor.py
 
 Vereisten:
@@ -27,7 +27,10 @@ import requests
 # ─── Configuratie ─────────────────────────────────────────────────────────────
 
 CKAN_BASE_URL = "https://onderwijsdata.duo.nl"
-OUTPUT_DIR = Path("data/raw")
+
+# Altijd relatief aan de projectroot (één map boven scripts/), ongeacht vanwaar het script wordt uitgevoerd
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+OUTPUT_DIR = PROJECT_ROOT / "data" / "raw"
 MANIFEST_PATH = OUTPUT_DIR / "manifest.json"
 
 # CKAN datasets: key = dataset_id, subdir = uitvoermap onder data/raw/

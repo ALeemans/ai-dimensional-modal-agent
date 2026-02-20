@@ -64,7 +64,9 @@
 - Fase 2.1–2.4 ✅ — Business analysis complete (`docs/fase2-bronanalyse.md` — 10 entities, 3 fact candidates, 7 dimension candidates)
 - Fase 2.5 ✅ — Instruction file written (`agent/instructions/02-source-analysis.md`)
 - **Fase 2 — COMPLETE ✅**
-- Fase 3 → Next — Gegevensextractie (data extraction script, `data/raw/`)
-- Fase 4 → — Dimensional model design (star schema: fact tables + dimensions)
+- Fase 3.1–3.5 ✅ — Data extraction complete (16 files in `data/raw/`, manifest written)
+- Fase 3.6 ✅ — Instruction file written (`agent/instructions/03-data-extraction.md`)
+- **Fase 3 — COMPLETE ✅**
+- Fase 4 → Next — Dimensional model design (star schema: fact tables + dimensions)
 - Fase 5 → — Model validation
 - Fase 6 → — Agent assembly
