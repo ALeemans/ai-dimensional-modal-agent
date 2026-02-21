@@ -35,8 +35,8 @@
 
 ## DUO Dataset Conventions
 
-- CSV separator: `;` (semicolon)
-- Encoding: `utf-8-sig` (UTF-8 with BOM — for Excel compatibility)
+- CSV separator: Statistical datasets use `,` (comma, quoted); address files use `;` (semicolon)
+- Encoding: Statistical CSVs `utf-8-sig`; address CSVs `cp1252`
 - Gender field: `MAN` / `VROUW` (text)
 - Privacy suppression: `-1` for counts < 5 (not 4 as DUO documentation suggests)
 - Municipality codes: stored as text with leading zeros (e.g. `"0106"`)
@@ -67,6 +67,12 @@
 - Fase 3.1–3.5 ✅ — Data extraction complete (16 files in `data/raw/`, manifest written)
 - Fase 3.6 ✅ — Instruction file written (`agent/instructions/03-data-extraction.md`)
 - **Fase 3 — COMPLETE ✅**
-- Fase 4 → Next — Dimensional model design (star schema: fact tables + dimensions)
-- Fase 5 → — Model validation
-- Fase 6 → — Agent assembly
+- Fase 4.1–4.5 ✅ — Dimensional model designed (`docs/fase4-dimensioneel-ontwerp.md` — 9 dimensions, 4 primary fact tables, 8 supplementary)
+- **Fase 4 — COMPLETE ✅**
+- Fase 5.1 ✅ — ETL scripts written (23 scripts: 9 dim + 4 primary feit + 8 aanvullend feit + `build_all.py` + `etl_utils.py`)
+- Fase 5.2 ✅ — Full pipeline runs clean (15s): 21 Parquet files in `data/processed/`, zero NULL FKs across all fact tables
+- Fase 5.3 ✅ — Instruction file written (`agent/instructions/05-etl-build.md`)
+- **Note:** p04 (gediplomeerden) uses SOORT_DIPLOMA instead of TYPE_HOGER_ONDERWIJS — mapped via `str.replace("hbo ", "")`
+- **Note:** dim_opleiding has 438 rows (design estimated ~247; p04b contributes CROHO codes absent from p01-p03)
+- **Fase 5 — COMPLETE ✅**
+- Fase 6 → Next — Agent assembly

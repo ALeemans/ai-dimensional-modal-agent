@@ -5,7 +5,8 @@
       "WebFetch(domain:duo.nl)",
       "Bash(curl:*)",
       "Bash(python -m json.tool:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(/c/Users/AnneL/AppData/Local/Programs/Python/Python312/python.exe:*)"
     ]
   }
 }
