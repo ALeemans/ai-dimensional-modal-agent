@@ -1,6 +1,6 @@
 # Data files (keep metadata, ignore raw/processed)
 data/raw/
-data/processed/
+# data/processed/
 
 # Environment
 .env

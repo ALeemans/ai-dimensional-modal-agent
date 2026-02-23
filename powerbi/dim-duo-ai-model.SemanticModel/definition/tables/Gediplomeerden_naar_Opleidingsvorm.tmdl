@@ -1,0 +1,73 @@
+table 'Gediplomeerden naar Opleidingsvorm'
+	lineageTag: c2e89ba2-422b-4414-b291-b123bd4f4b9f
+
+	column ID
+		dataType: int64
+		lineageTag: 6b0dfef4-0561-4ca0-ba80-8ee76c1bbbc1
+		isHidden
+		summarizeBy: none
+		sourceColumn: id
+
+	column 'Tijd Key'
+		dataType: int64
+		lineageTag: e87f958e-9a7d-4d2d-a9bc-917fb6bfdd22
+		isHidden
+		summarizeBy: none
+		sourceColumn: tijd_key
+
+	column 'Instelling Key'
+		dataType: int64
+		lineageTag: 3b3320ec-1486-4fa0-a2cf-165af18adb96
+		isHidden
+		summarizeBy: none
+		sourceColumn: instelling_key
+
+	column 'Sector Key'
+		dataType: int64
+		lineageTag: 181cd865-3589-43eb-a3e8-f60a0bf7de51
+		isHidden
+		summarizeBy: none
+		sourceColumn: sector_key
+
+	column 'Geografie Key'
+		dataType: int64
+		lineageTag: f9251645-f29c-4e0d-9c9a-fe0bf798a111
+		isHidden
+		summarizeBy: none
+		sourceColumn: geografie_key
+
+	column 'Soort Diploma Key'
+		dataType: int64
+		lineageTag: d7f751bf-b3ee-4e39-bf6c-35877442ddbe
+		isHidden
+		summarizeBy: none
+		sourceColumn: soort_diploma_key
+
+	column 'Opleidingsvorm Key'
+		dataType: int64
+		lineageTag: a4b62d73-34b8-48a9-a589-9cf414e65b4c
+		isHidden
+		summarizeBy: none
+		sourceColumn: opleidingsvorm_key
+
+	column 'Aantal Gediplomeerden'
+		dataType: int64
+		lineageTag: 1c36f822-8428-4173-a223-323cd39845a6
+		summarizeBy: sum
+		sourceColumn: aantal_gediplomeerden
+
+	column 'Privacy Onderdrukt'
+		dataType: boolean
+		lineageTag: e602c517-694e-479a-acb4-6a633e728464
+		summarizeBy: none
+		sourceColumn: is_onderdrukt
+
+	partition 'Gediplomeerden naar Opleidingsvorm' = m
+		mode: import
+		queryGroup: Feiten
+		source = ```
+			let
+			    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/feit_gediplomeerden_oplvorm.parquet"))
+			in
+			    Source
+		```

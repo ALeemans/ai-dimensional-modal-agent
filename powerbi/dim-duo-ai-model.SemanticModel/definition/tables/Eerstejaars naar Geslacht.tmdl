@@ -1,0 +1,70 @@
+table 'Eerstejaars naar Geslacht'
+	lineageTag: ed557246-9355-411e-bfe2-a66aac16333c
+
+	measure 'Totaal Eerstejaars (Geslacht)' = SUM('Eerstejaars naar Geslacht'[Aantal Eerstejaars])
+		formatString: #,0
+		lineageTag: 47268e18-74dc-4124-ae68-e634e1742b3e
+
+	column ID
+		dataType: int64
+		isHidden
+		lineageTag: 2a4fea83-59d2-4496-aed7-23d91061504d
+		summarizeBy: none
+		sourceColumn: id
+
+	column 'Tijd Key'
+		dataType: int64
+		isHidden
+		lineageTag: 1e2056e4-8693-48ad-aaeb-aca4989ce163
+		summarizeBy: none
+		sourceColumn: tijd_key
+
+	column 'Instelling Key'
+		dataType: int64
+		isHidden
+		lineageTag: fe9cb7e0-2e45-47f2-821e-cf715485ea39
+		summarizeBy: none
+		sourceColumn: instelling_key
+
+	column 'Sector Key'
+		dataType: int64
+		isHidden
+		lineageTag: 2dd7af30-0200-4dcb-b07a-fe6df5ddb6d7
+		summarizeBy: none
+		sourceColumn: sector_key
+
+	column 'Geografie Key'
+		dataType: int64
+		isHidden
+		lineageTag: 8c22625d-c452-4394-a066-91d15de9d974
+		summarizeBy: none
+		sourceColumn: geografie_key
+
+	column 'Geslacht Key'
+		dataType: int64
+		isHidden
+		lineageTag: be9ecf29-2eb9-4cfd-badc-adff692cf21e
+		summarizeBy: none
+		sourceColumn: geslacht_key
+
+	column 'Aantal Eerstejaars'
+		dataType: int64
+		lineageTag: 7a18ef99-d390-4f92-8a82-4cde90590af8
+		summarizeBy: sum
+		sourceColumn: aantal_eerstejaars
+
+	column 'Privacy Onderdrukt'
+		dataType: boolean
+		lineageTag: 846929a8-11f6-4d55-b666-0049d46a4859
+		summarizeBy: none
+		sourceColumn: is_onderdrukt
+
+	partition 'Eerstejaars naar Geslacht' = m
+		mode: import
+		queryGroup: Feiten
+		source =
+				let
+					    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/feit_eerstejaars_geslacht.parquet"))
+					in
+					    Source
+

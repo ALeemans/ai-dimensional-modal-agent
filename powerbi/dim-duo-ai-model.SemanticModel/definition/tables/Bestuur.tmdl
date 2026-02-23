@@ -1,0 +1,49 @@
+table Bestuur
+	lineageTag: 4a5252af-d832-401a-bcec-262e0834dae5
+
+	column 'Bestuur Key'
+		dataType: int64
+		lineageTag: 52167998-bad7-4bcc-8fb8-099f40dab43a
+		isHidden
+		summarizeBy: none
+		sourceColumn: bestuur_key
+
+	column 'Bevoegd Gezag Nummer'
+		dataType: string
+		lineageTag: 4b975014-a869-4cae-acc1-334c34495fef
+		summarizeBy: none
+		sourceColumn: bevoegd_gezag_nummer
+
+	column 'Bevoegd Gezag Naam'
+		dataType: string
+		lineageTag: ad701ee9-cce1-4b01-a13d-5883caf4d747
+		summarizeBy: none
+		sourceColumn: bevoegd_gezag_naam
+
+	column Denominatie
+		dataType: string
+		lineageTag: 2ea45d68-3deb-4c1f-a34d-e53580049c91
+		summarizeBy: none
+		sourceColumn: denominatie
+
+	column Plaatsnaam
+		dataType: string
+		lineageTag: 5f82ed73-6193-4404-ae62-d2cf813ccf47
+		summarizeBy: none
+		sourceColumn: plaatsnaam
+
+	column 'KvK Nummer'
+		dataType: string
+		lineageTag: 4e994fe1-eb1e-4916-a406-711455eaecd2
+		summarizeBy: none
+		sourceColumn: kvk_nummer
+
+	partition Bestuur = m
+		mode: import
+		queryGroup: Dimensies
+		source = ```
+			let
+			    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/dim_bestuur.parquet"))
+			in
+			    Source
+		```

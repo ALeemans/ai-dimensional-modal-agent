@@ -1,0 +1,66 @@
+table 'Eerstejaars naar Opleidingsvorm'
+	lineageTag: 7f26c59c-9deb-4c1c-a7fe-fb5704dcb413
+
+	column ID
+		dataType: int64
+		lineageTag: 6149fede-b048-4bff-876f-94da4152007c
+		isHidden
+		summarizeBy: none
+		sourceColumn: id
+
+	column 'Tijd Key'
+		dataType: int64
+		lineageTag: 634542dd-c3d9-4d91-86b6-65882b787b40
+		isHidden
+		summarizeBy: none
+		sourceColumn: tijd_key
+
+	column 'Instelling Key'
+		dataType: int64
+		lineageTag: ae30a014-78e2-487f-9195-572947cbfb0c
+		isHidden
+		summarizeBy: none
+		sourceColumn: instelling_key
+
+	column 'Sector Key'
+		dataType: int64
+		lineageTag: 6a391368-df05-455f-bbe2-1d2dc9a3853d
+		isHidden
+		summarizeBy: none
+		sourceColumn: sector_key
+
+	column 'Geografie Key'
+		dataType: int64
+		lineageTag: ecd702f1-0ea8-4128-af6f-e263a9aa34e5
+		isHidden
+		summarizeBy: none
+		sourceColumn: geografie_key
+
+	column 'Opleidingsvorm Key'
+		dataType: int64
+		lineageTag: 19a3fe5e-13b1-4232-9e07-b276f0415b84
+		isHidden
+		summarizeBy: none
+		sourceColumn: opleidingsvorm_key
+
+	column 'Aantal Eerstejaars'
+		dataType: int64
+		lineageTag: 92ef779f-26e5-4226-a9b2-fe6a38a713f2
+		summarizeBy: sum
+		sourceColumn: aantal_eerstejaars
+
+	column 'Privacy Onderdrukt'
+		dataType: boolean
+		lineageTag: b5fe08d8-3fb3-4f7f-865c-2920e7661569
+		summarizeBy: none
+		sourceColumn: is_onderdrukt
+
+	partition 'Eerstejaars naar Opleidingsvorm' = m
+		mode: import
+		queryGroup: Feiten
+		source = ```
+			let
+			    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/feit_eerstejaars_oplvorm.parquet"))
+			in
+			    Source
+		```

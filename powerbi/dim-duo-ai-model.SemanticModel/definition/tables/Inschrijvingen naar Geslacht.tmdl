@@ -1,0 +1,66 @@
+table 'Inschrijvingen naar Geslacht'
+	lineageTag: 9c49baba-4d48-462a-8422-c645a812a0b6
+
+	column ID
+		dataType: int64
+		isHidden
+		lineageTag: e48817d1-e0cf-431a-96cb-f2fcffdccf0a
+		summarizeBy: none
+		sourceColumn: id
+
+	column 'Tijd Key'
+		dataType: int64
+		isHidden
+		lineageTag: 754c7268-c322-49cb-ab0d-d423dccc3805
+		summarizeBy: none
+		sourceColumn: tijd_key
+
+	column 'Instelling Key'
+		dataType: int64
+		isHidden
+		lineageTag: 4c829cf3-1bde-4deb-ae2a-9322dd53b56f
+		summarizeBy: none
+		sourceColumn: instelling_key
+
+	column 'Sector Key'
+		dataType: int64
+		isHidden
+		lineageTag: c49eb0ae-7ad3-4a88-b01d-eb83da21adb6
+		summarizeBy: none
+		sourceColumn: sector_key
+
+	column 'Geografie Key'
+		dataType: int64
+		isHidden
+		lineageTag: 4c832ca4-9e83-459c-a6a2-b461905d6be6
+		summarizeBy: none
+		sourceColumn: geografie_key
+
+	column 'Geslacht Key'
+		dataType: int64
+		isHidden
+		lineageTag: 5ce10c4d-400f-4c36-9228-264a8c243d3f
+		summarizeBy: none
+		sourceColumn: geslacht_key
+
+	column 'Aantal Inschrijvingen'
+		dataType: int64
+		lineageTag: 23b5f26c-e150-4ccc-82e9-8fbe90c77699
+		summarizeBy: sum
+		sourceColumn: aantal_inschrijvingen
+
+	column 'Privacy Onderdrukt'
+		dataType: boolean
+		lineageTag: 45d33ff0-d900-4db7-b28c-b8f8478c3086
+		summarizeBy: none
+		sourceColumn: is_onderdrukt
+
+	partition 'Inschrijvingen naar Geslacht' = m
+		mode: import
+		queryGroup: Feiten
+		source =
+				let
+					    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/feit_inschrijvingen_geslacht.parquet"))
+					in
+					    Source
+

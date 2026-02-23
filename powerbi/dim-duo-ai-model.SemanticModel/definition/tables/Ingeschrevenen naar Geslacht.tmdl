@@ -1,0 +1,70 @@
+table 'Ingeschrevenen naar Geslacht'
+	lineageTag: 0c6f7099-dea7-4585-807e-ce51042ce767
+
+	measure 'Totaal Ingeschrevenen (Geslacht)' = SUM('Ingeschrevenen naar Geslacht'[Aantal Ingeschrevenen])
+		formatString: #,0
+		lineageTag: 48702a26-47e7-47df-8b02-af3fae0bd0ea
+
+	column ID
+		dataType: int64
+		isHidden
+		lineageTag: 59fa3f97-33d6-456d-a36b-0db729452b90
+		summarizeBy: none
+		sourceColumn: id
+
+	column 'Tijd Key'
+		dataType: int64
+		isHidden
+		lineageTag: 944476db-14bd-4a31-a0df-3b3d527efb6c
+		summarizeBy: none
+		sourceColumn: tijd_key
+
+	column 'Instelling Key'
+		dataType: int64
+		isHidden
+		lineageTag: 0e732015-308a-485f-b31f-c58f53314cbd
+		summarizeBy: none
+		sourceColumn: instelling_key
+
+	column 'Sector Key'
+		dataType: int64
+		isHidden
+		lineageTag: d3b3ecc0-dba9-4c67-8bb0-77367775ed72
+		summarizeBy: none
+		sourceColumn: sector_key
+
+	column 'Geografie Key'
+		dataType: int64
+		isHidden
+		lineageTag: 91d13864-9ea4-4480-a68a-41d69491a764
+		summarizeBy: none
+		sourceColumn: geografie_key
+
+	column 'Geslacht Key'
+		dataType: int64
+		isHidden
+		lineageTag: 0782e9a0-9553-4f99-bd86-1e2b73d3f0cf
+		summarizeBy: none
+		sourceColumn: geslacht_key
+
+	column 'Aantal Ingeschrevenen'
+		dataType: int64
+		lineageTag: d9d4d01b-bd5d-457c-a85f-548065df1a79
+		summarizeBy: sum
+		sourceColumn: aantal_ingeschrevenen
+
+	column 'Privacy Onderdrukt'
+		dataType: boolean
+		lineageTag: ce39c471-4c2d-4e52-bee9-a3b1304f1a48
+		summarizeBy: none
+		sourceColumn: is_onderdrukt
+
+	partition 'Ingeschrevenen naar Geslacht' = m
+		mode: import
+		queryGroup: Feiten
+		source =
+				let
+					    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/feit_ingeschrevenen_geslacht.parquet"))
+					in
+					    Source
+

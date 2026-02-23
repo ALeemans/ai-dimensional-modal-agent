@@ -1,0 +1,37 @@
+table Tijd
+	lineageTag: 63505b3f-596d-4845-b610-be27f1d43410
+
+	column 'Tijd Key'
+		dataType: int64
+		lineageTag: ec19b4c3-a992-4909-8fdb-9cf429ca576c
+		isHidden
+		summarizeBy: none
+		sourceColumn: tijd_key
+
+	column Jaar
+		dataType: int64
+		lineageTag: 64d46489-6058-44d1-a65e-a1f032fa5c66
+		summarizeBy: none
+		sourceColumn: jaar
+
+	column 'Academisch Jaar'
+		dataType: string
+		lineageTag: 1c8db4ec-550e-4362-8713-eeda19d1253a
+		summarizeBy: none
+		sourceColumn: academisch_jaar_label
+
+	column Decennium
+		dataType: int64
+		lineageTag: 8d257990-15f1-4307-8b37-69398e530630
+		summarizeBy: none
+		sourceColumn: decennium
+
+	partition Tijd = m
+		mode: import
+		queryGroup: Dimensies
+		source = ```
+			let
+			    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/dim_tijd.parquet"))
+			in
+			    Source
+		```

@@ -1,0 +1,59 @@
+table Ingeschrevenen
+	lineageTag: 63a0bb3d-8475-4b5b-bc71-7e67e5653533
+
+	column ID
+		dataType: int64
+		lineageTag: b03b81e7-feae-434b-bf63-25c852270ceb
+		isHidden
+		summarizeBy: none
+		sourceColumn: ingeschrevenen_key
+
+	column 'Tijd Key'
+		dataType: int64
+		lineageTag: 29ba072c-df5d-449b-8eea-d719c8fc545e
+		isHidden
+		summarizeBy: none
+		sourceColumn: tijd_key
+
+	column 'Instelling Key'
+		dataType: int64
+		lineageTag: ca99f875-15fe-4d58-8226-681e79a5728f
+		isHidden
+		summarizeBy: none
+		sourceColumn: instelling_key
+
+	column 'Opleiding Key'
+		dataType: int64
+		lineageTag: 81fe4818-2030-4e44-9ce0-e0c5e249f2be
+		isHidden
+		summarizeBy: none
+		sourceColumn: opleiding_key
+
+	column 'Geografie Key'
+		dataType: int64
+		lineageTag: b1babae3-fd10-4c1a-845d-d3ae43dcea82
+		isHidden
+		summarizeBy: none
+		sourceColumn: geografie_key
+
+	column 'Aantal Ingeschrevenen'
+		dataType: int64
+		lineageTag: ebe70084-9146-4cb1-8553-9dc4df66f565
+		summarizeBy: sum
+		sourceColumn: aantal_ingeschrevenen
+
+	column 'Privacy Onderdrukt'
+		dataType: boolean
+		lineageTag: fc54b9f5-8a2c-4cd5-9d09-cd7585dbb029
+		summarizeBy: none
+		sourceColumn: is_onderdrukt
+
+	partition Ingeschrevenen = m
+		mode: import
+		queryGroup: Feiten
+		source = ```
+			let
+			    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/feit_ingeschrevenen.parquet"))
+			in
+			    Source
+		```

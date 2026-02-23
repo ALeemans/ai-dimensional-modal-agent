@@ -1,0 +1,239 @@
+relationship db2dfedd-998c-4450-b4b8-14f2a69d2520
+	fromColumn: 'Ingeschrevenen'.'Tijd Key'
+	toColumn: 'Tijd'.'Tijd Key'
+
+relationship bfc89868-20f8-4321-9233-1c6384cdb060
+	fromColumn: 'Ingeschrevenen'.'Instelling Key'
+	toColumn: 'Instelling'.'Instelling Key'
+
+relationship cbdb4ce9-f213-41b3-b4aa-6f0f02eba089
+	fromColumn: 'Ingeschrevenen'.'Opleiding Key'
+	toColumn: 'Opleiding'.'Opleiding Key'
+
+relationship 70676adb-1dc5-4215-b2f8-c3d4910d3682
+	fromColumn: 'Ingeschrevenen'.'Geografie Key'
+	toColumn: 'Geografie'.'Geografie Key'
+
+relationship 6fd158d5-a8ee-4b2f-9da5-c463023fc3b8
+	fromColumn: 'Inschrijvingen'.'Tijd Key'
+	toColumn: 'Tijd'.'Tijd Key'
+
+relationship 471e3c88-d6fc-490c-a763-358b000aeed4
+	fromColumn: 'Inschrijvingen'.'Instelling Key'
+	toColumn: 'Instelling'.'Instelling Key'
+
+relationship a6972c12-4798-4b86-89b4-0ba5cbbf4167
+	fromColumn: 'Inschrijvingen'.'Opleiding Key'
+	toColumn: 'Opleiding'.'Opleiding Key'
+
+relationship dd91393d-ec02-4527-aa39-3f04ec8f9085
+	fromColumn: 'Inschrijvingen'.'Geografie Key'
+	toColumn: 'Geografie'.'Geografie Key'
+
+relationship abfc68e5-52c3-43b5-965d-4889b0dc1e54
+	fromColumn: 'Eerstejaars'.'Tijd Key'
+	toColumn: 'Tijd'.'Tijd Key'
+
+relationship f1a8a94f-8918-4b8b-a19d-4553a99debc5
+	fromColumn: 'Eerstejaars'.'Instelling Key'
+	toColumn: 'Instelling'.'Instelling Key'
+
+relationship 29909c03-3732-45a0-9aae-755d0d0abfa6
+	fromColumn: 'Eerstejaars'.'Opleiding Key'
+	toColumn: 'Opleiding'.'Opleiding Key'
+
+relationship 8ed04be3-febb-4514-8432-c85a8fb13a38
+	fromColumn: 'Eerstejaars'.'Geografie Key'
+	toColumn: 'Geografie'.'Geografie Key'
+
+relationship 21563583-bab1-45cd-a54c-724fe0445f5d
+	fromColumn: 'Gediplomeerden'.'Tijd Key'
+	toColumn: 'Tijd'.'Tijd Key'
+
+relationship e3a6f09d-8b4e-40c2-a157-2fbe68188ead
+	fromColumn: 'Gediplomeerden'.'Instelling Key'
+	toColumn: 'Instelling'.'Instelling Key'
+
+relationship a13d8fe4-d44e-462f-9176-e98ce1ffc566
+	fromColumn: 'Gediplomeerden'.'Opleiding Key'
+	toColumn: 'Opleiding'.'Opleiding Key'
+
+relationship d46ced3d-78f7-472e-8dfc-bf88342ea8ee
+	fromColumn: 'Gediplomeerden'.'Geografie Key'
+	toColumn: 'Geografie'.'Geografie Key'
+
+relationship b2ce971b-5984-4e8a-8a43-e261e22eef83
+	fromColumn: 'Gediplomeerden'.'Soort Diploma Key'
+	toColumn: 'Soort Diploma'.'Soort Diploma Key'
+
+relationship c58a996a-4775-4079-bc3e-6feb22227e12
+	fromColumn: 'Ingeschrevenen naar Geslacht'.'Tijd Key'
+	toColumn: 'Tijd'.'Tijd Key'
+
+relationship fd58107b-9e32-4b37-821c-4f032992aae4
+	fromColumn: 'Ingeschrevenen naar Geslacht'.'Instelling Key'
+	toColumn: 'Instelling'.'Instelling Key'
+
+relationship 596c39f1-d6c9-4edb-b15d-71bc20d65831
+	fromColumn: 'Ingeschrevenen naar Geslacht'.'Sector Key'
+	toColumn: 'Sector'.'Sector Key'
+
+relationship a469a1a9-ff5a-4ab7-9541-da1fc10d29b0
+	fromColumn: 'Ingeschrevenen naar Geslacht'.'Geografie Key'
+	toColumn: 'Geografie'.'Geografie Key'
+
+relationship b30975ad-e6f6-4acb-89bd-518e763abc82
+	fromColumn: 'Ingeschrevenen naar Geslacht'.'Geslacht Key'
+	toColumn: 'Geslacht'.'Geslacht Key'
+
+relationship 5fb309a5-1624-44ea-952b-12e1b2dcb84d
+	fromColumn: 'Inschrijvingen naar Geslacht'.'Tijd Key'
+	toColumn: 'Tijd'.'Tijd Key'
+
+relationship ac85c8c6-d1e8-4091-b522-f05e9ddf7aa9
+	fromColumn: 'Inschrijvingen naar Geslacht'.'Instelling Key'
+	toColumn: 'Instelling'.'Instelling Key'
+
+relationship 8deed3c6-5ac3-4111-b524-28d853068358
+	fromColumn: 'Inschrijvingen naar Geslacht'.'Sector Key'
+	toColumn: 'Sector'.'Sector Key'
+
+relationship 3ac0c933-de42-4341-8c1c-8b81a9a6e168
+	fromColumn: 'Inschrijvingen naar Geslacht'.'Geografie Key'
+	toColumn: 'Geografie'.'Geografie Key'
+
+relationship a3e08562-13f7-430c-88a1-65b816702057
+	fromColumn: 'Inschrijvingen naar Geslacht'.'Geslacht Key'
+	toColumn: 'Geslacht'.'Geslacht Key'
+
+relationship 64a71085-f280-409b-a830-576627fc6b36
+	fromColumn: 'Eerstejaars naar Geslacht'.'Tijd Key'
+	toColumn: 'Tijd'.'Tijd Key'
+
+relationship cbe163c0-4451-47b1-aa4b-ed2e1bc29d6b
+	fromColumn: 'Eerstejaars naar Geslacht'.'Instelling Key'
+	toColumn: 'Instelling'.'Instelling Key'
+
+relationship 29c65d4a-db08-4035-9f21-893d8bbe8f19
+	fromColumn: 'Eerstejaars naar Geslacht'.'Sector Key'
+	toColumn: 'Sector'.'Sector Key'
+
+relationship b60351cc-a362-4f9c-9680-6fed3c053d5f
+	fromColumn: 'Eerstejaars naar Geslacht'.'Geografie Key'
+	toColumn: 'Geografie'.'Geografie Key'
+
+relationship 364afd21-0c39-41e5-8a9e-bef7bb40ac75
+	fromColumn: 'Eerstejaars naar Geslacht'.'Geslacht Key'
+	toColumn: 'Geslacht'.'Geslacht Key'
+
+relationship b1f6a1f7-36d7-4531-99af-2db651c81773
+	fromColumn: 'Gediplomeerden naar Geslacht'.'Tijd Key'
+	toColumn: 'Tijd'.'Tijd Key'
+
+relationship 0aa6789e-db49-4efc-8a53-8484b41d3794
+	fromColumn: 'Gediplomeerden naar Geslacht'.'Instelling Key'
+	toColumn: 'Instelling'.'Instelling Key'
+
+relationship 8cf1c837-ec35-402f-9718-afe2071cd1fc
+	fromColumn: 'Gediplomeerden naar Geslacht'.'Sector Key'
+	toColumn: 'Sector'.'Sector Key'
+
+relationship e2034e3c-d5b7-4a64-8fcb-20d8ff401b60
+	fromColumn: 'Gediplomeerden naar Geslacht'.'Geografie Key'
+	toColumn: 'Geografie'.'Geografie Key'
+
+relationship 902ee9d8-35f1-4690-87c2-2faef8c338f2
+	fromColumn: 'Gediplomeerden naar Geslacht'.'Soort Diploma Key'
+	toColumn: 'Soort Diploma'.'Soort Diploma Key'
+
+relationship 9213a86f-5e1e-4cf9-a273-4e5c5c281db4
+	fromColumn: 'Gediplomeerden naar Geslacht'.'Geslacht Key'
+	toColumn: 'Geslacht'.'Geslacht Key'
+
+relationship 2114dc42-a8ef-4cf6-bd55-7bac8d582dfa
+	fromColumn: 'Ingeschrevenen naar Opleidingsvorm'.'Tijd Key'
+	toColumn: 'Tijd'.'Tijd Key'
+
+relationship 9e92159c-044e-4781-accf-598a45068607
+	fromColumn: 'Ingeschrevenen naar Opleidingsvorm'.'Instelling Key'
+	toColumn: 'Instelling'.'Instelling Key'
+
+relationship 7ffb0d3a-4b8d-40de-bcc4-7d7d61889631
+	fromColumn: 'Ingeschrevenen naar Opleidingsvorm'.'Sector Key'
+	toColumn: 'Sector'.'Sector Key'
+
+relationship 2c7ec77a-65ba-49b1-a1d6-14df84bd5cda
+	fromColumn: 'Ingeschrevenen naar Opleidingsvorm'.'Geografie Key'
+	toColumn: 'Geografie'.'Geografie Key'
+
+relationship 0e569d74-a451-45a2-852d-f4861a0298af
+	fromColumn: 'Ingeschrevenen naar Opleidingsvorm'.'Opleidingsvorm Key'
+	toColumn: 'Opleidingsvorm'.'Opleidingsvorm Key'
+
+relationship 2f38fdfe-1ed9-4ed4-8f9e-ca63d07cbf13
+	fromColumn: 'Inschrijvingen naar Opleidingsvorm'.'Tijd Key'
+	toColumn: 'Tijd'.'Tijd Key'
+
+relationship 9e4618ac-4397-4833-ac33-81278ce278bb
+	fromColumn: 'Inschrijvingen naar Opleidingsvorm'.'Instelling Key'
+	toColumn: 'Instelling'.'Instelling Key'
+
+relationship f6f16a23-6181-44eb-a783-62cd8f6cdbb7
+	fromColumn: 'Inschrijvingen naar Opleidingsvorm'.'Sector Key'
+	toColumn: 'Sector'.'Sector Key'
+
+relationship 61dd57c4-e285-4b19-8c33-7f30fa03cd0d
+	fromColumn: 'Inschrijvingen naar Opleidingsvorm'.'Geografie Key'
+	toColumn: 'Geografie'.'Geografie Key'
+
+relationship 16596eb1-252b-4b09-ac7f-398379dc57f4
+	fromColumn: 'Inschrijvingen naar Opleidingsvorm'.'Opleidingsvorm Key'
+	toColumn: 'Opleidingsvorm'.'Opleidingsvorm Key'
+
+relationship 62c3861d-8b5d-4842-a9c1-1cfa7675756a
+	fromColumn: 'Eerstejaars naar Opleidingsvorm'.'Tijd Key'
+	toColumn: 'Tijd'.'Tijd Key'
+
+relationship c97b9076-d881-4caf-948b-30dba3c548cc
+	fromColumn: 'Eerstejaars naar Opleidingsvorm'.'Instelling Key'
+	toColumn: 'Instelling'.'Instelling Key'
+
+relationship 9e6a39cd-1470-48c9-b2b9-e5db24cd6a58
+	fromColumn: 'Eerstejaars naar Opleidingsvorm'.'Sector Key'
+	toColumn: 'Sector'.'Sector Key'
+
+relationship 9cd61506-0593-40cc-bb01-3ec19f0aa990
+	fromColumn: 'Eerstejaars naar Opleidingsvorm'.'Geografie Key'
+	toColumn: 'Geografie'.'Geografie Key'
+
+relationship 57fe5e72-5835-45ec-be1c-8b478de6d199
+	fromColumn: 'Eerstejaars naar Opleidingsvorm'.'Opleidingsvorm Key'
+	toColumn: 'Opleidingsvorm'.'Opleidingsvorm Key'
+
+relationship ee88d7ce-650d-44d9-b68a-ea5d107f8a7f
+	fromColumn: 'Gediplomeerden naar Opleidingsvorm'.'Tijd Key'
+	toColumn: 'Tijd'.'Tijd Key'
+
+relationship 333d6749-70b3-40e8-8111-54861ed3110c
+	fromColumn: 'Gediplomeerden naar Opleidingsvorm'.'Instelling Key'
+	toColumn: 'Instelling'.'Instelling Key'
+
+relationship 9984852f-679e-4796-a640-0a5669c5451d
+	fromColumn: 'Gediplomeerden naar Opleidingsvorm'.'Sector Key'
+	toColumn: 'Sector'.'Sector Key'
+
+relationship d39b815d-7d7d-4abd-96fb-56213ad8a0d3
+	fromColumn: 'Gediplomeerden naar Opleidingsvorm'.'Geografie Key'
+	toColumn: 'Geografie'.'Geografie Key'
+
+relationship aff2b28a-5b47-408e-a4c1-557e122d9886
+	fromColumn: 'Gediplomeerden naar Opleidingsvorm'.'Soort Diploma Key'
+	toColumn: 'Soort Diploma'.'Soort Diploma Key'
+
+relationship 14c44b9a-173c-4811-9939-5effdf89e590
+	fromColumn: 'Gediplomeerden naar Opleidingsvorm'.'Opleidingsvorm Key'
+	toColumn: 'Opleidingsvorm'.'Opleidingsvorm Key'
+
+relationship e3a38a6a-91f2-417a-b33e-314aad117c90
+	fromColumn: 'Instelling'.'Bevoegd Gezag Nummer'
+	toColumn: 'Bestuur'.'Bevoegd Gezag Nummer'

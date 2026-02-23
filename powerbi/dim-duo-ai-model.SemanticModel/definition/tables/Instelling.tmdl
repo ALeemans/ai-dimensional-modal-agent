@@ -1,0 +1,73 @@
+table Instelling
+	lineageTag: 726cd154-8a27-48cd-84f5-1faeced4d1e6
+
+	column 'Instelling Key'
+		dataType: int64
+		lineageTag: b082b396-2079-408e-aa48-3868b3afcdc7
+		isHidden
+		summarizeBy: none
+		sourceColumn: instelling_key
+
+	column 'Soort Instelling'
+		dataType: string
+		lineageTag: 9ea6040f-6050-45cf-8228-fb584ddc74cb
+		summarizeBy: none
+		sourceColumn: soort_instelling
+
+	column 'BRIN Code'
+		dataType: string
+		lineageTag: 42141e47-a204-4277-bf4e-45a110d65e18
+		summarizeBy: none
+		sourceColumn: brin_code
+
+	column Instellingsnaam
+		dataType: string
+		lineageTag: 36fa0610-044c-4b13-b900-fb368e58a8ab
+		summarizeBy: none
+		sourceColumn: instellingsnaam
+
+	column 'Bevoegd Gezag Nummer'
+		dataType: string
+		lineageTag: 36fa1f9f-1eaf-48d9-94d4-ab2e734f8aa1
+		summarizeBy: none
+		sourceColumn: bevoegd_gezag_nummer
+
+	column Denominatie
+		dataType: string
+		lineageTag: 2b0f5b94-8028-4c2c-a4aa-d68273dee58e
+		summarizeBy: none
+		sourceColumn: denominatie
+
+	column Straatnaam
+		dataType: string
+		lineageTag: 399c376e-6ba1-4bf8-b518-bbce622cd9f0
+		summarizeBy: none
+		sourceColumn: straatnaam
+
+	column Postcode
+		dataType: string
+		lineageTag: 13bf53ae-0a21-4e84-b53a-af392f9553fa
+		summarizeBy: none
+		sourceColumn: postcode
+
+	column Plaatsnaam
+		dataType: string
+		lineageTag: b89b9260-9898-46a6-ba61-031040a3507c
+		summarizeBy: none
+		sourceColumn: plaatsnaam
+
+	column Website
+		dataType: string
+		lineageTag: 3f228099-bcf4-4c54-a9d6-30ec538aa3e9
+		summarizeBy: none
+		sourceColumn: website
+
+	partition Instelling = m
+		mode: import
+		queryGroup: Dimensies
+		source = ```
+			let
+			    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/dim_instelling.parquet"))
+			in
+			    Source
+		```

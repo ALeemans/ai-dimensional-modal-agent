@@ -1,0 +1,307 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 800
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 50,
+            "y": 774.00565407534236
+          },
+          "nodeIndex": "Bestuur",
+          "nodeLineageTag": "c9bb0de9-7669-4bc9-987f-7b155fe67a03",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1240.5399913811643,
+            "y": 1866.333528490698
+          },
+          "nodeIndex": "Eerstejaars",
+          "nodeLineageTag": "ee4d8bd4-d1bc-44e4-a7c2-080ac77d0db6",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 926.600103595706,
+            "y": 1495.5209017924064
+          },
+          "nodeIndex": "Eerstejaars naar Geslacht",
+          "nodeLineageTag": "ed557246-9355-411e-bfe2-a66aac16333c",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 955.63946079101265,
+            "y": -50
+          },
+          "nodeIndex": "Eerstejaars naar Opleidingsvorm",
+          "nodeLineageTag": "8b5edc8c-4d26-4393-a169-eb41eae0e96c",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1788.3020851755143,
+            "y": 970.20712789241531
+          },
+          "nodeIndex": "Gediplomeerden",
+          "nodeLineageTag": "99cff357-d4bc-4fab-8ba2-2a0857f3e4f3",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1381.8353506103247,
+            "y": 970.20176359520576
+          },
+          "nodeIndex": "Gediplomeerden naar Geslacht",
+          "nodeLineageTag": "b38606bd-aead-4bc8-9d28-e474428709d8",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1576.3002262142438,
+            "y": 612.94174687700024
+          },
+          "nodeIndex": "Gediplomeerden naar Opleidingsvorm",
+          "nodeLineageTag": "47f9b28e-c5fe-4ebe-939c-ee3dc1d81527",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1093.1998405118004,
+            "y": 1166.6468788145521
+          },
+          "nodeIndex": "Geografie",
+          "nodeLineageTag": "5402b715-590e-40b8-9e3a-6b2c0575b596",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 636.7713235874312,
+            "y": 1834.0072270554006
+          },
+          "nodeIndex": "Geslacht",
+          "nodeLineageTag": "12d0ed29-0de4-4316-af2c-083d46f923ee",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1589.5797354207425,
+            "y": 1323.2557959363576
+          },
+          "nodeIndex": "Ingeschrevenen",
+          "nodeLineageTag": "6b5333fd-7405-4c16-ba4e-d3af4d6ff993",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 338.27711889111947,
+            "y": 994.710221315317
+          },
+          "nodeIndex": "Ingeschrevenen naar Geslacht",
+          "nodeLineageTag": "0c6f7099-dea7-4585-807e-ce51042ce767",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 926.91352959801952,
+            "y": 506.97521978221175
+          },
+          "nodeIndex": "Ingeschrevenen naar Opleidingsvorm",
+          "nodeLineageTag": "963453a2-d7f0-40d7-9af8-41c573508aa9",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1299.7520808924571,
+            "y": 1537.9207553991905
+          },
+          "nodeIndex": "Inschrijvingen",
+          "nodeLineageTag": "645eb2c8-a291-48a8-8ff4-a40a4346a204",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 463.34373066355909,
+            "y": 1347.7639633260783
+          },
+          "nodeIndex": "Inschrijvingen naar Geslacht",
+          "nodeLineageTag": "9c49baba-4d48-462a-8422-c645a812a0b6",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 401.32802399795395,
+            "y": 536.63362660330449
+          },
+          "nodeIndex": "Inschrijvingen naar Opleidingsvorm",
+          "nodeLineageTag": "734f8ad2-e06e-4fcf-bcf2-ac1fcda6cd49",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 805.14037800808376,
+            "y": 1119.2178802937747
+          },
+          "nodeIndex": "Instelling",
+          "nodeLineageTag": "7da96500-21d0-4c50-b287-2fc4d52ceafe",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1758.0806945727247,
+            "y": 1676.4431383617989
+          },
+          "nodeIndex": "Opleiding",
+          "nodeLineageTag": "ecb810da-aca7-4a97-9a8e-13906c70b984",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 691.04319373640817,
+            "y": 300.51568875291127
+          },
+          "nodeIndex": "Opleidingsvorm",
+          "nodeLineageTag": "119871b8-7097-4071-8d6c-4067023d9a35",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 628.14684692238,
+            "y": 887.33347377910991
+          },
+          "nodeIndex": "Sector",
+          "nodeLineageTag": "bc3367a9-42c2-4455-80c6-e07940d05ffd",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1980.743230031133,
+            "y": 786.75136794891864
+          },
+          "nodeIndex": "Soort Diploma",
+          "nodeLineageTag": "ea79cd4f-135c-4ae0-9d8c-f18e35664803",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 916.8849177646548,
+            "y": 858.5359603270183
+          },
+          "nodeIndex": "Tijd",
+          "nodeLineageTag": "7f152c87-b71b-4cd5-92dc-9ee1119396bb",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2214.743230031133,
+            "y": 1042.166764245349
+          },
+          "nodeIndex": "Measures DM",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 49.0092617685595,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

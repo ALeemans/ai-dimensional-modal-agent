@@ -79,4 +79,8 @@ df_opl.rename(columns={
 df_opl = df_opl.sort_values("croho_code").reset_index(drop=True)
 df_opl.insert(0, "opleiding_key", range(1, len(df_opl) + 1))
 
+# Verwijder kolommen die volledig leeg zijn (bijv. isced_code uit bron) — null-type
+# in Parquet kan Power BI niet verwerken.
+df_opl = df_opl.dropna(axis=1, how="all")
+
 write_parquet(df_opl, "dim_opleiding")

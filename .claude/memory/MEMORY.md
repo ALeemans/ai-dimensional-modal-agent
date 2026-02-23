@@ -74,5 +74,7 @@
 - Fase 5.3 ✅ — Instruction file written (`agent/instructions/05-etl-build.md`)
 - **Note:** p04 (gediplomeerden) uses SOORT_DIPLOMA instead of TYPE_HOGER_ONDERWIJS — mapped via `str.replace("hbo ", "")`
 - **Note:** dim_opleiding has 438 rows (design estimated ~247; p04b contributes CROHO codes absent from p01-p03)
+- Fase 5.4 ✅ — Power BI semantic model generated (`scripts/generate_powerbi_tmdl.py` → 21 TMDL table files + `relationships.tmdl`, 60 relationships). Instruction written (`agent/instructions/06-powerbi-semantic-model.md`)
+- **TMDL notes:** relationships go in `definition/relationships.tmdl` (not model.tmdl); syntax: `fromColumn: 'Table'.'Column Name'` (table **always** quoted; column **also** quoted when it contains spaces)
 - **Fase 5 — COMPLETE ✅**
 - Fase 6 → Next — Agent assembly

@@ -1,0 +1,61 @@
+table Geografie
+	lineageTag: ca9a8560-97ca-4a71-8dbd-049fde37fae4
+
+	column 'Geografie Key'
+		dataType: int64
+		lineageTag: 2bb19a4a-4879-431a-80a5-4a9db454e762
+		isHidden
+		summarizeBy: none
+		sourceColumn: geografie_key
+
+	column Provincie
+		dataType: string
+		lineageTag: db48e3d3-d9b6-4c95-a889-e2aa7766a830
+		summarizeBy: none
+		sourceColumn: provincienaam
+
+	column Gemeentenummer
+		dataType: string
+		lineageTag: 9ba543ad-d694-47ef-9c83-19fc665c80d9
+		summarizeBy: none
+		sourceColumn: gemeentenummer
+
+	column Gemeente
+		dataType: string
+		lineageTag: a0bd90dc-a65e-4640-ac2c-a7f245ed33f0
+		summarizeBy: none
+		sourceColumn: gemeentenaam
+
+	column 'COROP Code'
+		dataType: string
+		lineageTag: 3a80a90c-373e-4a58-bc78-a4fc85b15378
+		summarizeBy: none
+		sourceColumn: corop_code
+
+	column 'COROP Naam'
+		dataType: string
+		lineageTag: f9c33ff4-a778-4447-813a-f5c4bbf2b419
+		summarizeBy: none
+		sourceColumn: corop_naam
+
+	column 'RPA Code'
+		dataType: string
+		lineageTag: 039c38c6-e6ff-47cd-95e0-1e523e37c091
+		summarizeBy: none
+		sourceColumn: rpa_code
+
+	column 'RPA Naam'
+		dataType: string
+		lineageTag: 44d6743a-ac0d-4ac1-a319-3a14c9b38f9b
+		summarizeBy: none
+		sourceColumn: rpa_naam
+
+	partition Geografie = m
+		mode: import
+		queryGroup: Dimensies
+		source = ```
+			let
+			    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/dim_geografie.parquet"))
+			in
+			    Source
+		```

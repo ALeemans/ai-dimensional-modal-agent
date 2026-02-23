@@ -45,6 +45,10 @@ df_feit = df[[
     "tijd_key", "instelling_key", "sector_key", "geografie_key", "geslacht_key",
     "aantal_inschrijvingen", "is_onderdrukt",
 ]].copy()
+
+# Voorkom float-promotie door pandas bij NaN in integer FK-kolom
+df_feit["geslacht_key"] = df_feit["geslacht_key"].astype("Int64")
+
 df_feit.insert(0, "id", range(1, len(df_feit) + 1))
 
 write_parquet(df_feit, "feit_inschrijvingen_geslacht")

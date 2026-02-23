@@ -1,0 +1,79 @@
+table Opleiding
+	lineageTag: c94400eb-dab6-46d4-890a-09eaeaf1e50a
+
+	column 'Opleiding Key'
+		dataType: int64
+		lineageTag: 4b1db25b-3c74-4fa6-bef9-d7fd1d60de2a
+		isHidden
+		summarizeBy: none
+		sourceColumn: opleiding_key
+
+	column 'Type Hoger Onderwijs'
+		dataType: string
+		lineageTag: 4036df59-0405-45ec-a215-5bcef5fadce2
+		summarizeBy: none
+		sourceColumn: type_hoger_onderwijs
+
+	column Onderdeel
+		dataType: string
+		lineageTag: 80580829-d2e3-4746-896b-0c5d2dfaf463
+		summarizeBy: none
+		sourceColumn: onderdeel
+
+	column Subonderdeel
+		dataType: string
+		lineageTag: 6472cf1a-4da1-424a-9d27-9eaee9980591
+		summarizeBy: none
+		sourceColumn: subonderdeel
+
+	column 'CROHO Code'
+		dataType: int64
+		lineageTag: 732e6566-ca7f-43ac-9835-f76aa65857e2
+		summarizeBy: none
+		sourceColumn: croho_code
+
+	column Opleidingsnaam
+		dataType: string
+		lineageTag: a9dfc4b3-0998-48c8-a541-2393b7f8c1a9
+		summarizeBy: none
+		sourceColumn: opleidingsnaam
+
+	column Graad
+		dataType: string
+		lineageTag: 86f225b6-464d-44ff-bd23-7b3c2852cf96
+		summarizeBy: none
+		sourceColumn: graad
+
+	column 'Studielast ECTS'
+		dataType: string
+		lineageTag: d8ce0493-5ec7-4a0e-a080-adac15fd1308
+		summarizeBy: none
+		sourceColumn: studielast_ects
+
+	column 'EQF Niveau'
+		dataType: string
+		lineageTag: a4c227d0-8cd9-4a60-bc2c-b63ddf29a439
+		summarizeBy: none
+		sourceColumn: eqf_niveau
+
+	column 'NLQF Niveau'
+		dataType: string
+		lineageTag: f17f938f-998a-45ab-a9d2-1747e1d7bef1
+		summarizeBy: none
+		sourceColumn: nlqf_niveau
+
+	column Voertaal
+		dataType: string
+		lineageTag: 73f6e65b-5a9a-4a69-aef2-274acebfc94f
+		summarizeBy: none
+		sourceColumn: voertaal
+
+	partition Opleiding = m
+		mode: import
+		queryGroup: Dimensies
+		source = ```
+			let
+			    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/dim_opleiding.parquet"))
+			in
+			    Source
+		```

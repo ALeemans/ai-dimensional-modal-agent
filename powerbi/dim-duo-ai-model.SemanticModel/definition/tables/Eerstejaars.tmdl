@@ -1,0 +1,59 @@
+table Eerstejaars
+	lineageTag: 0b9933ad-b577-4cf0-8f17-78f4a72af633
+
+	column ID
+		dataType: int64
+		lineageTag: 0e71bfda-8622-4570-9493-20bf000c60a6
+		isHidden
+		summarizeBy: none
+		sourceColumn: eerstejaars_key
+
+	column 'Tijd Key'
+		dataType: int64
+		lineageTag: e672b756-1f2f-482c-9e1a-b9b8e9285c0d
+		isHidden
+		summarizeBy: none
+		sourceColumn: tijd_key
+
+	column 'Instelling Key'
+		dataType: int64
+		lineageTag: ea563aad-bb86-462d-bb3a-ac65d2cea2b0
+		isHidden
+		summarizeBy: none
+		sourceColumn: instelling_key
+
+	column 'Opleiding Key'
+		dataType: int64
+		lineageTag: 8663c1c8-5791-4cf6-b5af-c174ef1ebcc3
+		isHidden
+		summarizeBy: none
+		sourceColumn: opleiding_key
+
+	column 'Geografie Key'
+		dataType: int64
+		lineageTag: f7a1f7aa-1672-46e8-87c4-c6feafbda7de
+		isHidden
+		summarizeBy: none
+		sourceColumn: geografie_key
+
+	column 'Aantal Eerstejaars'
+		dataType: int64
+		lineageTag: c89a1be0-191a-486d-87e4-03d6de9fa504
+		summarizeBy: sum
+		sourceColumn: aantal_eerstejaars
+
+	column 'Privacy Onderdrukt'
+		dataType: boolean
+		lineageTag: b84dd7d5-c7cc-4824-8934-f1d717099632
+		summarizeBy: none
+		sourceColumn: is_onderdrukt
+
+	partition Eerstejaars = m
+		mode: import
+		queryGroup: Feiten
+		source = ```
+			let
+			    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/feit_eerstejaars.parquet"))
+			in
+			    Source
+		```

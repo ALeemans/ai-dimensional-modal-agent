@@ -1,0 +1,70 @@
+table 'Ingeschrevenen naar Opleidingsvorm'
+	lineageTag: 963453a2-d7f0-40d7-9af8-41c573508aa9
+
+	measure 'Totaal Ingeschrevenen (Oplvorm)' = SUM('Ingeschrevenen naar Opleidingsvorm'[Aantal Ingeschrevenen])
+		formatString: #,0
+		lineageTag: 5f99b38c-0ff7-4501-81b1-8a9741364250
+
+	column ID
+		dataType: int64
+		isHidden
+		lineageTag: f974679c-5433-4a59-91ab-ce2b1a8e25a7
+		summarizeBy: none
+		sourceColumn: id
+
+	column 'Tijd Key'
+		dataType: int64
+		isHidden
+		lineageTag: 130a337b-9813-475a-8630-7500c3f50474
+		summarizeBy: none
+		sourceColumn: tijd_key
+
+	column 'Instelling Key'
+		dataType: int64
+		isHidden
+		lineageTag: 76355c97-019e-4f70-9cc4-a0c3ba73f2db
+		summarizeBy: none
+		sourceColumn: instelling_key
+
+	column 'Sector Key'
+		dataType: int64
+		isHidden
+		lineageTag: ea2b262c-25ef-424f-9038-c7b1f59f938f
+		summarizeBy: none
+		sourceColumn: sector_key
+
+	column 'Geografie Key'
+		dataType: int64
+		isHidden
+		lineageTag: 5c465acd-dd90-470c-a64b-7ebdf51060e9
+		summarizeBy: none
+		sourceColumn: geografie_key
+
+	column 'Opleidingsvorm Key'
+		dataType: int64
+		isHidden
+		lineageTag: 03833b46-d6ad-4641-b74c-25b4f638bc80
+		summarizeBy: none
+		sourceColumn: opleidingsvorm_key
+
+	column 'Aantal Ingeschrevenen'
+		dataType: int64
+		lineageTag: 7ec462b4-8f52-49a3-b160-f31e7780f82c
+		summarizeBy: sum
+		sourceColumn: aantal_ingeschrevenen
+
+	column 'Privacy Onderdrukt'
+		dataType: boolean
+		lineageTag: 52ea4069-c46e-4679-98cb-96bfc928cbc9
+		summarizeBy: none
+		sourceColumn: is_onderdrukt
+
+	partition 'Ingeschrevenen naar Opleidingsvorm' = m
+		mode: import
+		queryGroup: Feiten
+		source =
+				let
+					    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/feit_ingeschrevenen_oplvorm.parquet"))
+					in
+					    Source
+

@@ -1,0 +1,25 @@
+table 'Soort Diploma'
+	lineageTag: d257dcfb-8d08-48fa-a73e-ec7d8de90d6a
+
+	column 'Soort Diploma Key'
+		dataType: int64
+		lineageTag: fc1eb19d-3e5e-43ef-893f-f2b596035cbf
+		isHidden
+		summarizeBy: none
+		sourceColumn: soort_diploma_key
+
+	column 'Soort Diploma'
+		dataType: string
+		lineageTag: b1edd7a3-5ee2-4946-85b9-9daf9e2a018c
+		summarizeBy: none
+		sourceColumn: soort_diploma
+
+	partition 'Soort Diploma' = m
+		mode: import
+		queryGroup: Dimensies
+		source = ```
+			let
+			    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/dim_soort_diploma.parquet"))
+			in
+			    Source
+		```
