@@ -1,70 +1,67 @@
 table 'Ingeschrevenen naar Geslacht'
-	lineageTag: 0c6f7099-dea7-4585-807e-ce51042ce767
-
-	measure 'Totaal Ingeschrevenen (Geslacht)' = SUM('Ingeschrevenen naar Geslacht'[Aantal Ingeschrevenen])
-		formatString: #,0
-		lineageTag: 48702a26-47e7-47df-8b02-af3fae0bd0ea
+	lineageTag: 36cb0ee5-06e8-4c94-b47b-3652e8cf8004
 
 	column ID
 		dataType: int64
 		isHidden
-		lineageTag: 59fa3f97-33d6-456d-a36b-0db729452b90
+		lineageTag: a41b62a0-949f-4c65-95c5-d68e8ba9ca24
 		summarizeBy: none
 		sourceColumn: id
 
 	column 'Tijd Key'
 		dataType: int64
 		isHidden
-		lineageTag: 944476db-14bd-4a31-a0df-3b3d527efb6c
+		lineageTag: ab2df745-b224-49bd-8766-98051e4fa698
 		summarizeBy: none
 		sourceColumn: tijd_key
 
 	column 'Instelling Key'
 		dataType: int64
 		isHidden
-		lineageTag: 0e732015-308a-485f-b31f-c58f53314cbd
+		lineageTag: d31d770c-2e75-4fa7-a53e-63d273348281
 		summarizeBy: none
 		sourceColumn: instelling_key
 
 	column 'Sector Key'
 		dataType: int64
 		isHidden
-		lineageTag: d3b3ecc0-dba9-4c67-8bb0-77367775ed72
+		lineageTag: a74e1742-135f-4e6f-b5c6-11fdfe1e0fbb
 		summarizeBy: none
 		sourceColumn: sector_key
 
 	column 'Geografie Key'
 		dataType: int64
 		isHidden
-		lineageTag: 91d13864-9ea4-4480-a68a-41d69491a764
+		lineageTag: 891eae6e-b0f9-4df6-9f22-64d001af1dc0
 		summarizeBy: none
 		sourceColumn: geografie_key
 
 	column 'Geslacht Key'
 		dataType: int64
 		isHidden
-		lineageTag: 0782e9a0-9553-4f99-bd86-1e2b73d3f0cf
+		lineageTag: 713eefbe-680a-4190-ba6e-b95f981d8c83
 		summarizeBy: none
 		sourceColumn: geslacht_key
 
 	column 'Aantal Ingeschrevenen'
 		dataType: int64
-		lineageTag: d9d4d01b-bd5d-457c-a85f-548065df1a79
+		lineageTag: 1b579825-30ef-42ed-909d-14075ca7df01
 		summarizeBy: sum
 		sourceColumn: aantal_ingeschrevenen
 
 	column 'Privacy Onderdrukt'
 		dataType: boolean
-		lineageTag: ce39c471-4c2d-4e52-bee9-a3b1304f1a48
+		lineageTag: dda3e169-0d0c-410d-8b50-f0f47da2ce02
 		summarizeBy: none
 		sourceColumn: is_onderdrukt
 
 	partition 'Ingeschrevenen naar Geslacht' = m
 		mode: import
 		queryGroup: Feiten
-		source =
-				let
+		source = ```
+					let
 					    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/feit_ingeschrevenen_geslacht.parquet"))
 					in
 					    Source
+				```
 

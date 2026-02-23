@@ -1,64 +1,64 @@
 table Instelling
-	lineageTag: 726cd154-8a27-48cd-84f5-1faeced4d1e6
+	lineageTag: ef82a39a-ad44-45da-8c9a-28984ee655d1
 
 	column 'Instelling Key'
 		dataType: int64
-		lineageTag: b082b396-2079-408e-aa48-3868b3afcdc7
 		isHidden
+		lineageTag: 105b9923-a9f4-4db7-8569-9602011680f0
 		summarizeBy: none
 		sourceColumn: instelling_key
 
 	column 'Soort Instelling'
 		dataType: string
-		lineageTag: 9ea6040f-6050-45cf-8228-fb584ddc74cb
+		lineageTag: 47985cd8-739e-480c-a372-4735239b2fb3
 		summarizeBy: none
 		sourceColumn: soort_instelling
 
 	column 'BRIN Code'
 		dataType: string
-		lineageTag: 42141e47-a204-4277-bf4e-45a110d65e18
+		lineageTag: 160ce231-bdc2-4f01-93c0-eb8e45fd3f3a
 		summarizeBy: none
 		sourceColumn: brin_code
 
 	column Instellingsnaam
 		dataType: string
-		lineageTag: 36fa0610-044c-4b13-b900-fb368e58a8ab
+		lineageTag: aef1387e-48ae-45f8-a231-c30cc03c1dfe
 		summarizeBy: none
 		sourceColumn: instellingsnaam
 
 	column 'Bevoegd Gezag Nummer'
 		dataType: string
-		lineageTag: 36fa1f9f-1eaf-48d9-94d4-ab2e734f8aa1
+		lineageTag: b7d3b273-6c38-499f-838f-d67204b48577
 		summarizeBy: none
 		sourceColumn: bevoegd_gezag_nummer
 
 	column Denominatie
 		dataType: string
-		lineageTag: 2b0f5b94-8028-4c2c-a4aa-d68273dee58e
+		lineageTag: 3e37a40d-97d1-4cd0-9181-c2c3cbb77fd2
 		summarizeBy: none
 		sourceColumn: denominatie
 
 	column Straatnaam
 		dataType: string
-		lineageTag: 399c376e-6ba1-4bf8-b518-bbce622cd9f0
+		lineageTag: c4ae5ee9-fe28-4806-bb2d-2aa28cc1712a
 		summarizeBy: none
 		sourceColumn: straatnaam
 
 	column Postcode
 		dataType: string
-		lineageTag: 13bf53ae-0a21-4e84-b53a-af392f9553fa
+		lineageTag: fb62c6a2-1809-4cd3-8421-37f49f29e1ea
 		summarizeBy: none
 		sourceColumn: postcode
 
 	column Plaatsnaam
 		dataType: string
-		lineageTag: b89b9260-9898-46a6-ba61-031040a3507c
+		lineageTag: 16686409-b3fc-40b5-99ae-3d3df621a25d
 		summarizeBy: none
 		sourceColumn: plaatsnaam
 
 	column Website
 		dataType: string
-		lineageTag: 3f228099-bcf4-4c54-a9d6-30ec538aa3e9
+		lineageTag: 6493cd29-914f-4ba8-b8b2-18208ddb722a
 		summarizeBy: none
 		sourceColumn: website
 
@@ -66,8 +66,9 @@ table Instelling
 		mode: import
 		queryGroup: Dimensies
 		source = ```
-			let
-			    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/dim_instelling.parquet"))
-			in
-			    Source
-		```
+					let
+					    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/dim_instelling.parquet"))
+					in
+					    Source
+				```
+

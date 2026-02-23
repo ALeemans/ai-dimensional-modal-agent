@@ -1,50 +1,50 @@
 table Eerstejaars
-	lineageTag: 0b9933ad-b577-4cf0-8f17-78f4a72af633
+	lineageTag: 90af30f7-d45b-4bb0-a8b5-9cfb7a00e8b8
 
 	column ID
 		dataType: int64
-		lineageTag: 0e71bfda-8622-4570-9493-20bf000c60a6
 		isHidden
+		lineageTag: d7b678a3-0d76-4dd5-aa99-ac7f2424692e
 		summarizeBy: none
 		sourceColumn: eerstejaars_key
 
 	column 'Tijd Key'
 		dataType: int64
-		lineageTag: e672b756-1f2f-482c-9e1a-b9b8e9285c0d
 		isHidden
+		lineageTag: 09b858bd-0151-4490-9efc-c346c0aa26d2
 		summarizeBy: none
 		sourceColumn: tijd_key
 
 	column 'Instelling Key'
 		dataType: int64
-		lineageTag: ea563aad-bb86-462d-bb3a-ac65d2cea2b0
 		isHidden
+		lineageTag: c9b0cb5e-d30b-4c3e-b449-7b44020cc6b0
 		summarizeBy: none
 		sourceColumn: instelling_key
 
 	column 'Opleiding Key'
 		dataType: int64
-		lineageTag: 8663c1c8-5791-4cf6-b5af-c174ef1ebcc3
 		isHidden
+		lineageTag: d48622bb-71c6-43bc-9620-57c8b4e1822c
 		summarizeBy: none
 		sourceColumn: opleiding_key
 
 	column 'Geografie Key'
 		dataType: int64
-		lineageTag: f7a1f7aa-1672-46e8-87c4-c6feafbda7de
 		isHidden
+		lineageTag: e077c5d9-2f8d-45b2-b0b0-882700a84693
 		summarizeBy: none
 		sourceColumn: geografie_key
 
 	column 'Aantal Eerstejaars'
 		dataType: int64
-		lineageTag: c89a1be0-191a-486d-87e4-03d6de9fa504
+		lineageTag: 093ff285-f47b-446a-9d7d-1d5a23380873
 		summarizeBy: sum
 		sourceColumn: aantal_eerstejaars
 
 	column 'Privacy Onderdrukt'
 		dataType: boolean
-		lineageTag: b84dd7d5-c7cc-4824-8934-f1d717099632
+		lineageTag: c4cc5e3a-8555-4f08-a7bb-156d1b82da05
 		summarizeBy: none
 		sourceColumn: is_onderdrukt
 
@@ -52,8 +52,9 @@ table Eerstejaars
 		mode: import
 		queryGroup: Feiten
 		source = ```
-			let
-			    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/feit_eerstejaars.parquet"))
-			in
-			    Source
-		```
+					let
+					    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/feit_eerstejaars.parquet"))
+					in
+					    Source
+				```
+

@@ -1,22 +1,22 @@
 table Opleidingsvorm
-	lineageTag: f0565a5a-c5a4-426c-92ac-f6a9c3e61acb
+	lineageTag: d2c2ad39-d324-4404-a6a0-daec6f37c032
 
 	column 'Opleidingsvorm Key'
 		dataType: int64
-		lineageTag: a78a4a0d-feb1-49fe-a26b-07e9fed073d8
 		isHidden
+		lineageTag: 5bd892c0-c82b-4f16-a907-3a2ec8a61c57
 		summarizeBy: none
 		sourceColumn: opleidingsvorm_key
 
 	column 'Opleidingsvorm Code'
 		dataType: string
-		lineageTag: d4d7b138-3d47-47ab-9419-5f634680b58a
+		lineageTag: e8c67174-6727-4714-b8d4-4cefc39b424d
 		summarizeBy: none
 		sourceColumn: opleidingsvorm_code
 
 	column Opleidingsvorm
 		dataType: string
-		lineageTag: 3efd9327-9c00-4320-9bf6-d38849e9a05c
+		lineageTag: 2859fd72-e94a-4662-8e33-d8ca6fc1e544
 		summarizeBy: none
 		sourceColumn: opleidingsvorm_naam
 
@@ -24,8 +24,9 @@ table Opleidingsvorm
 		mode: import
 		queryGroup: Dimensies
 		source = ```
-			let
-			    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/dim_opleidingsvorm.parquet"))
-			in
-			    Source
-		```
+					let
+					    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/dim_opleidingsvorm.parquet"))
+					in
+					    Source
+				```
+

@@ -325,7 +325,8 @@ def summarize_by(src_col: str, tmdl_type: str) -> str:
 
 
 def tmdl_file_name(display_name: str) -> str:
-    return display_name.replace(" ", "_") + ".tmdl"
+    """Use the display name directly as filename (spaces allowed on all platforms)."""
+    return display_name + ".tmdl"
 
 
 # === Table TMDL generator ===
@@ -541,6 +542,14 @@ def main() -> None:
     if not parquet_files:
         print("ERROR: No parquet files found in", PROCESSED)
         return
+
+    # 0. Remove all existing TMDL files so no stale or duplicate-named files remain
+    removed = list(TABLES_DIR.glob("*.tmdl"))
+    for f in removed:
+        f.unlink()
+    if removed:
+        print(f"  Removed {len(removed)} existing .tmdl files from tables/")
+        print()
 
     # 1. Generate one TMDL file per parquet-based table
     for pf_path in parquet_files:

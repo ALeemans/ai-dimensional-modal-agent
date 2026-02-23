@@ -1,70 +1,67 @@
 table 'Inschrijvingen naar Opleidingsvorm'
-	lineageTag: 734f8ad2-e06e-4fcf-bcf2-ac1fcda6cd49
-
-	measure 'Totaal Inschrijvingen (Oplvorm)' = SUM('Inschrijvingen naar Opleidingsvorm'[Aantal Inschrijvingen])
-		formatString: #,0
-		lineageTag: 64757bd7-979d-448e-b178-d7fdfabb763a
+	lineageTag: d52dbe9b-57f4-4499-a97f-2595657ec04a
 
 	column ID
 		dataType: int64
 		isHidden
-		lineageTag: e40ec252-12f9-414c-ad98-f72a4fe97f76
+		lineageTag: 22874707-4a46-4ac8-919a-f20bd9439a36
 		summarizeBy: none
 		sourceColumn: id
 
 	column 'Tijd Key'
 		dataType: int64
 		isHidden
-		lineageTag: 2c766ff5-682c-47b7-9962-15828c1ddc91
+		lineageTag: d1aa079e-c599-49ec-93ac-4e202982e859
 		summarizeBy: none
 		sourceColumn: tijd_key
 
 	column 'Instelling Key'
 		dataType: int64
 		isHidden
-		lineageTag: a7f5479a-74f9-4cf1-bf00-794359c25c7d
+		lineageTag: fd462bd0-d084-4542-847f-894e30ceb96a
 		summarizeBy: none
 		sourceColumn: instelling_key
 
 	column 'Sector Key'
 		dataType: int64
 		isHidden
-		lineageTag: 676b01e2-049b-4529-993d-0bb30fdca767
+		lineageTag: 0b4828a4-6ade-408b-a869-972582dc9a71
 		summarizeBy: none
 		sourceColumn: sector_key
 
 	column 'Geografie Key'
 		dataType: int64
 		isHidden
-		lineageTag: 2809b849-b90a-4b0f-92da-1054fbfa3ec9
+		lineageTag: 37f06076-a6c7-44b2-bec7-fbe4facaceef
 		summarizeBy: none
 		sourceColumn: geografie_key
 
 	column 'Opleidingsvorm Key'
 		dataType: int64
 		isHidden
-		lineageTag: 0f1f994d-7d07-437c-8695-0eead6abc399
+		lineageTag: 01eec7bb-143b-46aa-bea0-1725718cc038
 		summarizeBy: none
 		sourceColumn: opleidingsvorm_key
 
 	column 'Aantal Inschrijvingen'
 		dataType: int64
-		lineageTag: ba13d87d-0b2d-41b4-85a1-50337f0e6ccb
+		lineageTag: f53dedc3-ced3-43ef-b01f-19639dec38ea
 		summarizeBy: sum
 		sourceColumn: aantal_inschrijvingen
 
 	column 'Privacy Onderdrukt'
 		dataType: boolean
-		lineageTag: e22cb7a6-e9fa-406c-aff4-9dd7b1cb48f1
+		lineageTag: b9db5c20-60d7-4518-a49b-e1eb0ea6be04
 		summarizeBy: none
 		sourceColumn: is_onderdrukt
 
 	partition 'Inschrijvingen naar Opleidingsvorm' = m
 		mode: import
 		queryGroup: Feiten
-		source =
-				let
+		source = ```
+					let
 					    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/feit_inschrijvingen_oplvorm.parquet"))
 					in
 					    Source
+				```
 

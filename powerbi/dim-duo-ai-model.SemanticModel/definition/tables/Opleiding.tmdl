@@ -1,70 +1,70 @@
 table Opleiding
-	lineageTag: c94400eb-dab6-46d4-890a-09eaeaf1e50a
+	lineageTag: 93c29ad0-8b28-4b53-a575-eef576cc8614
 
 	column 'Opleiding Key'
 		dataType: int64
-		lineageTag: 4b1db25b-3c74-4fa6-bef9-d7fd1d60de2a
 		isHidden
+		lineageTag: 686a032a-53bd-41fc-b6c7-4d3f8a828895
 		summarizeBy: none
 		sourceColumn: opleiding_key
 
 	column 'Type Hoger Onderwijs'
 		dataType: string
-		lineageTag: 4036df59-0405-45ec-a215-5bcef5fadce2
+		lineageTag: 2d0ccbe6-692a-44a0-b798-1833cf372627
 		summarizeBy: none
 		sourceColumn: type_hoger_onderwijs
 
 	column Onderdeel
 		dataType: string
-		lineageTag: 80580829-d2e3-4746-896b-0c5d2dfaf463
+		lineageTag: 1d6e3fe5-2d99-4105-bcc2-8bf9d3d3f075
 		summarizeBy: none
 		sourceColumn: onderdeel
 
 	column Subonderdeel
 		dataType: string
-		lineageTag: 6472cf1a-4da1-424a-9d27-9eaee9980591
+		lineageTag: 34aa6e08-7448-47c4-a633-d7c26c568b59
 		summarizeBy: none
 		sourceColumn: subonderdeel
 
 	column 'CROHO Code'
 		dataType: int64
-		lineageTag: 732e6566-ca7f-43ac-9835-f76aa65857e2
+		lineageTag: 0903d9ed-99eb-48fc-904f-200035433c6e
 		summarizeBy: none
 		sourceColumn: croho_code
 
 	column Opleidingsnaam
 		dataType: string
-		lineageTag: a9dfc4b3-0998-48c8-a541-2393b7f8c1a9
+		lineageTag: b58aee78-87f3-47b5-8fd6-7e5d901e7d4f
 		summarizeBy: none
 		sourceColumn: opleidingsnaam
 
 	column Graad
 		dataType: string
-		lineageTag: 86f225b6-464d-44ff-bd23-7b3c2852cf96
+		lineageTag: fcdb33ad-82f8-4a83-a85f-887efd48bff9
 		summarizeBy: none
 		sourceColumn: graad
 
 	column 'Studielast ECTS'
 		dataType: string
-		lineageTag: d8ce0493-5ec7-4a0e-a080-adac15fd1308
+		lineageTag: 932dcae7-1a79-4a44-a640-7272b6a08e28
 		summarizeBy: none
 		sourceColumn: studielast_ects
 
 	column 'EQF Niveau'
 		dataType: string
-		lineageTag: a4c227d0-8cd9-4a60-bc2c-b63ddf29a439
+		lineageTag: 8ce61ee3-9758-46de-91fb-d0b5bd6e9a61
 		summarizeBy: none
 		sourceColumn: eqf_niveau
 
 	column 'NLQF Niveau'
 		dataType: string
-		lineageTag: f17f938f-998a-45ab-a9d2-1747e1d7bef1
+		lineageTag: d9eb6cd4-6709-463d-922d-7eb7f28f28df
 		summarizeBy: none
 		sourceColumn: nlqf_niveau
 
 	column Voertaal
 		dataType: string
-		lineageTag: 73f6e65b-5a9a-4a69-aef2-274acebfc94f
+		lineageTag: bbbef9fe-2a15-4201-8a55-8681f844cbef
 		summarizeBy: none
 		sourceColumn: voertaal
 
@@ -72,8 +72,9 @@ table Opleiding
 		mode: import
 		queryGroup: Dimensies
 		source = ```
-			let
-			    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/dim_opleiding.parquet"))
-			in
-			    Source
-		```
+					let
+					    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/dim_opleiding.parquet"))
+					in
+					    Source
+				```
+

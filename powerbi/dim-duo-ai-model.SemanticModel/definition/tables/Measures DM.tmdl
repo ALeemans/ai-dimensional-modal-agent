@@ -1,21 +1,64 @@
 table 'Measures DM'
-	lineageTag: e7a3a361-12f8-49c1-a05f-c394db371957
+	lineageTag: 8f5f9a49-bea6-4efd-9eb5-7b78c9941e83
 
 	measure 'Totaal Inschrijvingen (Geslacht)' = SUM('Inschrijvingen naar Geslacht'[Aantal Inschrijvingen])
-		formatString: 0
-		lineageTag: 930df94e-d9ac-4675-bc8b-249e49b2aa83
+		formatString: #,0
+		lineageTag: 85940c4c-784a-476d-ae5a-15616c83a81a
+
+	measure 'Totaal Ingeschrevenen' = SUM('Ingeschrevenen'[Aantal Ingeschrevenen])
+		formatString: #,0
+		lineageTag: 33251fe4-f667-4fe0-8c2d-34b04fd2b8a0
+
+	measure '% Privacy Onderdrukt' = DIVIDE(COUNTROWS(FILTER('Ingeschrevenen', 'Ingeschrevenen'[Privacy Onderdrukt])), COUNTROWS('Ingeschrevenen'))
+		formatString: 0.00%
+		lineageTag: e8a641cf-ffc8-48ad-9cd3-c7d67c58c39a
+
+	measure 'Totaal Inschrijvingen' = SUM('Inschrijvingen'[Aantal Inschrijvingen])
+		formatString: #,0
+		lineageTag: f5dbc20e-e027-40fc-8a6f-5df3e6601f0f
+
+	measure 'Totaal Eerstejaars' = SUM('Eerstejaars'[Aantal Eerstejaars])
+		formatString: #,0
+		lineageTag: ae9c125c-630b-4966-8cfd-7a0d0ef02f66
+
+	measure 'Totaal Gediplomeerden' = SUM('Gediplomeerden'[Aantal Gediplomeerden])
+		formatString: #,0
+		lineageTag: 09f2d090-45de-46e8-90ae-1dbbf2989521
+
+	measure 'Totaal Ingeschrevenen (Geslacht)' = SUM('Ingeschrevenen naar Geslacht'[Aantal Ingeschrevenen])
+		formatString: #,0
+		lineageTag: e55d04ba-bade-4b7e-8041-e6020eddb849
+
+	measure 'Totaal Eerstejaars (Geslacht)' = SUM('Eerstejaars naar Geslacht'[Aantal Eerstejaars])
+		formatString: #,0
+		lineageTag: 44816698-0973-4f18-a4e4-486fc5d29585
+
+	measure 'Totaal Gediplomeerden (Geslacht)' = SUM('Gediplomeerden naar Geslacht'[Aantal Gediplomeerden])
+		formatString: #,0
+		lineageTag: b137f65a-18e4-4780-85ce-12cc586672d8
+
+	measure 'Totaal Ingeschrevenen (Oplvorm)' = SUM('Ingeschrevenen naar Opleidingsvorm'[Aantal Ingeschrevenen])
+		formatString: #,0
+		lineageTag: e460ec7b-aca9-4ca0-ae12-a4b2e3a3e514
+
+	measure 'Totaal Inschrijvingen (Oplvorm)' = SUM('Inschrijvingen naar Opleidingsvorm'[Aantal Inschrijvingen])
+		formatString: #,0
+		lineageTag: b8861450-9f5d-4c01-91b9-14c92ea9588b
+
+	measure 'Totaal Eerstejaars (Oplvorm)' = SUM('Eerstejaars naar Opleidingsvorm'[Aantal Eerstejaars])
+		formatString: #,0
+		lineageTag: 94d6f1fe-82ba-4309-8e4f-74d43a176617
+
+	measure 'Totaal Gediplomeerden (Oplvorm)' = SUM('Gediplomeerden naar Opleidingsvorm'[Aantal Gediplomeerden])
+		formatString: #,0
+		lineageTag: da2cc303-e1df-42ff-9220-66783b3d2d51
 
 	partition 'Measures DM' = m
 		mode: import
 		source =
 				let
-				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
-				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
-				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
-				in
-				    #"Removed Columns"
-
-	changedProperty = Name
-
-	annotation PBI_ResultType = Table
+					    Source = Table.FromRows({{""}}, {"Column1"}),
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"Column1"})
+					in
+					    #"Removed Columns"
 

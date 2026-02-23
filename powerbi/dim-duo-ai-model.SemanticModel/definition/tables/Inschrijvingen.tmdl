@@ -1,50 +1,50 @@
 table Inschrijvingen
-	lineageTag: 70bb35de-ee78-45f3-bcaf-5ebfbb305379
+	lineageTag: 4e57dec2-9d72-4469-8dc3-dadf8cd748c9
 
 	column ID
 		dataType: int64
-		lineageTag: 968f4319-9746-4c1c-a042-af8245eb59cf
 		isHidden
+		lineageTag: e82e4486-d659-4fa1-b504-c32241a12662
 		summarizeBy: none
 		sourceColumn: inschrijvingen_key
 
 	column 'Tijd Key'
 		dataType: int64
-		lineageTag: 556a2900-30b2-4630-a61d-0d1d73ceffb0
 		isHidden
+		lineageTag: ecdd9acb-8bc8-448d-861e-720591cd30c9
 		summarizeBy: none
 		sourceColumn: tijd_key
 
 	column 'Instelling Key'
 		dataType: int64
-		lineageTag: b787bba5-e436-4092-9638-3f7d28d82673
 		isHidden
+		lineageTag: 48329e64-6925-45b1-86b5-516c00d55ded
 		summarizeBy: none
 		sourceColumn: instelling_key
 
 	column 'Opleiding Key'
 		dataType: int64
-		lineageTag: 000c8a88-082b-4902-8110-bf50fe3efb37
 		isHidden
+		lineageTag: 1f96efa6-e86c-4542-8614-0df345a79219
 		summarizeBy: none
 		sourceColumn: opleiding_key
 
 	column 'Geografie Key'
 		dataType: int64
-		lineageTag: 23bdc16f-511a-4a3e-9452-d64a6902824a
 		isHidden
+		lineageTag: fa603339-ecd5-46cd-b41e-797558cd75f9
 		summarizeBy: none
 		sourceColumn: geografie_key
 
 	column 'Aantal Inschrijvingen'
 		dataType: int64
-		lineageTag: f4e9f900-35be-4404-a480-a18e43158ca4
+		lineageTag: e73a864d-d0e0-4605-9a1f-fc36d1ab8fd6
 		summarizeBy: sum
 		sourceColumn: aantal_inschrijvingen
 
 	column 'Privacy Onderdrukt'
 		dataType: boolean
-		lineageTag: a01a965e-f7ad-4c77-ac63-d9e197c581f7
+		lineageTag: 3180bdc2-424e-4679-a525-5fbbbfc52617
 		summarizeBy: none
 		sourceColumn: is_onderdrukt
 
@@ -52,8 +52,9 @@ table Inschrijvingen
 		mode: import
 		queryGroup: Feiten
 		source = ```
-			let
-			    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/feit_inschrijvingen.parquet"))
-			in
-			    Source
-		```
+					let
+					    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/feit_inschrijvingen.parquet"))
+					in
+					    Source
+				```
+

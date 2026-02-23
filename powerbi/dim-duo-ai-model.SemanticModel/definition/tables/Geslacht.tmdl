@@ -1,16 +1,16 @@
 table Geslacht
-	lineageTag: 2e6cc79c-d0cf-4dc8-9a26-e163be32abf8
+	lineageTag: 589b1684-f8f6-44e1-9a00-4bb7c3c4540f
 
 	column 'Geslacht Key'
 		dataType: int64
-		lineageTag: 0a479242-845d-4120-8485-4587f58a6fd9
 		isHidden
+		lineageTag: b9abebb7-940f-4d44-94d3-142e97f34831
 		summarizeBy: none
 		sourceColumn: geslacht_key
 
 	column Geslacht
 		dataType: string
-		lineageTag: ec654d8c-5d28-4e82-aaf5-00b5306eaaf0
+		lineageTag: 6fe8641a-96f2-4b82-a924-a84e10401bd4
 		summarizeBy: none
 		sourceColumn: geslacht
 
@@ -18,8 +18,9 @@ table Geslacht
 		mode: import
 		queryGroup: Dimensies
 		source = ```
-			let
-			    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/dim_geslacht.parquet"))
-			in
-			    Source
-		```
+					let
+					    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/dim_geslacht.parquet"))
+					in
+					    Source
+				```
+

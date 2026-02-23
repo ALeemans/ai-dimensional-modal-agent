@@ -1,0 +1,222 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "6610a6da809580da3be5",
+  "position": {
+    "x": 124.30057803468208,
+    "y": 0,
+    "z": 1,
+    "height": 719.9075144508671,
+    "width": 1155.6994219653179
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tijd"
+                    }
+                  },
+                  "Property": "Academisch Jaar"
+                }
+              },
+              "queryRef": "Tijd.Academisch Jaar",
+              "nativeQueryRef": "Academisch Jaar",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Geografie"
+                    }
+                  },
+                  "Property": "Gemeente"
+                }
+              },
+              "queryRef": "Geografie.Gemeente",
+              "nativeQueryRef": "Gemeente",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures DM"
+                    }
+                  },
+                  "Property": "Totaal Gediplomeerden"
+                }
+              },
+              "queryRef": "Measures DM.Totaal Gediplomeerden",
+              "nativeQueryRef": "Totaal Gediplomeerden"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures DM"
+                    }
+                  },
+                  "Property": "Totaal Eerstejaars"
+                }
+              },
+              "queryRef": "Measures DM.Totaal Eerstejaars",
+              "nativeQueryRef": "Totaal Eerstejaars"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures DM"
+                    }
+                  },
+                  "Property": "Totaal Ingeschrevenen"
+                }
+              },
+              "queryRef": "Measures DM.Totaal Ingeschrevenen",
+              "nativeQueryRef": "Totaal Ingeschrevenen"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures DM"
+                    }
+                  },
+                  "Property": "Totaal Inschrijvingen"
+                }
+              },
+              "queryRef": "Measures DM.Totaal Inschrijvingen",
+              "nativeQueryRef": "Totaal Inschrijvingen"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Measures DM"
+                  }
+                },
+                "Property": "Totaal Gediplomeerden"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "63a6b64e50c3e75cd104",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measures DM"
+              }
+            },
+            "Property": "Totaal Gediplomeerden"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "32e85e25e542de691a81",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Geografie"
+              }
+            },
+            "Property": "Gemeente"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5681d139430650d0d89b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measures DM"
+              }
+            },
+            "Property": "Totaal Eerstejaars"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "43d83c96b510b8ae52d0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measures DM"
+              }
+            },
+            "Property": "Totaal Ingeschrevenen"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a3f4ece44eb441e0150c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measures DM"
+              }
+            },
+            "Property": "Totaal Inschrijvingen"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a2cd05dd45698761a830",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Tijd"
+              }
+            },
+            "Property": "Academisch Jaar"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

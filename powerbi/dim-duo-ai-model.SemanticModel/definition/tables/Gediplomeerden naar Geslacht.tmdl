@@ -1,77 +1,74 @@
 table 'Gediplomeerden naar Geslacht'
-	lineageTag: b38606bd-aead-4bc8-9d28-e474428709d8
-
-	measure 'Totaal Gediplomeerden (Geslacht)' = SUM('Gediplomeerden naar Geslacht'[Aantal Gediplomeerden])
-		formatString: #,0
-		lineageTag: 3bc0d71f-d712-4652-8b90-4047a3eb9062
+	lineageTag: f999cc5b-5bcd-4d1e-93c0-fb9d50330163
 
 	column ID
 		dataType: int64
 		isHidden
-		lineageTag: 69865e22-9b1d-4645-ae59-9ed2cfb40433
+		lineageTag: 12c1d63e-1675-425f-94e5-a5d9963117ba
 		summarizeBy: none
 		sourceColumn: id
 
 	column 'Tijd Key'
 		dataType: int64
 		isHidden
-		lineageTag: f6582915-dc59-4e47-9a69-7d6be2365021
+		lineageTag: 45f11b67-d762-47a1-8ce0-0b273105347f
 		summarizeBy: none
 		sourceColumn: tijd_key
 
 	column 'Instelling Key'
 		dataType: int64
 		isHidden
-		lineageTag: 4fed7389-3a3a-4d22-8b4a-67f42d67b0e8
+		lineageTag: d2f3c091-d54e-4c84-82e9-c7fe01aaa9b0
 		summarizeBy: none
 		sourceColumn: instelling_key
 
 	column 'Sector Key'
 		dataType: int64
 		isHidden
-		lineageTag: 16c2ff39-b6b5-4989-8b3d-0f686d2f031e
+		lineageTag: 758a8d2b-7086-4057-a00a-26f0ae45a107
 		summarizeBy: none
 		sourceColumn: sector_key
 
 	column 'Geografie Key'
 		dataType: int64
 		isHidden
-		lineageTag: 7b497ef3-d90c-4bd6-90ff-d8e2ae1cf4ec
+		lineageTag: 784f9165-31e5-492a-845d-1585345321ec
 		summarizeBy: none
 		sourceColumn: geografie_key
 
 	column 'Soort Diploma Key'
 		dataType: int64
 		isHidden
-		lineageTag: 49656c82-7048-41a4-9522-3d76f057b728
+		lineageTag: 6989ec92-3329-4b9a-9687-6dfedda895a8
 		summarizeBy: none
 		sourceColumn: soort_diploma_key
 
 	column 'Geslacht Key'
 		dataType: int64
 		isHidden
-		lineageTag: 5f1da7dc-2b70-452d-af5e-b1e34d5265c8
+		lineageTag: bd61bc43-3a5c-4fe8-b0f1-93edeb29ddb5
 		summarizeBy: none
 		sourceColumn: geslacht_key
 
 	column 'Aantal Gediplomeerden'
 		dataType: int64
-		lineageTag: d975c923-4bcb-4689-9b37-80b27b2900dc
+		lineageTag: baf0abdd-95e6-4ada-8308-47b3a4da2c1c
 		summarizeBy: sum
 		sourceColumn: aantal_gediplomeerden
 
 	column 'Privacy Onderdrukt'
 		dataType: boolean
-		lineageTag: e12de361-9fca-4258-9ce5-8f036a1f739e
+		lineageTag: d22da8e5-7c04-4597-a7f5-1e0c46d15895
 		summarizeBy: none
 		sourceColumn: is_onderdrukt
 
 	partition 'Gediplomeerden naar Geslacht' = m
 		mode: import
 		queryGroup: Feiten
-		source =
-				let
+		source = ```
+					let
 					    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/feit_gediplomeerden_geslacht.parquet"))
 					in
 					    Source
+				```
 

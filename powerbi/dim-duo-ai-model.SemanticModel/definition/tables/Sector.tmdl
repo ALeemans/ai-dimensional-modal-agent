@@ -1,28 +1,28 @@
 table Sector
-	lineageTag: 158d7823-ddc8-4637-ba35-4b57f8a64692
+	lineageTag: 53243f18-25e6-416e-8707-ac0a8e332507
 
 	column 'Sector Key'
 		dataType: int64
-		lineageTag: 1a66e66c-6bef-4cb2-8a42-9b09a2fd421f
 		isHidden
+		lineageTag: 215e36ab-4d76-4bf1-b36d-f1092fb5e22c
 		summarizeBy: none
 		sourceColumn: sector_key
 
 	column 'Type Hoger Onderwijs'
 		dataType: string
-		lineageTag: f91844af-421e-4baa-8aeb-b6ddecd75ed6
+		lineageTag: 9165c940-7307-456f-a8bd-2d9603e61ae5
 		summarizeBy: none
 		sourceColumn: type_hoger_onderwijs
 
 	column Onderdeel
 		dataType: string
-		lineageTag: 182bb93f-bae5-4fc5-8640-242aab5b88f0
+		lineageTag: 619085f0-9fa4-41ee-b8d0-767f451d2531
 		summarizeBy: none
 		sourceColumn: onderdeel
 
 	column Subonderdeel
 		dataType: string
-		lineageTag: 4ae99721-662b-4950-b2a8-6d086a17536c
+		lineageTag: 03959df9-09b5-41f9-84cf-806ab292f6a1
 		summarizeBy: none
 		sourceColumn: subonderdeel
 
@@ -30,8 +30,9 @@ table Sector
 		mode: import
 		queryGroup: Dimensies
 		source = ```
-			let
-			    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/dim_sector.parquet"))
-			in
-			    Source
-		```
+					let
+					    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/dim_sector.parquet"))
+					in
+					    Source
+				```
+

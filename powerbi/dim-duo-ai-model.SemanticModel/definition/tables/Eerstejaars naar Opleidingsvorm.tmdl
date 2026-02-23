@@ -1,70 +1,67 @@
 table 'Eerstejaars naar Opleidingsvorm'
-	lineageTag: 8b5edc8c-4d26-4393-a169-eb41eae0e96c
-
-	measure 'Totaal Eerstejaars (Oplvorm)' = SUM('Eerstejaars naar Opleidingsvorm'[Aantal Eerstejaars])
-		formatString: #,0
-		lineageTag: b88d49f5-ac28-4b66-a06d-3f94bef7110a
+	lineageTag: a7810418-e20a-4b10-8069-be15cfab4983
 
 	column ID
 		dataType: int64
 		isHidden
-		lineageTag: 2fbf01d8-fb61-4885-b38e-cbdac8cd15ea
+		lineageTag: 8d8bb1b7-99df-4eba-a170-b6e7c264f1ee
 		summarizeBy: none
 		sourceColumn: id
 
 	column 'Tijd Key'
 		dataType: int64
 		isHidden
-		lineageTag: 6de29fbc-1901-40fe-97c4-65c80680dc70
+		lineageTag: 5fe32d57-56cb-4009-a141-10d0e937ae6a
 		summarizeBy: none
 		sourceColumn: tijd_key
 
 	column 'Instelling Key'
 		dataType: int64
 		isHidden
-		lineageTag: 48da6a30-aede-4443-9998-3f2cc3158d43
+		lineageTag: 29b73504-5574-4f20-9fcd-49ad76366bc7
 		summarizeBy: none
 		sourceColumn: instelling_key
 
 	column 'Sector Key'
 		dataType: int64
 		isHidden
-		lineageTag: 0304cc97-3d7d-4a79-b2f5-e15a7713efa4
+		lineageTag: 6fb78023-b398-44d9-a77c-f1c36ebf1b4a
 		summarizeBy: none
 		sourceColumn: sector_key
 
 	column 'Geografie Key'
 		dataType: int64
 		isHidden
-		lineageTag: 1008a5c0-95a7-4f99-9b5a-541410f19563
+		lineageTag: c616acac-9fb3-4587-b363-22faf0b4fbfe
 		summarizeBy: none
 		sourceColumn: geografie_key
 
 	column 'Opleidingsvorm Key'
 		dataType: int64
 		isHidden
-		lineageTag: 028a8bb4-298d-48a1-aa2d-ffbdaf3783e8
+		lineageTag: 02817b2a-20a5-4258-bfcc-1e29acb84573
 		summarizeBy: none
 		sourceColumn: opleidingsvorm_key
 
 	column 'Aantal Eerstejaars'
 		dataType: int64
-		lineageTag: bb643a05-457d-4435-a02b-3034f8ea2e4e
+		lineageTag: f793601a-a63f-48ef-9861-4a7312cb1d69
 		summarizeBy: sum
 		sourceColumn: aantal_eerstejaars
 
 	column 'Privacy Onderdrukt'
 		dataType: boolean
-		lineageTag: 179bb738-2d10-406b-bfc4-0ae5764c26e1
+		lineageTag: 616e4b95-dc6c-4940-a090-674ddc2f2e02
 		summarizeBy: none
 		sourceColumn: is_onderdrukt
 
 	partition 'Eerstejaars naar Opleidingsvorm' = m
 		mode: import
 		queryGroup: Feiten
-		source =
-				let
+		source = ```
+					let
 					    Source = Parquet.Document(File.Contents("D:/HogeschoolUtrecht/GithubRepos/ai-dimensional-modal-agent/data/processed/feit_eerstejaars_oplvorm.parquet"))
 					in
 					    Source
+				```
 
